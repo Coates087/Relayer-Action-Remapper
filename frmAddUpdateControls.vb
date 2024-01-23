@@ -4,11 +4,13 @@ Imports System.Reflection
 Imports RelayerJsonActionMapper.ButtonItems
 
 '' Add toggle for when the user only wants to set keyboard and mouse, gamepad or both
+'' Get saving working
 Public Class frmAddUpdateControls
     Public assemblyName As String = String.Empty
     Public gStrOpenFileName As String = String.Empty
     Public gControls As GameControls = Nothing
 
+    Public gSaveControls As GameControls = Nothing
     Public fileResourceList As New List(Of String)
 
     Public imageStreamList As New List(Of ImageName)
@@ -24,7 +26,9 @@ Public Class frmAddUpdateControls
     End Sub
 
     Private Sub frmAddUpdateControls_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ''Path.GetFileName(
+
+        btnClose.DialogResult = DialogResult.Cancel
+        btnSave.DialogResult = DialogResult.OK
         lblFile.Text = ""
         If Not String.IsNullOrWhiteSpace(gStrOpenFileName) Then
             lblFile.Text = "Reading from: " & Path.GetFileName(gStrOpenFileName)
@@ -33,6 +37,15 @@ Public Class frmAddUpdateControls
     End Sub
 
 
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        'Dim em = cboStart.SelectedValue
+        'Dim em2 = cboStart.Text
+
+        Dim saveControls As New GameControls
+        saveControls = PrepSaveControls()
+        gSaveControls = saveControls
+        Me.Close()
+    End Sub
     Public Sub LoadForm()
         fileResourceList = New List(Of String) From {
         "Icon_BtnXbox_dpad_down.png",
@@ -199,8 +212,40 @@ Public Class frmAddUpdateControls
         Return image
     End Function
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim em = cboStart.SelectedValue
-        Dim em2 = cboStart.Text
-    End Sub
+
+
+    Public Function PrepSaveControls() As GameControls
+        Dim saveControls As New GameControls
+        saveControls = gControls
+
+        saveControls.Escape.ButtonName = cboStart.SelectedValue
+        saveControls.V.ButtonName = cboBack.SelectedValue
+        saveControls.Enter.ButtonName = cboA.SelectedValue
+        saveControls.Backspace.ButtonName = cboB.SelectedValue
+        saveControls.Tab.ButtonName = cboX.SelectedValue
+        saveControls.Shift.ButtonName = cboY.SelectedValue
+
+        saveControls.Q.ButtonName = cboLB.SelectedValue
+        saveControls.E.ButtonName = cboRB.SelectedValue
+        saveControls.WheelUp.ButtonName = cboLT.SelectedValue
+        saveControls.WheelDown.ButtonName = cboRT.SelectedValue
+
+        saveControls.W.ButtonName = cbodUp.SelectedValue
+        saveControls.S.ButtonName = cbodDown.SelectedValue
+        saveControls.A.ButtonName = cbodLeft.SelectedValue
+        saveControls.D.ButtonName = cbodRight.SelectedValue
+
+        saveControls.CtrlW.ButtonName = cboLsUp.SelectedValue
+        saveControls.CtrlS.ButtonName = cboLsDown.SelectedValue
+        saveControls.CtrlA.ButtonName = cboLsLeft.SelectedValue
+        saveControls.CtrlD.ButtonName = cboLsRight.SelectedValue
+        saveControls.F.ButtonName = cboLsButton.SelectedValue
+
+        saveControls.UpArrow.ButtonName = cboRsUp.SelectedValue
+        saveControls.DownArrow.ButtonName = cboRsDown.SelectedValue
+        saveControls.DownArrow.ButtonName = cboRsLeft.SelectedValue
+        saveControls.DownArrow.ButtonName = cboRsRight.SelectedValue
+        saveControls.R.ButtonName = cboRsButton.SelectedValue
+        Return saveControls
+    End Function
 End Class

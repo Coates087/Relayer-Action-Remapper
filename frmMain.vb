@@ -8,6 +8,7 @@ Public Class frmMain
     Public assemblyName As String = String.Empty
     Public gStrOpenFileName As String = String.Empty
     Public gControls As GameControls = Nothing
+    Public gUnsavedChanges As Boolean = False
 
     Const resKeyConfigDefault As String = "KeyConfigDefault.json"
     Const resKeyGamePadConfigDefault As String = "KeyConfigDefaultController.json"
@@ -526,6 +527,11 @@ Public Class frmMain
         editControls.assemblyName = assemblyName
         editControls.gStrOpenFileName = gStrOpenFileName
         editControls.gControls = gControls
-        editControls.ShowDialog()
+        Dim controlDialog As DialogResult = editControls.ShowDialog()
+
+        If controlDialog = DialogResult.OK Then
+            gControls = editControls.gSaveControls
+            gUnsavedChanges = True
+        End If
     End Sub
 End Class
