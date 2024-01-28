@@ -46,6 +46,7 @@ Public Class frmAddUpdateControls
         gSaveControls = saveControls
         Me.Close()
     End Sub
+
     Public Sub LoadForm()
         fileResourceList = New List(Of String) From {
         "Icon_BtnXbox_dpad_down.png",
@@ -218,34 +219,42 @@ Public Class frmAddUpdateControls
         Dim saveControls As New GameControls
         saveControls = gControls
 
-        saveControls.Escape.ButtonName = cboStart.SelectedValue
-        saveControls.V.ButtonName = cboBack.SelectedValue
-        saveControls.Enter.ButtonName = cboA.SelectedValue
-        saveControls.Backspace.ButtonName = cboB.SelectedValue
-        saveControls.Tab.ButtonName = cboX.SelectedValue
-        saveControls.Shift.ButtonName = cboY.SelectedValue
+        saveControls.Escape.ButtonName = ReplaceIfNothing(cboStart.SelectedValue, "")
+        saveControls.V.ButtonName = ReplaceIfNothing(cboBack.SelectedValue, "")
+        saveControls.Enter.ButtonName = ReplaceIfNothing(cboA.SelectedValue, "")
+        saveControls.Backspace.ButtonName = ReplaceIfNothing(cboB.SelectedValue, "")
+        saveControls.Tab.ButtonName = ReplaceIfNothing(cboX.SelectedValue, "")
+        saveControls.Shift.ButtonName = ReplaceIfNothing(cboY.SelectedValue, "")
 
-        saveControls.Q.ButtonName = cboLB.SelectedValue
-        saveControls.E.ButtonName = cboRB.SelectedValue
-        saveControls.WheelUp.ButtonName = cboLT.SelectedValue
-        saveControls.WheelDown.ButtonName = cboRT.SelectedValue
+        saveControls.Q.ButtonName = ReplaceIfNothing(cboLB.SelectedValue, "")
+        saveControls.E.ButtonName = ReplaceIfNothing(cboRB.SelectedValue, "")
+        saveControls.WheelUp.ButtonName = ReplaceIfNothing(cboLT.SelectedValue, "")
+        saveControls.WheelDown.ButtonName = ReplaceIfNothing(cboRT.SelectedValue, "")
 
-        saveControls.W.ButtonName = cbodUp.SelectedValue
-        saveControls.S.ButtonName = cbodDown.SelectedValue
-        saveControls.A.ButtonName = cbodLeft.SelectedValue
-        saveControls.D.ButtonName = cbodRight.SelectedValue
+        saveControls.W.ButtonName = ReplaceIfNothing(cbodUp.SelectedValue, "")
+        saveControls.S.ButtonName = ReplaceIfNothing(cbodDown.SelectedValue, "")
+        saveControls.A.ButtonName = ReplaceIfNothing(cbodLeft.SelectedValue, "")
+        saveControls.D.ButtonName = ReplaceIfNothing(cbodRight.SelectedValue, "")
 
-        saveControls.CtrlW.ButtonName = cboLsUp.SelectedValue
-        saveControls.CtrlS.ButtonName = cboLsDown.SelectedValue
-        saveControls.CtrlA.ButtonName = cboLsLeft.SelectedValue
-        saveControls.CtrlD.ButtonName = cboLsRight.SelectedValue
-        saveControls.F.ButtonName = cboLsButton.SelectedValue
+        saveControls.CtrlW.ButtonName = ReplaceIfNothing(cboLsUp.SelectedValue, "")
+        saveControls.CtrlS.ButtonName = ReplaceIfNothing(cboLsDown.SelectedValue, "")
+        saveControls.CtrlA.ButtonName = ReplaceIfNothing(cboLsLeft.SelectedValue, "")
+        saveControls.CtrlD.ButtonName = ReplaceIfNothing(cboLsRight.SelectedValue, "")
+        saveControls.F.ButtonName = ReplaceIfNothing(cboLsButton.SelectedValue, "")
 
-        saveControls.UpArrow.ButtonName = cboRsUp.SelectedValue
-        saveControls.DownArrow.ButtonName = cboRsDown.SelectedValue
-        saveControls.DownArrow.ButtonName = cboRsLeft.SelectedValue
-        saveControls.DownArrow.ButtonName = cboRsRight.SelectedValue
-        saveControls.R.ButtonName = cboRsButton.SelectedValue
+        saveControls.UpArrow.ButtonName = ReplaceIfNothing(cboRsUp.SelectedValue, "")
+        saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsDown.SelectedValue, "")
+        saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsLeft.SelectedValue, "")
+        saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsRight.SelectedValue, "")
+        saveControls.R.ButtonName = ReplaceIfNothing(cboRsButton.SelectedValue, "")
         Return saveControls
+    End Function
+
+    Public Function ReplaceIfNothing(ByVal objValue As Object, ByVal altValue As Object) As Object
+        Dim result As Object = objValue
+        If IsNothing(objValue) Then
+            result = altValue
+        End If
+        Return result
     End Function
 End Class

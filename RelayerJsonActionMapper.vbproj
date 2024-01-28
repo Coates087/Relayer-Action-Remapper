@@ -118,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonItems.vb" />
+    <Compile Include="frmOpenFile.Designer.vb">
+      <DependentUpon>frmOpenFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GameControls.vb" />
     <Compile Include="frmAddUpdateControls.Designer.vb">
       <DependentUpon>frmAddUpdateControls.vb</DependentUpon>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenFile.resx">
+      <DependentUpon>frmOpenFile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
