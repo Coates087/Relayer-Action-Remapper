@@ -50,7 +50,7 @@ Partial Class frmControlWindow
         Me.cboDefaultKey.Name = "cboDefaultKey"
         Me.cboDefaultKey.Size = New System.Drawing.Size(267, 32)
         Me.cboDefaultKey.TabIndex = 8
-        Me.cboDefaultKey.Tag = "0"
+        Me.cboDefaultKey.Tag = "key-0"
         '
         'lblAction
         '
@@ -63,6 +63,7 @@ Partial Class frmControlWindow
         '
         'btnSave
         '
+        Me.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnSave.Location = New System.Drawing.Point(369, 227)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(64, 20)

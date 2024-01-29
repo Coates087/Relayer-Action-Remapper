@@ -22,10 +22,13 @@ Partial Class frmAddUpdateControls
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lblFile = New System.Windows.Forms.Label()
         Me.gboxFields = New System.Windows.Forms.GroupBox()
+        Me.lblStart = New System.Windows.Forms.Label()
         Me.Label150 = New System.Windows.Forms.Label()
+        Me.btnKeyStart = New System.Windows.Forms.Button()
         Me.picBoxRsButton = New System.Windows.Forms.PictureBox()
         Me.picBoxRsRight = New System.Windows.Forms.PictureBox()
         Me.picBoxRsLeft = New System.Windows.Forms.PictureBox()
@@ -105,8 +108,7 @@ Partial Class frmAddUpdateControls
         Me.gboxEditMode = New System.Windows.Forms.GroupBox()
         Me.rbnController = New System.Windows.Forms.RadioButton()
         Me.rbnEditAll = New System.Windows.Forms.RadioButton()
-        Me.btnKeyStart = New System.Windows.Forms.Button()
-        Me.lblStart = New System.Windows.Forms.Label()
+        Me.tip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.gboxFields.SuspendLayout()
         CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,6 +241,17 @@ Partial Class frmAddUpdateControls
         Me.gboxFields.TabStop = False
         Me.gboxFields.Text = "Fields"
         '
+        'lblStart
+        '
+        Me.lblStart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStart.Location = New System.Drawing.Point(76, 49)
+        Me.lblStart.Name = "lblStart"
+        Me.lblStart.Size = New System.Drawing.Size(219, 19)
+        Me.lblStart.TabIndex = 91
+        Me.lblStart.Tag = "KeyLabel"
+        Me.lblStart.Text = "<Key>"
+        '
         'Label150
         '
         Me.Label150.AutoSize = True
@@ -248,6 +261,16 @@ Partial Class frmAddUpdateControls
         Me.Label150.TabIndex = 90
         Me.Label150.Tag = "XboxLabel"
         Me.Label150.Text = "Button"
+        '
+        'btnKeyStart
+        '
+        Me.btnKeyStart.Location = New System.Drawing.Point(77, 27)
+        Me.btnKeyStart.Name = "btnKeyStart"
+        Me.btnKeyStart.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyStart.TabIndex = 15
+        Me.btnKeyStart.Tag = "KeyButton"
+        Me.btnKeyStart.Text = "Edit Keys"
+        Me.btnKeyStart.UseVisualStyleBackColor = True
         '
         'picBoxRsButton
         '
@@ -1020,25 +1043,6 @@ Partial Class frmAddUpdateControls
         Me.rbnEditAll.Text = "Edit for Keyboard and Gamepad"
         Me.rbnEditAll.UseVisualStyleBackColor = True
         '
-        'btnKeyStart
-        '
-        Me.btnKeyStart.Location = New System.Drawing.Point(79, 26)
-        Me.btnKeyStart.Name = "btnKeyStart"
-        Me.btnKeyStart.Size = New System.Drawing.Size(64, 20)
-        Me.btnKeyStart.TabIndex = 15
-        Me.btnKeyStart.Tag = "KeyButton"
-        Me.btnKeyStart.Text = "Edit Keys"
-        Me.btnKeyStart.UseVisualStyleBackColor = True
-        '
-        'lblStart
-        '
-        Me.lblStart.Location = New System.Drawing.Point(81, 49)
-        Me.lblStart.Name = "lblStart"
-        Me.lblStart.Size = New System.Drawing.Size(192, 16)
-        Me.lblStart.TabIndex = 91
-        Me.lblStart.Tag = "KeyLabel"
-        Me.lblStart.Text = "<Key>"
-        '
         'frmAddUpdateControls
         '
         Me.AcceptButton = Me.btnSave
@@ -1175,4 +1179,5 @@ Partial Class frmAddUpdateControls
     Friend WithEvents rbnEditAll As RadioButton
     Friend WithEvents lblStart As Label
     Friend WithEvents btnKeyStart As Button
+    Friend WithEvents tip1 As ToolTip
 End Class

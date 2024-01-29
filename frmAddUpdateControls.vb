@@ -15,6 +15,8 @@ Public Class frmAddUpdateControls
 
     Public imageStreamList As New List(Of ImageName)
     Public gamepadOnlyFirstTime As Boolean = True
+
+    Private Const conDlbQuote As String = Chr(34)
     Private Const gamepadOnlyWarningText As String = "You have selected "“Edit for Controller Only”". This mode is intended for the Controller Button Prompts mod on Nexus Mods and Game Banana. This mode will override all changes made for keyboard and mouse controls. Do you wish to use this mode?"
 
     Public Class ImageName
@@ -38,6 +40,7 @@ Public Class frmAddUpdateControls
         ShowXboxControls()
         HideKeyboardControls()
         LoadForm()
+        SetToolTips()
     End Sub
 
 
@@ -102,7 +105,14 @@ Public Class frmAddUpdateControls
             myControlForm.gControls = gControls
             myControlForm.gButton = aButton
 
-            myControlForm.ShowDialog()
+            Dim dialogResults = myControlForm.ShowDialog()
+
+            If dialogResults = DialogResult.OK Then
+                aButton.KeyCode = myControlForm.gStrKeys
+                MapValues()
+            End If
+
+            SetToolTips()
         End If
     End Sub
 
@@ -154,6 +164,16 @@ Public Class frmAddUpdateControls
         For Each aControl In myControls
             aControl.Visible = True
         Next
+    End Sub
+
+    Private Sub SetToolTips()
+        Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"KeyLabel"}.Contains(e.Tag?.ToString)).ToList
+
+        For Each aLabelControl In myControls
+            'aLabelControl.too
+            tip1.SetToolTip(aLabelControl, aLabelControl.Text)
+        Next
+        ' tip1.Sho
     End Sub
 
 

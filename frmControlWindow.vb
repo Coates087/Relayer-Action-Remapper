@@ -5,8 +5,29 @@
     Public gControls As GameControls = Nothing
     Public gButton As GenericKey = Nothing
 
+    Public gStrKeys As New List(Of String)
+    Public gStrAllKeys As String = String.Empty
+    Private Const conDlbQuote As String = Chr(34)
+
     Private Sub frmControlWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadControlData()
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+
+        Dim myControls As List(Of Control) = panKeys.Controls.Cast(Of Control)().Where(Function(t) t.GetType = GetType(ComboBox) AndAlso t.Tag?.ToString.StartsWith("key-")).ToList
+
+        gStrKeys = New List(Of String)
+        For Each aComboControl In myControls
+            gStrKeys.Add(DirectCast(aComboControl, ComboBox).SelectedValue)
+
+        Next
+        gStrAllKeys = String.Join(", ", gStrKeys)
+        Me.Close()
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
     End Sub
     Private Sub LoadControlData()
         picBoxButton.Image = gImageData
@@ -22,7 +43,7 @@
             Dim newY As Integer = cboDefaultKey.Location.Y
             For i As Integer = 1 To strKeys.Count - 1 Step 1
                 newY += cboDefaultKey.Size.Height + 5
-                Dim controlResult = CopyDropDownItem(cboDefaultKey, i.ToString, cboDefaultKey.Location.X, cboDefaultKey.Location.X, newY)
+                Dim controlResult = CopyDropDownItem(cboDefaultKey, "key-" + i.ToString, cboDefaultKey.Location.X, cboDefaultKey.Location.X, newY)
 
                 controlResult.DisplayMember = "KeyName"
                 controlResult.ValueMember = "KeyCode"
@@ -53,6 +74,7 @@
         finalControl.Size = originalControl.Size
         finalControl.Tag = strTag
         finalControl.TabStop = tabStop
+        finalControl.DropDownStyle = originalControl.DropDownStyle
 
         finalControl.Location = New Point(x, y)
 
@@ -220,6 +242,8 @@
 
         Return result
     End Function
+
+
 
     'LeftWindows
     'RightWindows
