@@ -4,7 +4,7 @@ Imports System.Reflection
 Imports RelayerJsonActionMapper.ButtonItems
 
 '' Add toggle for when the user only wants to set keyboard and mouse, gamepad or both
-'' Get saving working
+
 Public Class frmAddUpdateControls
     Public assemblyName As String = String.Empty
     Public gStrOpenFileName As String = String.Empty
@@ -14,6 +14,8 @@ Public Class frmAddUpdateControls
     Public fileResourceList As New List(Of String)
 
     Public imageStreamList As New List(Of ImageName)
+    Public gamepadOnlyFirstTime As Boolean = True
+    Private Const gamepadOnlyWarningText As String = "You have selected "“Edit for Controller Only”". This mode is intended for the Controller Button Prompts mod on Nexus Mods and Game Banana. This mode will override all changes made for keyboard and mouse controls. Do you wish to use this mode?"
 
     Public Class ImageName
         Public FileName As String = String.Empty
@@ -38,13 +40,65 @@ Public Class frmAddUpdateControls
 
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        'Dim em = cboStart.SelectedValue
-        'Dim em2 = cboStart.Text
 
         Dim saveControls As New GameControls
         saveControls = PrepSaveControls()
         gSaveControls = saveControls
         Me.Close()
+    End Sub
+    Private Sub rbnController_CheckedChanged(sender As Object, e As EventArgs) Handles rbnController.CheckedChanged
+
+        If rbnController.Checked Then
+            If gamepadOnlyFirstTime Then
+                Dim msgResult = MessageBox.Show(gamepadOnlyWarningText, "Information", MessageBoxButtons.YesNo)
+                If msgResult = DialogResult.Yes Then
+                    gamepadOnlyFirstTime = False
+                    ForceViewGamePadOnly()
+                    DisableViewControls()
+                Else
+                    EnableViewControls()
+                End If
+            Else
+                ForceViewGamePadOnly()
+                DisableViewControls()
+            End If
+        Else
+            EnableViewControls()
+        End If
+    End Sub
+
+    Private Sub rbnEditAll_CheckedChanged(sender As Object, e As EventArgs) Handles rbnEditAll.CheckedChanged
+        If rbnEditAll.Checked Then
+            EnableViewControls()
+        End If
+    End Sub
+
+    Private Sub rbnViewGamePad_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewGamePad.CheckedChanged
+        If rbnViewGamePad.Checked Then
+            Dim em As String = "Pad"
+            Console.WriteLine(em)
+        End If
+    End Sub
+
+    Private Sub rbnViewKeyboard_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewKeyboard.CheckedChanged
+        If rbnViewKeyboard.Checked Then
+            Dim em As String = "Rat"
+            Console.WriteLine(em)
+        End If
+    End Sub
+
+    Private Sub ForceViewGamePadOnly()
+        rbnViewGamePad.Checked = True
+    End Sub
+
+    Private Sub DisableViewControls()
+        rbnViewKeyboard.Enabled = False
+        rbnViewGamePad.Enabled = False
+    End Sub
+
+    Private Sub EnableViewControls()
+        rbnViewKeyboard.Enabled = True
+        rbnViewGamePad.Enabled = True
     End Sub
 
     Public Sub LoadForm()
@@ -257,4 +311,5 @@ Public Class frmAddUpdateControls
         End If
         Return result
     End Function
+
 End Class

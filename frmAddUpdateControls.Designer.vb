@@ -99,6 +99,12 @@ Partial Class frmAddUpdateControls
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panItems = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.rbnViewGamePad = New System.Windows.Forms.RadioButton()
+        Me.gboxViewControls = New System.Windows.Forms.GroupBox()
+        Me.rbnViewKeyboard = New System.Windows.Forms.RadioButton()
+        Me.gboxEditMode = New System.Windows.Forms.GroupBox()
+        Me.rbnController = New System.Windows.Forms.RadioButton()
+        Me.rbnEditAll = New System.Windows.Forms.RadioButton()
         Me.gboxFields.SuspendLayout()
         CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,6 +131,8 @@ Partial Class frmAddUpdateControls
         CType(Me.picBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panItems.SuspendLayout()
+        Me.gboxViewControls.SuspendLayout()
+        Me.gboxEditMode.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnClose
@@ -140,7 +148,7 @@ Partial Class frmAddUpdateControls
         'lblFile
         '
         Me.lblFile.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.lblFile.Location = New System.Drawing.Point(10, 24)
+        Me.lblFile.Location = New System.Drawing.Point(10, 9)
         Me.lblFile.Name = "lblFile"
         Me.lblFile.Size = New System.Drawing.Size(364, 20)
         Me.lblFile.TabIndex = 8
@@ -220,9 +228,9 @@ Partial Class frmAddUpdateControls
         Me.gboxFields.Controls.Add(Me.picBoxStart)
         Me.gboxFields.Controls.Add(Me.cboStart)
         Me.gboxFields.Controls.Add(Me.Label1)
-        Me.gboxFields.Location = New System.Drawing.Point(3, 13)
+        Me.gboxFields.Location = New System.Drawing.Point(3, 6)
         Me.gboxFields.Name = "gboxFields"
-        Me.gboxFields.Size = New System.Drawing.Size(626, 701)
+        Me.gboxFields.Size = New System.Drawing.Size(727, 675)
         Me.gboxFields.TabIndex = 9
         Me.gboxFields.TabStop = False
         Me.gboxFields.Text = "Fields"
@@ -230,7 +238,7 @@ Partial Class frmAddUpdateControls
         'Label150
         '
         Me.Label150.AutoSize = True
-        Me.Label150.Location = New System.Drawing.Point(356, 303)
+        Me.Label150.Location = New System.Drawing.Point(380, 303)
         Me.Label150.Name = "Label150"
         Me.Label150.Size = New System.Drawing.Size(38, 13)
         Me.Label150.TabIndex = 90
@@ -238,7 +246,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxRsButton
         '
-        Me.picBoxRsButton.Location = New System.Drawing.Point(308, 438)
+        Me.picBoxRsButton.Location = New System.Drawing.Point(332, 438)
         Me.picBoxRsButton.Name = "picBoxRsButton"
         Me.picBoxRsButton.Size = New System.Drawing.Size(42, 36)
         Me.picBoxRsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -247,7 +255,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxRsRight
         '
-        Me.picBoxRsRight.Location = New System.Drawing.Point(308, 393)
+        Me.picBoxRsRight.Location = New System.Drawing.Point(332, 393)
         Me.picBoxRsRight.Name = "picBoxRsRight"
         Me.picBoxRsRight.Size = New System.Drawing.Size(42, 36)
         Me.picBoxRsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -256,7 +264,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxRsLeft
         '
-        Me.picBoxRsLeft.Location = New System.Drawing.Point(308, 348)
+        Me.picBoxRsLeft.Location = New System.Drawing.Point(332, 348)
         Me.picBoxRsLeft.Name = "picBoxRsLeft"
         Me.picBoxRsLeft.Size = New System.Drawing.Size(42, 36)
         Me.picBoxRsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -265,7 +273,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxRsDown
         '
-        Me.picBoxRsDown.Location = New System.Drawing.Point(308, 303)
+        Me.picBoxRsDown.Location = New System.Drawing.Point(332, 303)
         Me.picBoxRsDown.Name = "picBoxRsDown"
         Me.picBoxRsDown.Size = New System.Drawing.Size(42, 36)
         Me.picBoxRsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -276,7 +284,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboRsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRsButton.FormattingEnabled = True
-        Me.cboRsButton.Location = New System.Drawing.Point(356, 454)
+        Me.cboRsButton.Location = New System.Drawing.Point(380, 454)
         Me.cboRsButton.Name = "cboRsButton"
         Me.cboRsButton.Size = New System.Drawing.Size(197, 21)
         Me.cboRsButton.TabIndex = 85
@@ -285,7 +293,7 @@ Partial Class frmAddUpdateControls
         'Label160
         '
         Me.Label160.AutoSize = True
-        Me.Label160.Location = New System.Drawing.Point(356, 438)
+        Me.Label160.Location = New System.Drawing.Point(380, 438)
         Me.Label160.Name = "Label160"
         Me.Label160.Size = New System.Drawing.Size(38, 13)
         Me.Label160.TabIndex = 84
@@ -295,7 +303,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboRsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRsRight.FormattingEnabled = True
-        Me.cboRsRight.Location = New System.Drawing.Point(356, 409)
+        Me.cboRsRight.Location = New System.Drawing.Point(380, 409)
         Me.cboRsRight.Name = "cboRsRight"
         Me.cboRsRight.Size = New System.Drawing.Size(197, 21)
         Me.cboRsRight.TabIndex = 83
@@ -304,7 +312,7 @@ Partial Class frmAddUpdateControls
         'Label170
         '
         Me.Label170.AutoSize = True
-        Me.Label170.Location = New System.Drawing.Point(356, 393)
+        Me.Label170.Location = New System.Drawing.Point(380, 393)
         Me.Label170.Name = "Label170"
         Me.Label170.Size = New System.Drawing.Size(38, 13)
         Me.Label170.TabIndex = 82
@@ -314,7 +322,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboRsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRsLeft.FormattingEnabled = True
-        Me.cboRsLeft.Location = New System.Drawing.Point(356, 363)
+        Me.cboRsLeft.Location = New System.Drawing.Point(380, 363)
         Me.cboRsLeft.Name = "cboRsLeft"
         Me.cboRsLeft.Size = New System.Drawing.Size(197, 21)
         Me.cboRsLeft.TabIndex = 81
@@ -323,7 +331,7 @@ Partial Class frmAddUpdateControls
         'Label180
         '
         Me.Label180.AutoSize = True
-        Me.Label180.Location = New System.Drawing.Point(356, 347)
+        Me.Label180.Location = New System.Drawing.Point(380, 347)
         Me.Label180.Name = "Label180"
         Me.Label180.Size = New System.Drawing.Size(38, 13)
         Me.Label180.TabIndex = 80
@@ -333,7 +341,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboRsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRsDown.FormattingEnabled = True
-        Me.cboRsDown.Location = New System.Drawing.Point(356, 318)
+        Me.cboRsDown.Location = New System.Drawing.Point(380, 318)
         Me.cboRsDown.Name = "cboRsDown"
         Me.cboRsDown.Size = New System.Drawing.Size(197, 21)
         Me.cboRsDown.TabIndex = 79
@@ -341,7 +349,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxRsUp
         '
-        Me.picBoxRsUp.Location = New System.Drawing.Point(308, 258)
+        Me.picBoxRsUp.Location = New System.Drawing.Point(332, 258)
         Me.picBoxRsUp.Name = "picBoxRsUp"
         Me.picBoxRsUp.Size = New System.Drawing.Size(42, 36)
         Me.picBoxRsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -352,7 +360,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboRsUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRsUp.FormattingEnabled = True
-        Me.cboRsUp.Location = New System.Drawing.Point(356, 274)
+        Me.cboRsUp.Location = New System.Drawing.Point(380, 274)
         Me.cboRsUp.Name = "cboRsUp"
         Me.cboRsUp.Size = New System.Drawing.Size(197, 21)
         Me.cboRsUp.TabIndex = 77
@@ -361,7 +369,7 @@ Partial Class frmAddUpdateControls
         'Label190
         '
         Me.Label190.AutoSize = True
-        Me.Label190.Location = New System.Drawing.Point(356, 258)
+        Me.Label190.Location = New System.Drawing.Point(380, 258)
         Me.Label190.Name = "Label190"
         Me.Label190.Size = New System.Drawing.Size(38, 13)
         Me.Label190.TabIndex = 76
@@ -370,7 +378,7 @@ Partial Class frmAddUpdateControls
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(356, 75)
+        Me.Label15.Location = New System.Drawing.Point(380, 75)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(38, 13)
         Me.Label15.TabIndex = 60
@@ -378,7 +386,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxLsButton
         '
-        Me.picBoxLsButton.Location = New System.Drawing.Point(308, 210)
+        Me.picBoxLsButton.Location = New System.Drawing.Point(332, 210)
         Me.picBoxLsButton.Name = "picBoxLsButton"
         Me.picBoxLsButton.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -387,7 +395,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxLsRight
         '
-        Me.picBoxLsRight.Location = New System.Drawing.Point(308, 165)
+        Me.picBoxLsRight.Location = New System.Drawing.Point(332, 165)
         Me.picBoxLsRight.Name = "picBoxLsRight"
         Me.picBoxLsRight.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -396,7 +404,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxLsLeft
         '
-        Me.picBoxLsLeft.Location = New System.Drawing.Point(308, 120)
+        Me.picBoxLsLeft.Location = New System.Drawing.Point(332, 120)
         Me.picBoxLsLeft.Name = "picBoxLsLeft"
         Me.picBoxLsLeft.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -405,7 +413,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxLsDown
         '
-        Me.picBoxLsDown.Location = New System.Drawing.Point(308, 75)
+        Me.picBoxLsDown.Location = New System.Drawing.Point(332, 75)
         Me.picBoxLsDown.Name = "picBoxLsDown"
         Me.picBoxLsDown.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -416,7 +424,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsButton.FormattingEnabled = True
-        Me.cboLsButton.Location = New System.Drawing.Point(356, 226)
+        Me.cboLsButton.Location = New System.Drawing.Point(380, 226)
         Me.cboLsButton.Name = "cboLsButton"
         Me.cboLsButton.Size = New System.Drawing.Size(197, 21)
         Me.cboLsButton.TabIndex = 55
@@ -425,7 +433,7 @@ Partial Class frmAddUpdateControls
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(356, 210)
+        Me.Label16.Location = New System.Drawing.Point(380, 210)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(38, 13)
         Me.Label16.TabIndex = 54
@@ -435,7 +443,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsRight.FormattingEnabled = True
-        Me.cboLsRight.Location = New System.Drawing.Point(356, 181)
+        Me.cboLsRight.Location = New System.Drawing.Point(380, 181)
         Me.cboLsRight.Name = "cboLsRight"
         Me.cboLsRight.Size = New System.Drawing.Size(197, 21)
         Me.cboLsRight.TabIndex = 53
@@ -444,7 +452,7 @@ Partial Class frmAddUpdateControls
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(356, 165)
+        Me.Label17.Location = New System.Drawing.Point(380, 165)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(38, 13)
         Me.Label17.TabIndex = 52
@@ -454,7 +462,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsLeft.FormattingEnabled = True
-        Me.cboLsLeft.Location = New System.Drawing.Point(356, 135)
+        Me.cboLsLeft.Location = New System.Drawing.Point(380, 135)
         Me.cboLsLeft.Name = "cboLsLeft"
         Me.cboLsLeft.Size = New System.Drawing.Size(197, 21)
         Me.cboLsLeft.TabIndex = 51
@@ -463,7 +471,7 @@ Partial Class frmAddUpdateControls
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(356, 119)
+        Me.Label18.Location = New System.Drawing.Point(380, 119)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(38, 13)
         Me.Label18.TabIndex = 50
@@ -473,7 +481,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsDown.FormattingEnabled = True
-        Me.cboLsDown.Location = New System.Drawing.Point(356, 90)
+        Me.cboLsDown.Location = New System.Drawing.Point(380, 90)
         Me.cboLsDown.Name = "cboLsDown"
         Me.cboLsDown.Size = New System.Drawing.Size(197, 21)
         Me.cboLsDown.TabIndex = 49
@@ -481,7 +489,7 @@ Partial Class frmAddUpdateControls
         '
         'picBoxLsUp
         '
-        Me.picBoxLsUp.Location = New System.Drawing.Point(308, 30)
+        Me.picBoxLsUp.Location = New System.Drawing.Point(332, 30)
         Me.picBoxLsUp.Name = "picBoxLsUp"
         Me.picBoxLsUp.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -492,7 +500,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsUp.FormattingEnabled = True
-        Me.cboLsUp.Location = New System.Drawing.Point(356, 46)
+        Me.cboLsUp.Location = New System.Drawing.Point(380, 46)
         Me.cboLsUp.Name = "cboLsUp"
         Me.cboLsUp.Size = New System.Drawing.Size(197, 21)
         Me.cboLsUp.TabIndex = 47
@@ -501,7 +509,7 @@ Partial Class frmAddUpdateControls
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(356, 30)
+        Me.Label19.Location = New System.Drawing.Point(380, 30)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(38, 13)
         Me.Label19.TabIndex = 46
@@ -903,9 +911,9 @@ Partial Class frmAddUpdateControls
         '
         Me.panItems.AutoScroll = True
         Me.panItems.Controls.Add(Me.gboxFields)
-        Me.panItems.Location = New System.Drawing.Point(10, 76)
+        Me.panItems.Location = New System.Drawing.Point(10, 138)
         Me.panItems.Name = "panItems"
-        Me.panItems.Size = New System.Drawing.Size(728, 510)
+        Me.panItems.Size = New System.Drawing.Size(761, 448)
         Me.panItems.TabIndex = 10
         '
         'btnSave
@@ -917,6 +925,74 @@ Partial Class frmAddUpdateControls
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'rbnViewGamePad
+        '
+        Me.rbnViewGamePad.AutoSize = True
+        Me.rbnViewGamePad.Checked = True
+        Me.rbnViewGamePad.Location = New System.Drawing.Point(6, 19)
+        Me.rbnViewGamePad.Name = "rbnViewGamePad"
+        Me.rbnViewGamePad.Size = New System.Drawing.Size(139, 17)
+        Me.rbnViewGamePad.TabIndex = 12
+        Me.rbnViewGamePad.TabStop = True
+        Me.rbnViewGamePad.Text = "View GamePad Controls"
+        Me.rbnViewGamePad.UseVisualStyleBackColor = True
+        '
+        'gboxViewControls
+        '
+        Me.gboxViewControls.Controls.Add(Me.rbnViewKeyboard)
+        Me.gboxViewControls.Controls.Add(Me.rbnViewGamePad)
+        Me.gboxViewControls.Location = New System.Drawing.Point(24, 88)
+        Me.gboxViewControls.Name = "gboxViewControls"
+        Me.gboxViewControls.Size = New System.Drawing.Size(504, 38)
+        Me.gboxViewControls.TabIndex = 13
+        Me.gboxViewControls.TabStop = False
+        Me.gboxViewControls.Text = "View Controls"
+        '
+        'rbnViewKeyboard
+        '
+        Me.rbnViewKeyboard.AutoSize = True
+        Me.rbnViewKeyboard.Location = New System.Drawing.Point(158, 19)
+        Me.rbnViewKeyboard.Name = "rbnViewKeyboard"
+        Me.rbnViewKeyboard.Size = New System.Drawing.Size(174, 17)
+        Me.rbnViewKeyboard.TabIndex = 13
+        Me.rbnViewKeyboard.Text = "View Keyboard/Mouse Controls"
+        Me.rbnViewKeyboard.UseVisualStyleBackColor = True
+        '
+        'gboxEditMode
+        '
+        Me.gboxEditMode.Controls.Add(Me.rbnController)
+        Me.gboxEditMode.Controls.Add(Me.rbnEditAll)
+        Me.gboxEditMode.Location = New System.Drawing.Point(24, 38)
+        Me.gboxEditMode.Name = "gboxEditMode"
+        Me.gboxEditMode.Size = New System.Drawing.Size(592, 47)
+        Me.gboxEditMode.TabIndex = 14
+        Me.gboxEditMode.TabStop = False
+        Me.gboxEditMode.Text = "Edit Mode"
+        '
+        'rbnController
+        '
+        Me.rbnController.AutoSize = True
+        Me.rbnController.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbnController.Location = New System.Drawing.Point(275, 19)
+        Me.rbnController.Name = "rbnController"
+        Me.rbnController.Size = New System.Drawing.Size(185, 24)
+        Me.rbnController.TabIndex = 13
+        Me.rbnController.Text = "Edit for Controller Only"
+        Me.rbnController.UseVisualStyleBackColor = True
+        '
+        'rbnEditAll
+        '
+        Me.rbnEditAll.AutoSize = True
+        Me.rbnEditAll.Checked = True
+        Me.rbnEditAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbnEditAll.Location = New System.Drawing.Point(6, 19)
+        Me.rbnEditAll.Name = "rbnEditAll"
+        Me.rbnEditAll.Size = New System.Drawing.Size(255, 24)
+        Me.rbnEditAll.TabIndex = 12
+        Me.rbnEditAll.TabStop = True
+        Me.rbnEditAll.Text = "Edit for Keyboard and Gamepad"
+        Me.rbnEditAll.UseVisualStyleBackColor = True
+        '
         'frmAddUpdateControls
         '
         Me.AcceptButton = Me.btnSave
@@ -925,6 +1001,8 @@ Partial Class frmAddUpdateControls
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(899, 628)
         Me.ControlBox = False
+        Me.Controls.Add(Me.gboxEditMode)
+        Me.Controls.Add(Me.gboxViewControls)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.panItems)
         Me.Controls.Add(Me.lblFile)
@@ -958,6 +1036,10 @@ Partial Class frmAddUpdateControls
         CType(Me.picBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panItems.ResumeLayout(False)
+        Me.gboxViewControls.ResumeLayout(False)
+        Me.gboxViewControls.PerformLayout()
+        Me.gboxEditMode.ResumeLayout(False)
+        Me.gboxEditMode.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1039,4 +1121,10 @@ Partial Class frmAddUpdateControls
     Friend WithEvents picBoxRsUp As PictureBox
     Friend WithEvents cboRsUp As ComboBox
     Friend WithEvents Label190 As Label
+    Friend WithEvents rbnViewGamePad As RadioButton
+    Friend WithEvents gboxViewControls As GroupBox
+    Friend WithEvents rbnViewKeyboard As RadioButton
+    Friend WithEvents gboxEditMode As GroupBox
+    Friend WithEvents rbnController As RadioButton
+    Friend WithEvents rbnEditAll As RadioButton
 End Class
