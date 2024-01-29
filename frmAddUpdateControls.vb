@@ -77,8 +77,6 @@ Public Class frmAddUpdateControls
 
     Private Sub rbnViewGamePad_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewGamePad.CheckedChanged
         If rbnViewGamePad.Checked Then
-            'Dim em As String = "Pad"
-            'Console.WriteLine(em)
             ShowXboxControls()
             HideKeyboardControls()
         End If
@@ -86,10 +84,25 @@ Public Class frmAddUpdateControls
 
     Private Sub rbnViewKeyboard_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewKeyboard.CheckedChanged
         If rbnViewKeyboard.Checked Then
-            'Dim em As String = "Rat"
-            'Console.WriteLine(em)
             ShowKeyboardControls()
             HideXboxControls()
+        End If
+    End Sub
+
+    Private Sub btnKeyStart_Click(sender As Object, e As EventArgs) Handles btnKeyStart.Click
+        ShowKeyboardDialog("Xbox_start_button.png", gControls.Escape)
+    End Sub
+
+    Private Sub ShowKeyboardDialog(xboxButtonName As String, aButton As GenericKey)
+        Dim selectedImage = imageStreamList.Where(Function(e) e.FileName = xboxButtonName).FirstOrDefault()
+
+        If Not IsNothing(selectedImage) Then
+            Dim myControlForm As New frmControlWindow
+            myControlForm.gImageData = selectedImage.ImageData
+            myControlForm.gControls = gControls
+            myControlForm.gButton = aButton
+
+            myControlForm.ShowDialog()
         End If
     End Sub
 
@@ -291,6 +304,8 @@ Public Class frmAddUpdateControls
             cboRsLeft.SelectedValue = gControls.DownArrow.ButtonName
             cboRsRight.SelectedValue = gControls.DownArrow.ButtonName
             cboRsButton.SelectedValue = gControls.R.ButtonName
+
+            lblStart.Text = String.Join(", ", gControls.Escape.KeyCode)
         End If
     End Sub
 
@@ -354,5 +369,4 @@ Public Class frmAddUpdateControls
         End If
         Return result
     End Function
-
 End Class

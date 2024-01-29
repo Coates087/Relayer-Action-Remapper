@@ -992,18 +992,17 @@ Partial Class frmAddUpdateControls
         Me.gboxEditMode.Controls.Add(Me.rbnEditAll)
         Me.gboxEditMode.Location = New System.Drawing.Point(24, 38)
         Me.gboxEditMode.Name = "gboxEditMode"
-        Me.gboxEditMode.Size = New System.Drawing.Size(592, 47)
+        Me.gboxEditMode.Size = New System.Drawing.Size(606, 47)
         Me.gboxEditMode.TabIndex = 14
         Me.gboxEditMode.TabStop = False
         Me.gboxEditMode.Text = "Edit Mode"
         '
         'rbnController
         '
-        Me.rbnController.AutoSize = True
         Me.rbnController.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbnController.Location = New System.Drawing.Point(275, 19)
+        Me.rbnController.Location = New System.Drawing.Point(279, 19)
         Me.rbnController.Name = "rbnController"
-        Me.rbnController.Size = New System.Drawing.Size(185, 24)
+        Me.rbnController.Size = New System.Drawing.Size(190, 24)
         Me.rbnController.TabIndex = 13
         Me.rbnController.Text = "Edit for Controller Only"
         Me.rbnController.UseVisualStyleBackColor = True

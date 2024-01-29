@@ -74,3 +74,8 @@ Public Class GameControls
     <JsonPropertyName("Ctrl+D")>
     Public Property CtrlD As GenericKeyButtonName
 End Class
+
+Public Class KeyboardClass
+    Public Property KeyCode As String
+    Public Property KeyName As String
+End Class

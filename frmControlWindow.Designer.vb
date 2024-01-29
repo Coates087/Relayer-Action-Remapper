@@ -22,37 +22,39 @@ Partial Class frmControlWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.picBoxStart = New System.Windows.Forms.PictureBox()
-        Me.cboStart = New System.Windows.Forms.ComboBox()
+        Me.picBoxButton = New System.Windows.Forms.PictureBox()
+        Me.cboDefaultKey = New System.Windows.Forms.ComboBox()
         Me.lblAction = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panKeys = New System.Windows.Forms.Panel()
+        CType(Me.picBoxButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panKeys.SuspendLayout()
         Me.SuspendLayout()
         '
-        'picBoxStart
+        'picBoxButton
         '
-        Me.picBoxStart.Location = New System.Drawing.Point(12, 25)
-        Me.picBoxStart.Name = "picBoxStart"
-        Me.picBoxStart.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxStart.TabIndex = 9
-        Me.picBoxStart.TabStop = False
+        Me.picBoxButton.Location = New System.Drawing.Point(7, 14)
+        Me.picBoxButton.Name = "picBoxButton"
+        Me.picBoxButton.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxButton.TabIndex = 9
+        Me.picBoxButton.TabStop = False
         '
-        'cboStart
+        'cboDefaultKey
         '
-        Me.cboStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboStart.FormattingEnabled = True
-        Me.cboStart.Location = New System.Drawing.Point(60, 41)
-        Me.cboStart.Name = "cboStart"
-        Me.cboStart.Size = New System.Drawing.Size(197, 21)
-        Me.cboStart.TabIndex = 8
-        Me.cboStart.Tag = "XboxCBox"
+        Me.cboDefaultKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDefaultKey.FormattingEnabled = True
+        Me.cboDefaultKey.Location = New System.Drawing.Point(55, 30)
+        Me.cboDefaultKey.Name = "cboDefaultKey"
+        Me.cboDefaultKey.Size = New System.Drawing.Size(197, 21)
+        Me.cboDefaultKey.TabIndex = 8
+        Me.cboDefaultKey.Tag = "0"
         '
         'lblAction
         '
         Me.lblAction.AutoSize = True
-        Me.lblAction.Location = New System.Drawing.Point(60, 25)
+        Me.lblAction.Location = New System.Drawing.Point(55, 14)
         Me.lblAction.Name = "lblAction"
         Me.lblAction.Size = New System.Drawing.Size(38, 13)
         Me.lblAction.TabIndex = 7
@@ -77,28 +79,38 @@ Partial Class frmControlWindow
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'panKeys
+        '
+        Me.panKeys.Controls.Add(Me.picBoxButton)
+        Me.panKeys.Controls.Add(Me.lblAction)
+        Me.panKeys.Controls.Add(Me.cboDefaultKey)
+        Me.panKeys.Location = New System.Drawing.Point(12, 12)
+        Me.panKeys.Name = "panKeys"
+        Me.panKeys.Size = New System.Drawing.Size(286, 261)
+        Me.panKeys.TabIndex = 14
+        '
         'frmControlWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 298)
+        Me.ClientSize = New System.Drawing.Size(394, 305)
         Me.ControlBox = False
+        Me.Controls.Add(Me.panKeys)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.picBoxStart)
-        Me.Controls.Add(Me.cboStart)
-        Me.Controls.Add(Me.lblAction)
         Me.Name = "frmControlWindow"
         Me.Text = "Control Window"
-        CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxButton, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panKeys.ResumeLayout(False)
+        Me.panKeys.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents picBoxStart As PictureBox
-    Friend WithEvents cboStart As ComboBox
+    Friend WithEvents picBoxButton As PictureBox
+    Friend WithEvents cboDefaultKey As ComboBox
     Friend WithEvents lblAction As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents btnClose As Button
+    Friend WithEvents panKeys As Panel
 End Class
