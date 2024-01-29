@@ -40,8 +40,10 @@ Partial Class frmOpenFile
         '
         'txtFileName
         '
+        Me.txtFileName.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtFileName.Location = New System.Drawing.Point(34, 84)
         Me.txtFileName.Name = "txtFileName"
+        Me.txtFileName.ReadOnly = True
         Me.txtFileName.Size = New System.Drawing.Size(373, 20)
         Me.txtFileName.TabIndex = 4
         '
@@ -79,6 +81,7 @@ Partial Class frmOpenFile
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(615, 230)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Label1)

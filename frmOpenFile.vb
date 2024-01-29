@@ -3,6 +3,8 @@
 Public Class frmOpenFile
     Public gStrOpenFileName As String = String.Empty
     Public gControls As GameControls = Nothing
+    Private myToolTip As New ToolTip()
+
     Delegate Sub InvokeDelegate()
 
     Private Sub frmOpenFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -67,14 +69,14 @@ Public Class frmOpenFile
 
 
             gControls = myControls
-            Dim em As String = JsonSerializer.Serialize(myControls, myOptions)
-            Console.WriteLine(em)
+            'myToolTip.Show(txtFileName.Text, txtFileName)
+
+            'Dim em As String = JsonSerializer.Serialize(myControls, myOptions)
+            'Console.WriteLine(em)
 
         Catch ex As Exception
             MessageBox.Show("JSON file not formatted properly")
         End Try
-
-
 
     End Sub
 

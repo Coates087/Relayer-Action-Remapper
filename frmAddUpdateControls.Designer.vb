@@ -924,6 +924,7 @@ Partial Class frmAddUpdateControls
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(899, 628)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.panItems)
         Me.Controls.Add(Me.lblFile)

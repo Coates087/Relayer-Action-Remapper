@@ -124,6 +124,12 @@
     <Compile Include="frmOpenFile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPreviewConfigFile.Designer.vb">
+      <DependentUpon>frmPreviewConfigFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreviewConfigFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GameControls.vb" />
     <Compile Include="frmAddUpdateControls.Designer.vb">
       <DependentUpon>frmAddUpdateControls.vb</DependentUpon>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpenFile.resx">
       <DependentUpon>frmOpenFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreviewConfigFile.resx">
+      <DependentUpon>frmPreviewConfigFile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
