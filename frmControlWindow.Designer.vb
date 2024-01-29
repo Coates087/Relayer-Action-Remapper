@@ -36,7 +36,7 @@ Partial Class frmControlWindow
         '
         Me.picBoxButton.Location = New System.Drawing.Point(7, 14)
         Me.picBoxButton.Name = "picBoxButton"
-        Me.picBoxButton.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxButton.Size = New System.Drawing.Size(52, 48)
         Me.picBoxButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBoxButton.TabIndex = 9
         Me.picBoxButton.TabStop = False
@@ -44,17 +44,18 @@ Partial Class frmControlWindow
         'cboDefaultKey
         '
         Me.cboDefaultKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDefaultKey.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboDefaultKey.FormattingEnabled = True
-        Me.cboDefaultKey.Location = New System.Drawing.Point(55, 30)
+        Me.cboDefaultKey.Location = New System.Drawing.Point(65, 30)
         Me.cboDefaultKey.Name = "cboDefaultKey"
-        Me.cboDefaultKey.Size = New System.Drawing.Size(197, 21)
+        Me.cboDefaultKey.Size = New System.Drawing.Size(267, 32)
         Me.cboDefaultKey.TabIndex = 8
         Me.cboDefaultKey.Tag = "0"
         '
         'lblAction
         '
         Me.lblAction.AutoSize = True
-        Me.lblAction.Location = New System.Drawing.Point(55, 14)
+        Me.lblAction.Location = New System.Drawing.Point(65, 14)
         Me.lblAction.Name = "lblAction"
         Me.lblAction.Size = New System.Drawing.Size(38, 13)
         Me.lblAction.TabIndex = 7
@@ -62,7 +63,7 @@ Partial Class frmControlWindow
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(304, 173)
+        Me.btnSave.Location = New System.Drawing.Point(369, 227)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(64, 20)
         Me.btnSave.TabIndex = 13
@@ -72,7 +73,7 @@ Partial Class frmControlWindow
         'btnClose
         '
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnClose.Location = New System.Drawing.Point(304, 199)
+        Me.btnClose.Location = New System.Drawing.Point(369, 253)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(64, 20)
         Me.btnClose.TabIndex = 12
@@ -86,14 +87,14 @@ Partial Class frmControlWindow
         Me.panKeys.Controls.Add(Me.cboDefaultKey)
         Me.panKeys.Location = New System.Drawing.Point(12, 12)
         Me.panKeys.Name = "panKeys"
-        Me.panKeys.Size = New System.Drawing.Size(286, 261)
+        Me.panKeys.Size = New System.Drawing.Size(351, 261)
         Me.panKeys.TabIndex = 14
         '
         'frmControlWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(394, 305)
+        Me.ClientSize = New System.Drawing.Size(445, 305)
         Me.ControlBox = False
         Me.Controls.Add(Me.panKeys)
         Me.Controls.Add(Me.btnSave)
