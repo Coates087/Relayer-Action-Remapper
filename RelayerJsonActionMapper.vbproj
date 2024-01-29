@@ -118,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonItems.vb" />
+    <Compile Include="frmControlWindow.Designer.vb">
+      <DependentUpon>frmControlWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmControlWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOpenFile.Designer.vb">
       <DependentUpon>frmOpenFile.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAddUpdateControls.resx">
       <DependentUpon>frmAddUpdateControls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControlWindow.resx">
+      <DependentUpon>frmControlWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>

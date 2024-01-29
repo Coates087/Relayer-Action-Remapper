@@ -105,6 +105,8 @@ Partial Class frmAddUpdateControls
         Me.gboxEditMode = New System.Windows.Forms.GroupBox()
         Me.rbnController = New System.Windows.Forms.RadioButton()
         Me.rbnEditAll = New System.Windows.Forms.RadioButton()
+        Me.btnKeyStart = New System.Windows.Forms.Button()
+        Me.lblStart = New System.Windows.Forms.Label()
         Me.gboxFields.SuspendLayout()
         CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,7 +158,9 @@ Partial Class frmAddUpdateControls
         '
         'gboxFields
         '
+        Me.gboxFields.Controls.Add(Me.lblStart)
         Me.gboxFields.Controls.Add(Me.Label150)
+        Me.gboxFields.Controls.Add(Me.btnKeyStart)
         Me.gboxFields.Controls.Add(Me.picBoxRsButton)
         Me.gboxFields.Controls.Add(Me.picBoxRsRight)
         Me.gboxFields.Controls.Add(Me.picBoxRsLeft)
@@ -242,6 +246,7 @@ Partial Class frmAddUpdateControls
         Me.Label150.Name = "Label150"
         Me.Label150.Size = New System.Drawing.Size(38, 13)
         Me.Label150.TabIndex = 90
+        Me.Label150.Tag = "XboxLabel"
         Me.Label150.Text = "Button"
         '
         'picBoxRsButton
@@ -297,6 +302,7 @@ Partial Class frmAddUpdateControls
         Me.Label160.Name = "Label160"
         Me.Label160.Size = New System.Drawing.Size(38, 13)
         Me.Label160.TabIndex = 84
+        Me.Label160.Tag = "XboxLabel"
         Me.Label160.Text = "Button"
         '
         'cboRsRight
@@ -316,6 +322,7 @@ Partial Class frmAddUpdateControls
         Me.Label170.Name = "Label170"
         Me.Label170.Size = New System.Drawing.Size(38, 13)
         Me.Label170.TabIndex = 82
+        Me.Label170.Tag = "XboxLabel"
         Me.Label170.Text = "Button"
         '
         'cboRsLeft
@@ -335,6 +342,7 @@ Partial Class frmAddUpdateControls
         Me.Label180.Name = "Label180"
         Me.Label180.Size = New System.Drawing.Size(38, 13)
         Me.Label180.TabIndex = 80
+        Me.Label180.Tag = "XboxLabel"
         Me.Label180.Text = "Button"
         '
         'cboRsDown
@@ -373,6 +381,7 @@ Partial Class frmAddUpdateControls
         Me.Label190.Name = "Label190"
         Me.Label190.Size = New System.Drawing.Size(38, 13)
         Me.Label190.TabIndex = 76
+        Me.Label190.Tag = "XboxLabel"
         Me.Label190.Text = "Button"
         '
         'Label15
@@ -382,6 +391,7 @@ Partial Class frmAddUpdateControls
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(38, 13)
         Me.Label15.TabIndex = 60
+        Me.Label15.Tag = "XboxLabel"
         Me.Label15.Text = "Button"
         '
         'picBoxLsButton
@@ -437,6 +447,7 @@ Partial Class frmAddUpdateControls
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(38, 13)
         Me.Label16.TabIndex = 54
+        Me.Label16.Tag = "XboxLabel"
         Me.Label16.Text = "Button"
         '
         'cboLsRight
@@ -456,6 +467,7 @@ Partial Class frmAddUpdateControls
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(38, 13)
         Me.Label17.TabIndex = 52
+        Me.Label17.Tag = "XboxLabel"
         Me.Label17.Text = "Button"
         '
         'cboLsLeft
@@ -475,6 +487,7 @@ Partial Class frmAddUpdateControls
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(38, 13)
         Me.Label18.TabIndex = 50
+        Me.Label18.Tag = "XboxLabel"
         Me.Label18.Text = "Button"
         '
         'cboLsDown
@@ -513,6 +526,7 @@ Partial Class frmAddUpdateControls
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(38, 13)
         Me.Label19.TabIndex = 46
+        Me.Label19.Tag = "XboxLabel"
         Me.Label19.Text = "Button"
         '
         'Label14
@@ -522,6 +536,7 @@ Partial Class frmAddUpdateControls
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(38, 13)
         Me.Label14.TabIndex = 45
+        Me.Label14.Tag = "XboxLabel"
         Me.Label14.Text = "Button"
         '
         'picBox_dRight
@@ -577,6 +592,7 @@ Partial Class frmAddUpdateControls
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(38, 13)
         Me.Label11.TabIndex = 39
+        Me.Label11.Tag = "XboxLabel"
         Me.Label11.Text = "Button"
         '
         'cbodLeft
@@ -596,6 +612,7 @@ Partial Class frmAddUpdateControls
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(38, 13)
         Me.Label12.TabIndex = 37
+        Me.Label12.Tag = "XboxLabel"
         Me.Label12.Text = "Button"
         '
         'cbodDown
@@ -615,6 +632,7 @@ Partial Class frmAddUpdateControls
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 35
+        Me.Label13.Tag = "XboxLabel"
         Me.Label13.Text = "Button"
         '
         'cbodUp
@@ -680,6 +698,7 @@ Partial Class frmAddUpdateControls
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(38, 13)
         Me.Label7.TabIndex = 28
+        Me.Label7.Tag = "XboxLabel"
         Me.Label7.Text = "Button"
         '
         'cboLT
@@ -699,6 +718,7 @@ Partial Class frmAddUpdateControls
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(38, 13)
         Me.Label8.TabIndex = 26
+        Me.Label8.Tag = "XboxLabel"
         Me.Label8.Text = "Button"
         '
         'cboRB
@@ -718,6 +738,7 @@ Partial Class frmAddUpdateControls
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(38, 13)
         Me.Label9.TabIndex = 24
+        Me.Label9.Tag = "XboxLabel"
         Me.Label9.Text = "Button"
         '
         'cboLB
@@ -737,6 +758,7 @@ Partial Class frmAddUpdateControls
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 13)
         Me.Label10.TabIndex = 22
+        Me.Label10.Tag = "XboxLabel"
         Me.Label10.Text = "Button"
         '
         'picBoxY
@@ -801,6 +823,7 @@ Partial Class frmAddUpdateControls
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
         Me.Label5.TabIndex = 15
+        Me.Label5.Tag = "XboxLabel"
         Me.Label5.Text = "Button"
         '
         'cboX
@@ -820,6 +843,7 @@ Partial Class frmAddUpdateControls
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(38, 13)
         Me.Label6.TabIndex = 13
+        Me.Label6.Tag = "XboxLabel"
         Me.Label6.Text = "Button"
         '
         'cboB
@@ -839,6 +863,7 @@ Partial Class frmAddUpdateControls
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 11
+        Me.Label4.Tag = "XboxLabel"
         Me.Label4.Text = "Button"
         '
         'cboA
@@ -858,6 +883,7 @@ Partial Class frmAddUpdateControls
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 9
+        Me.Label3.Tag = "XboxLabel"
         Me.Label3.Text = "Button"
         '
         'cboBack
@@ -877,6 +903,7 @@ Partial Class frmAddUpdateControls
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 7
+        Me.Label2.Tag = "XboxLabel"
         Me.Label2.Text = "Button"
         '
         'picBoxStart
@@ -905,6 +932,7 @@ Partial Class frmAddUpdateControls
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 4
+        Me.Label1.Tag = "XboxLabel"
         Me.Label1.Text = "Button"
         '
         'panItems
@@ -992,6 +1020,25 @@ Partial Class frmAddUpdateControls
         Me.rbnEditAll.TabStop = True
         Me.rbnEditAll.Text = "Edit for Keyboard and Gamepad"
         Me.rbnEditAll.UseVisualStyleBackColor = True
+        '
+        'btnKeyStart
+        '
+        Me.btnKeyStart.Location = New System.Drawing.Point(79, 26)
+        Me.btnKeyStart.Name = "btnKeyStart"
+        Me.btnKeyStart.Size = New System.Drawing.Size(64, 20)
+        Me.btnKeyStart.TabIndex = 15
+        Me.btnKeyStart.Tag = "KeyButton"
+        Me.btnKeyStart.Text = "Edit Keys"
+        Me.btnKeyStart.UseVisualStyleBackColor = True
+        '
+        'lblStart
+        '
+        Me.lblStart.Location = New System.Drawing.Point(81, 49)
+        Me.lblStart.Name = "lblStart"
+        Me.lblStart.Size = New System.Drawing.Size(192, 16)
+        Me.lblStart.TabIndex = 91
+        Me.lblStart.Tag = "KeyLabel"
+        Me.lblStart.Text = "<Key>"
         '
         'frmAddUpdateControls
         '
@@ -1127,4 +1174,6 @@ Partial Class frmAddUpdateControls
     Friend WithEvents gboxEditMode As GroupBox
     Friend WithEvents rbnController As RadioButton
     Friend WithEvents rbnEditAll As RadioButton
+    Friend WithEvents lblStart As Label
+    Friend WithEvents btnKeyStart As Button
 End Class

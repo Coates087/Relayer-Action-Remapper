@@ -35,6 +35,8 @@ Public Class frmAddUpdateControls
         If Not String.IsNullOrWhiteSpace(gStrOpenFileName) Then
             lblFile.Text = "Reading from: " & Path.GetFileName(gStrOpenFileName)
         End If
+        ShowXboxControls()
+        HideKeyboardControls()
         LoadForm()
     End Sub
 
@@ -75,15 +77,19 @@ Public Class frmAddUpdateControls
 
     Private Sub rbnViewGamePad_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewGamePad.CheckedChanged
         If rbnViewGamePad.Checked Then
-            Dim em As String = "Pad"
-            Console.WriteLine(em)
+            'Dim em As String = "Pad"
+            'Console.WriteLine(em)
+            ShowXboxControls()
+            HideKeyboardControls()
         End If
     End Sub
 
     Private Sub rbnViewKeyboard_CheckedChanged(sender As Object, e As EventArgs) Handles rbnViewKeyboard.CheckedChanged
         If rbnViewKeyboard.Checked Then
-            Dim em As String = "Rat"
-            Console.WriteLine(em)
+            'Dim em As String = "Rat"
+            'Console.WriteLine(em)
+            ShowKeyboardControls()
+            HideXboxControls()
         End If
     End Sub
 
@@ -100,6 +106,43 @@ Public Class frmAddUpdateControls
         rbnViewKeyboard.Enabled = True
         rbnViewGamePad.Enabled = True
     End Sub
+
+    Private Sub HideXboxControls()
+
+        Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"XboxLabel", "XboxCBox"}.Contains(e.Tag?.ToString)).ToList
+        HideControls(myControls)
+    End Sub
+
+    Private Sub HideKeyboardControls()
+
+        Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"KeyLabel", "KeyButton"}.Contains(e.Tag?.ToString)).ToList
+        HideControls(myControls)
+    End Sub
+
+    Private Sub ShowXboxControls()
+
+        Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"XboxLabel", "XboxCBox"}.Contains(e.Tag?.ToString)).ToList
+        ShowControls(myControls)
+    End Sub
+
+    Private Sub ShowKeyboardControls()
+
+        Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"KeyLabel", "KeyButton"}.Contains(e.Tag?.ToString)).ToList
+        ShowControls(myControls)
+    End Sub
+
+    Private Sub HideControls(myControls As IEnumerable(Of Control))
+        For Each aControl In myControls
+            aControl.Visible = False
+        Next
+    End Sub
+
+    Private Sub ShowControls(myControls As IEnumerable(Of Control))
+        For Each aControl In myControls
+            aControl.Visible = True
+        Next
+    End Sub
+
 
     Public Sub LoadForm()
         fileResourceList = New List(Of String) From {
