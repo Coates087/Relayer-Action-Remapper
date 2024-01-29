@@ -19,9 +19,51 @@
 
         If strKeys.Count > 0 Then
             cboDefaultKey.SelectedValue = strKeys(0)
+            Dim newY As Integer = cboDefaultKey.Location.Y
+            For i As Integer = 1 To strKeys.Count - 1 Step 1
+                newY += cboDefaultKey.Size.Height + 5
+                Dim controlResult = CopyDropDownItem(cboDefaultKey, i.ToString, cboDefaultKey.Location.X, cboDefaultKey.Location.X, newY)
+
+                controlResult.DisplayMember = "KeyName"
+                controlResult.ValueMember = "KeyCode"
+                controlResult.DataSource = New List(Of KeyboardClass)(keyList)
+
+                controlResult.Parent = panKeys
+
+                controlResult.SelectedValue = strKeys(i)
+            Next
+
         End If
 
+
+
     End Sub
+
+    Private Function CopyDropDownItem(originalControl As ComboBox, strTag As String, tabStop As Integer, x As Integer, y As Integer) As ComboBox
+        Dim finalControl = New ComboBox()
+
+        ''finalControl.Items = originalControl.Items
+
+        'Dim keyList As List(Of KeyboardClass) = GetKeyboardKeys()
+        'finalControl.DisplayMember = "KeyName"
+        'finalControl.ValueMember = "KeyCode"
+        'finalControl.DataSource = New List(Of KeyboardClass)(keyList)
+        finalControl.Font = originalControl.Font
+
+        finalControl.Size = originalControl.Size
+        finalControl.Tag = strTag
+        finalControl.TabStop = tabStop
+
+        finalControl.Location = New Point(x, y)
+
+        Return finalControl
+    End Function
+
+    Private Function CopyControlItem(objControl As Object, x As Integer, y As Integer) As Object
+        Dim finalControl As Object = Nothing
+
+        Return finalControl
+    End Function
 
 
     Public Function GetKeyboardKeys() As List(Of KeyboardClass)
