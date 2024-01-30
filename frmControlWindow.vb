@@ -8,6 +8,10 @@
     Public gStrKeys As New List(Of String)
     Public gStrAllKeys As String = String.Empty
     Private Const conDlbQuote As String = Chr(34)
+    Private Const conRemoveTag As String = "btn-remove-"
+    Private Const conComboTag As String = "key-"
+    Private gHighestNo As Integer = 0
+    Private gLastTabStop As Integer = 0
 
     Private Sub frmControlWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadControlData()
@@ -15,7 +19,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
-        Dim myControls As List(Of Control) = panKeys.Controls.Cast(Of Control)().Where(Function(t) t.GetType = GetType(ComboBox) AndAlso t.Tag?.ToString.StartsWith("key-")).ToList
+        Dim myControls As List(Of Control) = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) t.GetType = GetType(ComboBox) AndAlso t.Tag?.ToString.StartsWith("key-")).ToList
 
         gStrKeys = New List(Of String)
         For Each aComboControl In myControls
@@ -29,6 +33,38 @@
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
+
+    Private Sub btnAddKey_Click(sender As Object, e As EventArgs) Handles btnAddKey.Click
+
+        Dim keyList As List(Of KeyboardClass) = GetKeyboardKeys()
+        Dim lastControl As Control = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) t.GetType = GetType(ComboBox)).LastOrDefault
+        Dim newY As Integer = (lastControl.Location.Y + lastControl.Size.Height) + 5 ' + (lastControl.Location.Y / 2)
+
+        Dim controlResult = CopyDropDownItem(cboDefaultKey, btnRemove, gHighestNo.ToString, lastControl.TabStop + 1, lastControl.TabStop + 2, cboDefaultKey.Location.X, newY)
+
+        controlResult.DisplayMember = "KeyName"
+        controlResult.ValueMember = "KeyCode"
+        controlResult.DataSource = New List(Of KeyboardClass)(keyList)
+
+        controlResult.Parent = gBoxKeys
+    End Sub
+
+    Private Sub btnDynamicRemove(sender As Object, e As EventArgs)
+
+        If Not IsNothing(sender.Tag) Then
+            Dim tagNo As String = sender.Tag.ToString.Replace(conRemoveTag, "")
+
+            Dim myDropDown = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) {conComboTag + tagNo}.Contains(t.Tag?.ToString)).FirstOrDefault
+
+            Dim myButton = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) {conRemoveTag + tagNo}.Contains(t.Tag?.ToString)).FirstOrDefault
+
+            gBoxKeys.Controls.Remove(myDropDown)
+            gBoxKeys.Controls.Remove(myButton)
+
+        End If
+
+    End Sub
+
     Private Sub LoadControlData()
         picBoxButton.Image = gImageData
         Dim keyList As List(Of KeyboardClass) = GetKeyboardKeys()
@@ -41,17 +77,24 @@
         If strKeys.Count > 0 Then
             cboDefaultKey.SelectedValue = strKeys(0)
             Dim newY As Integer = cboDefaultKey.Location.Y
+            Dim tabStop As Integer = 1
+            Dim tabStop2 As Integer = 2
+
             For i As Integer = 1 To strKeys.Count - 1 Step 1
                 newY += cboDefaultKey.Size.Height + 5
-                Dim controlResult = CopyDropDownItem(cboDefaultKey, "key-" + i.ToString, cboDefaultKey.Location.X, cboDefaultKey.Location.X, newY)
+
+                Dim controlResult = CopyDropDownItem(cboDefaultKey, btnRemove, i.ToString, tabStop, tabStop2, cboDefaultKey.Location.X, newY)
 
                 controlResult.DisplayMember = "KeyName"
                 controlResult.ValueMember = "KeyCode"
                 controlResult.DataSource = New List(Of KeyboardClass)(keyList)
 
-                controlResult.Parent = panKeys
+                controlResult.Parent = gBoxKeys
 
                 controlResult.SelectedValue = strKeys(i)
+
+                tabStop += 2
+                tabStop2 += 2
             Next
 
         End If
@@ -60,24 +103,36 @@
 
     End Sub
 
-    Private Function CopyDropDownItem(originalControl As ComboBox, strTag As String, tabStop As Integer, x As Integer, y As Integer) As ComboBox
+    Private Function CopyDropDownItem(originalControl As ComboBox, originalRemoveButton As Button, strTag As String, tabStop As Integer, tabStop2 As Integer, x As Integer, y As Integer) As ComboBox
         Dim finalControl = New ComboBox()
 
-        ''finalControl.Items = originalControl.Items
-
-        'Dim keyList As List(Of KeyboardClass) = GetKeyboardKeys()
-        'finalControl.DisplayMember = "KeyName"
-        'finalControl.ValueMember = "KeyCode"
-        'finalControl.DataSource = New List(Of KeyboardClass)(keyList)
         finalControl.Font = originalControl.Font
 
         finalControl.Size = originalControl.Size
-        finalControl.Tag = strTag
+        finalControl.Tag = conComboTag + strTag
         finalControl.TabStop = tabStop
         finalControl.DropDownStyle = originalControl.DropDownStyle
 
         finalControl.Location = New Point(x, y)
+        finalControl.Parent = originalControl.Parent
 
+        finalControl.Name = "cboKey_" + strTag
+
+        Dim finalRemoveButton = New Button()
+        finalRemoveButton.Visible = True
+        finalRemoveButton.Text = originalRemoveButton.Text
+        finalRemoveButton.Size = originalRemoveButton.Size
+        finalRemoveButton.Tag = conRemoveTag + strTag
+        finalRemoveButton.TabStop = tabStop2
+        finalRemoveButton.Location = New Point(x + 5 + finalControl.Size.Width, y) '
+        finalRemoveButton.Parent = originalRemoveButton.Parent
+
+        finalRemoveButton.Name = "btnRemove_" + strTag
+
+        gLastTabStop = tabStop2
+        gHighestNo += 1
+
+        AddHandler finalRemoveButton.Click, AddressOf btnDynamicRemove
         Return finalControl
     End Function
 
@@ -242,6 +297,7 @@
 
         Return result
     End Function
+
 
 
 
