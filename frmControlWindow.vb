@@ -10,8 +10,10 @@
     Private Const conDlbQuote As String = Chr(34)
     Private Const conRemoveTag As String = "btn-remove-"
     Private Const conComboTag As String = "key-"
-    Private gHighestNo As Integer = 0
-    Private gLastTabStop As Integer = 0
+    Private gHighestNo As Integer = 1
+    Private gLastTabStop As Integer = 1
+
+    '' On removing a control, figure out how to move the other controls dynamically
 
     Private Sub frmControlWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadControlData()
@@ -40,6 +42,7 @@
         Dim lastControl As Control = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) t.GetType = GetType(ComboBox)).LastOrDefault
         Dim newY As Integer = (lastControl.Location.Y + lastControl.Size.Height) + 5 ' + (lastControl.Location.Y / 2)
 
+        'gHighestNo = +1
         Dim controlResult = CopyDropDownItem(cboDefaultKey, btnRemove, gHighestNo.ToString, lastControl.TabStop + 1, lastControl.TabStop + 2, cboDefaultKey.Location.X, newY)
 
         controlResult.DisplayMember = "KeyName"
@@ -61,8 +64,31 @@
             gBoxKeys.Controls.Remove(myDropDown)
             gBoxKeys.Controls.Remove(myButton)
 
+            OrganizeControls()
         End If
 
+    End Sub
+
+    Private Sub OrganizeControls()
+
+        Dim allControls = gBoxKeys.Controls.Cast(Of Control)().Where(Function(t) Not IsNothing(t.Tag)).ToList
+
+        Dim myDropDowns1 = allControls.Cast(Of Control)().Where(Function(t) conComboTag.StartsWith(t.Tag?.ToString)).ToList
+
+        Dim myDropDowns = allControls.Cast(Of Control)().Where(Function(t) t.Tag?.ToString.StartsWith(conComboTag) AndAlso Not cboDefaultKey.Tag.ToString.Equals(t.Tag?.ToString)).ToList
+
+        Dim myButtons = allControls.Cast(Of Control)().Where(Function(t) t.Tag?.ToString.StartsWith(conRemoveTag) AndAlso Not btnRemove.Tag.ToString.Equals(t.Tag?.ToString)).ToList
+
+        Dim startingPoint As Integer = cboDefaultKey.Location.Y
+        ''+= cboDefaultKey.Size.Height + 5
+        Dim newY As Integer = cboDefaultKey.Size.Height + 5
+
+        For i As Integer = 0 To myDropDowns.Count - 1 Step 1
+            newY += cboDefaultKey.Size.Height + 5
+            myDropDowns(i).Location = New Point(myDropDowns(i).Location.X, newY) '
+
+            myButtons(i).Location = New Point(myButtons(i).Location.X, newY) '
+        Next
     End Sub
 
     Private Sub LoadControlData()
