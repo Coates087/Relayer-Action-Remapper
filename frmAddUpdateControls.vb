@@ -400,24 +400,68 @@ Public Class frmAddUpdateControls
             For Each aKey In keyActions
                 Dim aKeyList As New List(Of String)
                 If aKey = "Ctrl" Then
-                    aKeyList.Add("Control")
-                    myControls.Ctrl.KeyCode = aKeyList
+                    root.Item(aKey).Item("KeyCode").AsArray().Clear()
+                    root.Item(aKey).Item("KeyCode").AsArray().Add("Control")
                 Else
-                    'For i = 0 To root.Count - 1 Step 1
-                    '    root.
-                    'Next
-                    aKeyList.Add("None")
-                    root.Item(aKey).Item("KeyCode").AsArray().Clear() '' = aKeyList
-                    root.Item(aKey).Item("KeyCode").AsArray().Add("None")
-                    ''Dim em = DirectCast(myControls, Object)(aKey)
-                    'If Not IsNothing(DirectCast(myControls, Object)?.aKey?.ButtonName) Then
-                    '    DirectCast(myControls, Object).aKey.ButtonName = "None"
-                    'End If
+                    root.Item(aKey).Item("KeyCode").AsArray().Clear()
+                    Dim result = GetRightKey(root.Item(aKey).Item("ButtonName"))
+                    root.Item(aKey).Item("KeyCode").AsArray().Add(result)
                 End If
             Next
-            Dim em = root.ToString
+            myControls = JsonSerializer.Deserialize(Of GameControls)(root.ToString)
         End If
         Return myControls
+    End Function
+
+    Private Function GetRightKey(buttonName As String) As String
+        Dim keyName As String = String.Empty
+
+        Select Case buttonName
+            Case "joystick_button_0"
+                keyName = "Return"
+            Case "joystick_button_1"
+                keyName = "Backspace"
+            Case "joystick_button_3"
+                keyName = "Shift"
+            Case "joystick_button_2"
+                keyName = "Tab"
+            Case "Axis_7_P"
+                keyName = "W"
+            Case "Axis_7_N"
+                keyName = "S"
+            Case "Axis_6_N"
+                keyName = "A"
+            Case "Axis_6_P"
+                keyName = "D"
+            Case "joystick_button_4"
+                keyName = "Q"
+            Case "joystick_button_5"
+                keyName = "E"
+            Case "joystick_button_8"
+                keyName = "F"
+            Case "joystick_button_9"
+                keyName = "R"
+            Case "joystick_button_6"
+                keyName = "V"
+            Case "joystick_button_7"
+                keyName = "Escape"
+
+            Case "Axis_5_N"
+                keyName = "UpArrow"
+            Case "Axis_5_P"
+                keyName = "DownArrow"
+            Case "Axis_4_N"
+                keyName = "LeftArrow"
+            Case "Axis_4_P"
+                keyName = "RightArrow"
+
+            Case "Axis_9_P"
+                keyName = ""
+            Case "Axis_10_P"
+                keyName = ""
+        End Select
+
+        Return keyName
     End Function
 
     Private Function GetKeyActionNameList() As List(Of String)
