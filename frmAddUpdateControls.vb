@@ -2,6 +2,7 @@
 Imports System.Text.Json
 Imports System.Reflection
 Imports RelayerJsonActionMapper.ButtonItems
+Imports System.Text.Json.Nodes
 
 '' Add toggle for when the user only wants to set keyboard and mouse, gamepad or both
 
@@ -15,6 +16,7 @@ Public Class frmAddUpdateControls
 
     Public imageStreamList As New List(Of ImageName)
     Public gamepadOnlyFirstTime As Boolean = True
+    Public gamepadOnly As Boolean = False
 
     Private Const conDlbQuote As String = Chr(34)
     Private Const gamepadOnlyWarningText As String = "You have selected "“Edit for Controller Only”". This mode is intended for the Controller Button Prompts mod on Nexus Mods and Game Banana. This mode will override all changes made for keyboard and mouse controls. Do you wish to use this mode?"
@@ -67,7 +69,9 @@ Public Class frmAddUpdateControls
                 ForceViewGamePadOnly()
                 DisableViewControls()
             End If
+            gamepadOnly = True
         Else
+            gamepadOnly = False
             EnableViewControls()
         End If
     End Sub
@@ -376,10 +380,76 @@ Public Class frmAddUpdateControls
 
         saveControls.UpArrow.ButtonName = ReplaceIfNothing(cboRsUp.SelectedValue, "")
         saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsDown.SelectedValue, "")
-        saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsLeft.SelectedValue, "")
-        saveControls.DownArrow.ButtonName = ReplaceIfNothing(cboRsRight.SelectedValue, "")
+        saveControls.LeftArrow.ButtonName = ReplaceIfNothing(cboRsLeft.SelectedValue, "")
+        saveControls.RightArrow.ButtonName = ReplaceIfNothing(cboRsRight.SelectedValue, "")
         saveControls.R.ButtonName = ReplaceIfNothing(cboRsButton.SelectedValue, "")
+        saveControls = SetControlsForGamepadOnly(saveControls)
         Return saveControls
+    End Function
+
+    Private Function SetControlsForGamepadOnly(saveControls As GameControls) As GameControls
+        Dim myControls As New GameControls
+        myControls = saveControls
+        If gamepadOnly Then
+            Dim myOptions As New JsonSerializerOptions
+            myOptions.WriteIndented = True
+            myOptions.Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            Dim root = JsonNode.Parse(JsonSerializer.Serialize(myControls, myOptions)).AsObject()
+            Dim keyActions As List(Of String) = GetKeyActionNameList()
+
+            For Each aKey In keyActions
+                Dim aKeyList As New List(Of String)
+                If aKey = "Ctrl" Then
+                    aKeyList.Add("Control")
+                    myControls.Ctrl.KeyCode = aKeyList
+                Else
+                    'For i = 0 To root.Count - 1 Step 1
+                    '    root.
+                    'Next
+                    aKeyList.Add("None")
+                    root.Item(aKey).Item("KeyCode").AsArray().Clear() '' = aKeyList
+                    root.Item(aKey).Item("KeyCode").AsArray().Add("None")
+                    ''Dim em = DirectCast(myControls, Object)(aKey)
+                    'If Not IsNothing(DirectCast(myControls, Object)?.aKey?.ButtonName) Then
+                    '    DirectCast(myControls, Object).aKey.ButtonName = "None"
+                    'End If
+                End If
+            Next
+            Dim em = root.ToString
+        End If
+        Return myControls
+    End Function
+
+    Private Function GetKeyActionNameList() As List(Of String)
+        Dim keyActions As New List(Of String)
+
+        keyActions.Add("Enter")
+        keyActions.Add("Backspace")
+        keyActions.Add("Shift")
+        keyActions.Add("Tab")
+        keyActions.Add("W")
+        keyActions.Add("S")
+        keyActions.Add("A")
+        keyActions.Add("D")
+        keyActions.Add("Q")
+        keyActions.Add("E")
+        keyActions.Add("F")
+        keyActions.Add("R")
+        keyActions.Add("V")
+        keyActions.Add("Escape")
+        keyActions.Add("UpArrow")
+        keyActions.Add("DownArrow")
+        keyActions.Add("LeftArrow")
+        keyActions.Add("RightArrow")
+        keyActions.Add("WheelUp")
+        keyActions.Add("WheelDown")
+        keyActions.Add("Ctrl")
+        'keyActions.Add("CtrlW")
+        'keyActions.Add("CtrlS")
+        'keyActions.Add("CtrlA")
+        'keyActions.Add("CtrlD")
+
+        Return keyActions
     End Function
 
     Public Function ReplaceIfNothing(ByVal objValue As Object, ByVal altValue As Object) As Object
