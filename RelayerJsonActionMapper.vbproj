@@ -130,6 +130,12 @@
     <Compile Include="frmOpenFile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmControllerDialog.Designer.vb">
+      <DependentUpon>frmControllerDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmControllerDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPreviewConfigFile.Designer.vb">
       <DependentUpon>frmPreviewConfigFile.vb</DependentUpon>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpenFile.resx">
       <DependentUpon>frmOpenFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControllerDialog.resx">
+      <DependentUpon>frmControllerDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPreviewConfigFile.resx">
       <DependentUpon>frmPreviewConfigFile.vb</DependentUpon>

@@ -5,7 +5,7 @@ Imports RelayerJsonActionMapper.ButtonItems
 Imports System.Text.Json.Nodes
 
 '' Add toggle for when the user only wants to set keyboard and mouse, gamepad or both
-
+'' Add form for warning use about gamepad only mode. Using built-in message dialog box isn't that great
 Public Class frmAddUpdateControls
     Public assemblyName As String = String.Empty
     Public gStrOpenFileName As String = String.Empty
@@ -57,8 +57,12 @@ Public Class frmAddUpdateControls
 
         If rbnController.Checked Then
             If gamepadOnlyFirstTime Then
-                Dim msgResult = MessageBox.Show(gamepadOnlyWarningText, "Information", MessageBoxButtons.YesNo)
-                If msgResult = DialogResult.Yes Then
+
+                Dim myWarning As New frmControllerDialog
+
+                Dim myResult = myWarning.ShowDialog()
+
+                If myResult = vbYes Then
                     gamepadOnlyFirstTime = False
                     ForceViewGamePadOnly()
                     DisableViewControls()
