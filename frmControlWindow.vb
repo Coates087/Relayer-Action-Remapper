@@ -4,6 +4,7 @@
     Public gImageData As Bitmap = Nothing
     Public gControls As GameControls = Nothing
     Public gButton As GenericKey = Nothing
+    Public gKeyList As GenericKeyCode = Nothing
 
     Public gStrKeys As New List(Of String)
     Public gStrAllKeys As String = String.Empty
@@ -98,7 +99,9 @@
         cboDefaultKey.ValueMember = "KeyCode"
         cboDefaultKey.DataSource = New List(Of KeyboardClass)(keyList)
 
-        Dim strKeys As List(Of String) = gButton.KeyCode
+        Dim obj = IIf(IsNothing(gButton), gKeyList, gButton)
+
+        Dim strKeys As List(Of String) = obj.KeyCode
 
         If strKeys.Count > 0 Then
             cboDefaultKey.SelectedValue = strKeys(0)

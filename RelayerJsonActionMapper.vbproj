@@ -217,6 +217,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ResourceObjects\buttonFiles.txt" />
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_L_Sticks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceObjects\XboxButtons\Xbox_R_Sticks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResourceObjects\XboxButtons\Icon_BtnXbox_dpad_down.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

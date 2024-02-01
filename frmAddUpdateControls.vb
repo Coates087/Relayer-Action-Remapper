@@ -99,10 +99,93 @@ Public Class frmAddUpdateControls
             HideXboxControls()
         End If
     End Sub
+#Region "Keyboard Mapping"
 
     Private Sub btnKeyStart_Click(sender As Object, e As EventArgs) Handles btnKeyStart.Click
         ShowKeyboardDialog("Xbox_start_button.png", gControls.Escape)
     End Sub
+
+    Private Sub btnKeyBack_Click(sender As Object, e As EventArgs) Handles btnKeyBack.Click
+        ShowKeyboardDialog("Xbox_back_button.png", gControls.V)
+    End Sub
+
+    Private Sub btnKeyA_Click(sender As Object, e As EventArgs) Handles btnKeyA.Click
+        ShowKeyboardDialog("Xbox_A_button.png", gControls.Enter)
+    End Sub
+
+    Private Sub btnKeyB_Click(sender As Object, e As EventArgs) Handles btnKeyB.Click
+        ShowKeyboardDialog("Xbox_B_button.png", gControls.Backspace)
+    End Sub
+
+    Private Sub btnKeyX_Click(sender As Object, e As EventArgs) Handles btnKeyX.Click
+        ShowKeyboardDialog("Xbox_X_button.png", gControls.Tab)
+    End Sub
+
+    Private Sub btnKeyY_Click(sender As Object, e As EventArgs) Handles btnKeyY.Click
+        ShowKeyboardDialog("Xbox_Y_button.png", gControls.Shift)
+    End Sub
+
+    Private Sub btnKeyLB_Click(sender As Object, e As EventArgs) Handles btnKeyLB.Click
+        ShowKeyboardDialog("Icon_BtnXbox_LB.png", gControls.Q)
+    End Sub
+
+    Private Sub btnKeyRB_Click(sender As Object, e As EventArgs) Handles btnKeyRB.Click
+        ShowKeyboardDialog("Icon_BtnXbox_RB.png", gControls.R)
+    End Sub
+
+    Private Sub btnKeyLT_Click(sender As Object, e As EventArgs) Handles btnKeyLT.Click
+        ShowKeyboardDialog("Icon_BtnXbox_LT.png", gControls.WheelUp)
+    End Sub
+
+    Private Sub btnKeyRT_Click(sender As Object, e As EventArgs) Handles btnKeyRT.Click
+        ShowKeyboardDialog("Icon_BtnXbox_RT.png", gControls.WheelDown)
+    End Sub
+
+    Private Sub btnKey_dUp_Click(sender As Object, e As EventArgs) Handles btnKey_dUp.Click
+        ShowKeyboardDialog("Icon_BtnXbox_dpad_up.png", gControls.W)
+    End Sub
+
+    Private Sub btnKey_dRight_Click(sender As Object, e As EventArgs) Handles btnKey_dRight.Click
+        ShowKeyboardDialog("Icon_BtnXbox_dpad_right.png", gControls.D)
+    End Sub
+
+    Private Sub btnKey_dLeft_Click(sender As Object, e As EventArgs) Handles btnKey_dLeft.Click
+        ShowKeyboardDialog("Icon_BtnXbox_dpad_left.png", gControls.A)
+    End Sub
+
+    Private Sub btnKey_dDown_Click(sender As Object, e As EventArgs) Handles btnKey_dDown.Click
+        ShowKeyboardDialog("Icon_BtnXbox_dpad_down.png", gControls.S)
+    End Sub
+
+    Private Sub btnKeyLsUp_Click(sender As Object, e As EventArgs) Handles btnKeyLsUp.Click
+        ShowKeyboardDialog("Xbox_L_Sticks.png", gControls.Ctrl)
+    End Sub
+
+    Private Sub btnKeyLsButton_Click(sender As Object, e As EventArgs) Handles btnKeyLsButton.Click
+        ShowKeyboardDialog("Xbox_L_StickClick.png", gControls.F)
+    End Sub
+
+    Private Sub btnKeyRsUp_Click(sender As Object, e As EventArgs) Handles btnKeyRsUp.Click
+        ShowKeyboardDialog("Xbox_R_Sticks_up.png", gControls.UpArrow)
+    End Sub
+
+    Private Sub btnKeyRsDown_Click(sender As Object, e As EventArgs) Handles btnKeyRsDown.Click
+        ShowKeyboardDialog("Xbox_R_Sticks_down.png", gControls.DownArrow)
+    End Sub
+
+    Private Sub btnKeyRsLeft_Click(sender As Object, e As EventArgs) Handles btnKeyRsLeft.Click
+        ShowKeyboardDialog("Xbox_R_Sticks_left.png", gControls.LeftArrow)
+    End Sub
+
+    Private Sub btnKeyRsRight_Click(sender As Object, e As EventArgs) Handles btnKeyRsRight.Click
+        ShowKeyboardDialog("Xbox_R_Sticks_right.png", gControls.RightArrow)
+    End Sub
+
+    Private Sub btnKeyRsButton_Click(sender As Object, e As EventArgs) Handles btnKeyRsButton.Click
+        ShowKeyboardDialog("Xbox_R_StickClick.png", gControls.R)
+    End Sub
+
+#End Region
 
     Private Sub ShowKeyboardDialog(xboxButtonName As String, aButton As GenericKey)
         Dim selectedImage = imageStreamList.Where(Function(e) e.FileName = xboxButtonName).FirstOrDefault()
@@ -117,6 +200,27 @@ Public Class frmAddUpdateControls
 
             If dialogResults = DialogResult.OK Then
                 aButton.KeyCode = myControlForm.gStrKeys
+                MapValues()
+            End If
+
+            SetToolTips()
+        End If
+    End Sub
+
+    Private Sub ShowKeyboardDialog(xboxButtonName As String, aKeyList As GenericKeyCode)
+        Dim selectedImage = imageStreamList.Where(Function(e) e.FileName = xboxButtonName).FirstOrDefault()
+
+        If Not IsNothing(selectedImage) Then
+            Dim myControlForm As New frmControlWindow
+            myControlForm.gImageData = selectedImage.ImageData
+            myControlForm.gControls = gControls
+            myControlForm.gKeyList = aKeyList
+            myControlForm.gButton = Nothing
+
+            Dim dialogResults = myControlForm.ShowDialog()
+
+            If dialogResults = DialogResult.OK Then
+                aKeyList.KeyCode = myControlForm.gStrKeys
                 MapValues()
             End If
 
@@ -334,6 +438,34 @@ Public Class frmAddUpdateControls
             cboRsButton.SelectedValue = gControls.R.ButtonName
 
             lblStart.Text = String.Join(", ", gControls.Escape.KeyCode)
+            lblBack.Text = String.Join(", ", gControls.V.KeyCode)
+            lblA.Text = String.Join(", ", gControls.Enter.KeyCode)
+            lblB.Text = String.Join(", ", gControls.Backspace.KeyCode)
+            lblX.Text = String.Join(", ", gControls.Tab.KeyCode)
+            lblY.Text = String.Join(", ", gControls.Shift.KeyCode)
+
+            lblLB.Text = String.Join(", ", gControls.Q.KeyCode)
+            lblRB.Text = String.Join(", ", gControls.E.KeyCode)
+            lblLT.Text = String.Join(", ", gControls.WheelUp.KeyCode)
+            lblRT.Text = String.Join(", ", gControls.WheelDown.KeyCode)
+
+            lbl_dUp.Text = String.Join(", ", gControls.W.KeyCode)
+            lbl_dDown.Text = String.Join(", ", gControls.S.KeyCode)
+            lbl_dLeft.Text = String.Join(", ", gControls.A.KeyCode)
+            lbl_dRight.Text = String.Join(", ", gControls.D.KeyCode)
+
+            lbl_dUp.Text = String.Join(", ", gControls.W.KeyCode)
+            lbl_dDown.Text = String.Join(", ", gControls.S.KeyCode)
+            lbl_dLeft.Text = String.Join(", ", gControls.A.KeyCode)
+            lbl_dRight.Text = String.Join(", ", gControls.D.KeyCode)
+            lblLsButton.Text = String.Join(", ", gControls.F.KeyCode)
+
+
+            lblRsUp.Text = String.Join(", ", gControls.UpArrow.KeyCode)
+            lblRsDown.Text = String.Join(", ", gControls.DownArrow.KeyCode)
+            lblRsLeft.Text = String.Join(", ", gControls.LeftArrow.KeyCode)
+            lblRsRight.Text = String.Join(", ", gControls.RightArrow.KeyCode)
+            lblRsButton.Text = String.Join(", ", gControls.R.KeyCode)
         End If
     End Sub
 
@@ -507,4 +639,5 @@ Public Class frmAddUpdateControls
         End If
         Return result
     End Function
+
 End Class
