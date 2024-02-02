@@ -144,7 +144,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnDefaultFile)
         Me.Controls.Add(Me.btnLoadFile)
         Me.Name = "frmMain"
-        Me.Text = "Relayer JSON Button Mapper"
+        Me.Text = "Relayer Button Mapper"
         Me.ResumeLayout(False)
 
     End Sub

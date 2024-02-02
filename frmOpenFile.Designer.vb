@@ -32,7 +32,7 @@ Partial Class frmOpenFile
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 66)
+        Me.Label1.Location = New System.Drawing.Point(18, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(51, 13)
         Me.Label1.TabIndex = 5
@@ -41,7 +41,7 @@ Partial Class frmOpenFile
         'txtFileName
         '
         Me.txtFileName.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtFileName.Location = New System.Drawing.Point(34, 84)
+        Me.txtFileName.Location = New System.Drawing.Point(18, 51)
         Me.txtFileName.Name = "txtFileName"
         Me.txtFileName.ReadOnly = True
         Me.txtFileName.Size = New System.Drawing.Size(373, 20)
@@ -49,7 +49,7 @@ Partial Class frmOpenFile
         '
         'btnLoadFile
         '
-        Me.btnLoadFile.Location = New System.Drawing.Point(422, 84)
+        Me.btnLoadFile.Location = New System.Drawing.Point(406, 51)
         Me.btnLoadFile.Name = "btnLoadFile"
         Me.btnLoadFile.Size = New System.Drawing.Size(114, 20)
         Me.btnLoadFile.TabIndex = 3
@@ -59,7 +59,7 @@ Partial Class frmOpenFile
         'btnCancel
         '
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(422, 147)
+        Me.btnCancel.Location = New System.Drawing.Point(204, 114)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(114, 20)
         Me.btnCancel.TabIndex = 6
@@ -69,7 +69,7 @@ Partial Class frmOpenFile
         'btnOk
         '
         Me.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnOk.Location = New System.Drawing.Point(51, 147)
+        Me.btnOk.Location = New System.Drawing.Point(35, 114)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(114, 20)
         Me.btnOk.TabIndex = 7
@@ -80,7 +80,7 @@ Partial Class frmOpenFile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 230)
+        Me.ClientSize = New System.Drawing.Size(534, 176)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.btnCancel)
@@ -88,7 +88,7 @@ Partial Class frmOpenFile
         Me.Controls.Add(Me.txtFileName)
         Me.Controls.Add(Me.btnLoadFile)
         Me.Name = "frmOpenFile"
-        Me.Text = "frmOpenFile"
+        Me.Text = "Open File"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

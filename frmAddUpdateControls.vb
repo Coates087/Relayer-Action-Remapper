@@ -67,6 +67,7 @@ Public Class frmAddUpdateControls
                     ForceViewGamePadOnly()
                     DisableViewControls()
                 Else
+                    rbnEditAll.Checked = True
                     EnableViewControls()
                 End If
             Else
@@ -157,7 +158,7 @@ Public Class frmAddUpdateControls
         ShowKeyboardDialog("Icon_BtnXbox_dpad_down.png", gControls.S)
     End Sub
 
-    Private Sub btnKeyLsUp_Click(sender As Object, e As EventArgs) Handles btnKeyLsUp.Click
+    Private Sub btnKeyLsMod_Click(sender As Object, e As EventArgs) Handles btnKeyLsMod.Click
         ShowKeyboardDialog("Xbox_L_Sticks.png", gControls.Ctrl)
     End Sub
 
@@ -252,6 +253,7 @@ Public Class frmAddUpdateControls
 
         Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"KeyLabel", "KeyButton"}.Contains(e.Tag?.ToString)).ToList
         HideControls(myControls)
+        'picBoxLsMod.Visible = False
     End Sub
 
     Private Sub ShowXboxControls()
@@ -264,6 +266,7 @@ Public Class frmAddUpdateControls
 
         Dim myControls As List(Of Control) = gboxFields.Controls.Cast(Of Control)().Where(Function(e) {"KeyLabel", "KeyButton"}.Contains(e.Tag?.ToString)).ToList
         ShowControls(myControls)
+        'picBoxLsMod.Visible = True
     End Sub
 
     Private Sub HideControls(myControls As IEnumerable(Of Control))
@@ -303,6 +306,7 @@ Public Class frmAddUpdateControls
         "Xbox_back_button.png",
         "Xbox_B_button.png",
         "Xbox_L_StickClick.png",
+        "Xbox_L_Sticks.png",
         "Xbox_L_Sticks_down.png",
         "Xbox_L_Sticks_left.png",
         "Xbox_L_Sticks_right.png",
@@ -361,7 +365,9 @@ Public Class frmAddUpdateControls
                     picBox_dLeft.Image = imageStream.ImageData
                 ElseIf imageStream.FileName = "Icon_BtnXbox_dpad_right.png" Then
                     picBox_dRight.Image = imageStream.ImageData
-
+                    ''left stick
+                ElseIf imageStream.FileName = "Xbox_L_Sticks.png" Then
+                    picBoxLsMod.Image = imageStream.ImageData
                 ElseIf imageStream.FileName = "Xbox_L_Sticks_up.png" Then
                     picBoxLsUp.Image = imageStream.ImageData
                 ElseIf imageStream.FileName = "Xbox_L_Sticks_down.png" Then
@@ -373,7 +379,7 @@ Public Class frmAddUpdateControls
                 ElseIf imageStream.FileName = "Xbox_L_StickClick.png" Then
                     picBoxLsButton.Image = imageStream.ImageData
 
-
+                    ''right stick
                 ElseIf imageStream.FileName = "Xbox_R_Sticks_up.png" Then
                     picBoxRsUp.Image = imageStream.ImageData
                 ElseIf imageStream.FileName = "Xbox_R_Sticks_down.png" Then
@@ -458,6 +464,15 @@ Public Class frmAddUpdateControls
             lbl_dDown.Text = String.Join(", ", gControls.S.KeyCode)
             lbl_dLeft.Text = String.Join(", ", gControls.A.KeyCode)
             lbl_dRight.Text = String.Join(", ", gControls.D.KeyCode)
+
+
+            lblLsMod.Text = String.Join(", ", gControls.Ctrl.KeyCode)
+
+            lblLsUp.Text = $"[{lblLsMod.Text}] + [{lbl_dUp.Text}]"
+            lblLsDown.Text = $"[{lblLsMod.Text}] + [{lbl_dDown.Text}]"
+            lblLsLeft.Text = $"[{lblLsMod.Text}] + [{lbl_dLeft.Text}]"
+            lblLsRight.Text = $"[{lblLsMod.Text}] + [{lbl_dRight.Text}]"
+
             lblLsButton.Text = String.Join(", ", gControls.F.KeyCode)
 
 

@@ -26,35 +26,39 @@ Partial Class frmAddUpdateControls
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lblFile = New System.Windows.Forms.Label()
         Me.gboxFields = New System.Windows.Forms.GroupBox()
+        Me.lblLsMod = New System.Windows.Forms.Label()
+        Me.btnKeyLsMod = New System.Windows.Forms.Button()
+        Me.picBoxLsMod = New System.Windows.Forms.PictureBox()
+        Me.lblLsUp = New System.Windows.Forms.Label()
+        Me.btnKeyLsUp = New System.Windows.Forms.Button()
+        Me.lbl_dRight = New System.Windows.Forms.Label()
+        Me.btnKey_dRight = New System.Windows.Forms.Button()
+        Me.lbl_dLeft = New System.Windows.Forms.Label()
+        Me.btnKey_dLeft = New System.Windows.Forms.Button()
+        Me.lbl_dDown = New System.Windows.Forms.Label()
+        Me.btnKey_dDown = New System.Windows.Forms.Button()
+        Me.lbl_dUp = New System.Windows.Forms.Label()
+        Me.btnKey_dUp = New System.Windows.Forms.Button()
+        Me.lblRT = New System.Windows.Forms.Label()
+        Me.btnKeyRT = New System.Windows.Forms.Button()
+        Me.lblLT = New System.Windows.Forms.Label()
+        Me.btnKeyLT = New System.Windows.Forms.Button()
+        Me.lblRB = New System.Windows.Forms.Label()
+        Me.btnKeyRB = New System.Windows.Forms.Button()
+        Me.lblLB = New System.Windows.Forms.Label()
+        Me.btnKeyLB = New System.Windows.Forms.Button()
+        Me.lblY = New System.Windows.Forms.Label()
+        Me.btnKeyY = New System.Windows.Forms.Button()
+        Me.lblX = New System.Windows.Forms.Label()
+        Me.btnKeyX = New System.Windows.Forms.Button()
+        Me.lblB = New System.Windows.Forms.Label()
+        Me.btnKeyB = New System.Windows.Forms.Button()
+        Me.lblA = New System.Windows.Forms.Label()
+        Me.btnKeyA = New System.Windows.Forms.Button()
+        Me.lblBack = New System.Windows.Forms.Label()
+        Me.btnKeyBack = New System.Windows.Forms.Button()
         Me.lblStart = New System.Windows.Forms.Label()
-        Me.Label150 = New System.Windows.Forms.Label()
         Me.btnKeyStart = New System.Windows.Forms.Button()
-        Me.picBoxRsButton = New System.Windows.Forms.PictureBox()
-        Me.picBoxRsRight = New System.Windows.Forms.PictureBox()
-        Me.picBoxRsLeft = New System.Windows.Forms.PictureBox()
-        Me.picBoxRsDown = New System.Windows.Forms.PictureBox()
-        Me.cboRsButton = New System.Windows.Forms.ComboBox()
-        Me.Label160 = New System.Windows.Forms.Label()
-        Me.cboRsRight = New System.Windows.Forms.ComboBox()
-        Me.Label170 = New System.Windows.Forms.Label()
-        Me.cboRsLeft = New System.Windows.Forms.ComboBox()
-        Me.Label180 = New System.Windows.Forms.Label()
-        Me.cboRsDown = New System.Windows.Forms.ComboBox()
-        Me.picBoxRsUp = New System.Windows.Forms.PictureBox()
-        Me.cboRsUp = New System.Windows.Forms.ComboBox()
-        Me.Label190 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.picBoxLsButton = New System.Windows.Forms.PictureBox()
-        Me.picBoxLsRight = New System.Windows.Forms.PictureBox()
-        Me.picBoxLsLeft = New System.Windows.Forms.PictureBox()
-        Me.picBoxLsDown = New System.Windows.Forms.PictureBox()
-        Me.cboLsButton = New System.Windows.Forms.ComboBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.cboLsRight = New System.Windows.Forms.ComboBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.cboLsLeft = New System.Windows.Forms.ComboBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.cboLsDown = New System.Windows.Forms.ComboBox()
         Me.picBoxLsUp = New System.Windows.Forms.PictureBox()
         Me.cboLsUp = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -100,6 +104,51 @@ Partial Class frmAddUpdateControls
         Me.picBoxStart = New System.Windows.Forms.PictureBox()
         Me.cboStart = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblRsButton = New System.Windows.Forms.Label()
+        Me.btnKeyRsButton = New System.Windows.Forms.Button()
+        Me.lblRsRight = New System.Windows.Forms.Label()
+        Me.btnKeyRsRight = New System.Windows.Forms.Button()
+        Me.lblRsLeft = New System.Windows.Forms.Label()
+        Me.btnKeyRsLeft = New System.Windows.Forms.Button()
+        Me.lblRsDown = New System.Windows.Forms.Label()
+        Me.btnKeyRsDown = New System.Windows.Forms.Button()
+        Me.lblRsUp = New System.Windows.Forms.Label()
+        Me.btnKeyRsUp = New System.Windows.Forms.Button()
+        Me.lblLsButton = New System.Windows.Forms.Label()
+        Me.btnKeyLsButton = New System.Windows.Forms.Button()
+        Me.lblLsRight = New System.Windows.Forms.Label()
+        Me.btnKeyLsRight = New System.Windows.Forms.Button()
+        Me.lblLsLeft = New System.Windows.Forms.Label()
+        Me.btnKeyLsLeft = New System.Windows.Forms.Button()
+        Me.lblLsDown = New System.Windows.Forms.Label()
+        Me.btnKeyLsDown = New System.Windows.Forms.Button()
+        Me.Label150 = New System.Windows.Forms.Label()
+        Me.picBoxRsButton = New System.Windows.Forms.PictureBox()
+        Me.picBoxRsRight = New System.Windows.Forms.PictureBox()
+        Me.picBoxRsLeft = New System.Windows.Forms.PictureBox()
+        Me.picBoxRsDown = New System.Windows.Forms.PictureBox()
+        Me.cboRsButton = New System.Windows.Forms.ComboBox()
+        Me.Label160 = New System.Windows.Forms.Label()
+        Me.cboRsRight = New System.Windows.Forms.ComboBox()
+        Me.Label170 = New System.Windows.Forms.Label()
+        Me.cboRsLeft = New System.Windows.Forms.ComboBox()
+        Me.Label180 = New System.Windows.Forms.Label()
+        Me.cboRsDown = New System.Windows.Forms.ComboBox()
+        Me.picBoxRsUp = New System.Windows.Forms.PictureBox()
+        Me.cboRsUp = New System.Windows.Forms.ComboBox()
+        Me.Label190 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.picBoxLsButton = New System.Windows.Forms.PictureBox()
+        Me.picBoxLsRight = New System.Windows.Forms.PictureBox()
+        Me.picBoxLsLeft = New System.Windows.Forms.PictureBox()
+        Me.picBoxLsDown = New System.Windows.Forms.PictureBox()
+        Me.cboLsButton = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cboLsRight = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.cboLsLeft = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.cboLsDown = New System.Windows.Forms.ComboBox()
         Me.panItems = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.rbnViewGamePad = New System.Windows.Forms.RadioButton()
@@ -109,62 +158,9 @@ Partial Class frmAddUpdateControls
         Me.rbnController = New System.Windows.Forms.RadioButton()
         Me.rbnEditAll = New System.Windows.Forms.RadioButton()
         Me.tip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lblBack = New System.Windows.Forms.Label()
-        Me.btnKeyBack = New System.Windows.Forms.Button()
-        Me.lblA = New System.Windows.Forms.Label()
-        Me.btnKeyA = New System.Windows.Forms.Button()
-        Me.lblB = New System.Windows.Forms.Label()
-        Me.btnKeyB = New System.Windows.Forms.Button()
-        Me.lblX = New System.Windows.Forms.Label()
-        Me.btnKeyX = New System.Windows.Forms.Button()
-        Me.lblY = New System.Windows.Forms.Label()
-        Me.btnKeyY = New System.Windows.Forms.Button()
-        Me.lblLB = New System.Windows.Forms.Label()
-        Me.btnKeyLB = New System.Windows.Forms.Button()
-        Me.lblRB = New System.Windows.Forms.Label()
-        Me.btnKeyRB = New System.Windows.Forms.Button()
-        Me.lblLT = New System.Windows.Forms.Label()
-        Me.btnKeyLT = New System.Windows.Forms.Button()
-        Me.lblRT = New System.Windows.Forms.Label()
-        Me.btnKeyRT = New System.Windows.Forms.Button()
-        Me.lbl_dUp = New System.Windows.Forms.Label()
-        Me.btnKey_dUp = New System.Windows.Forms.Button()
-        Me.lbl_dDown = New System.Windows.Forms.Label()
-        Me.btnKey_dDown = New System.Windows.Forms.Button()
-        Me.lbl_dLeft = New System.Windows.Forms.Label()
-        Me.btnKey_dLeft = New System.Windows.Forms.Button()
-        Me.lbl_dRight = New System.Windows.Forms.Label()
-        Me.btnKey_dRight = New System.Windows.Forms.Button()
-        Me.lblLsUp = New System.Windows.Forms.Label()
-        Me.btnKeyLsUp = New System.Windows.Forms.Button()
-        Me.lblLsDown = New System.Windows.Forms.Label()
-        Me.btnKeyLsDown = New System.Windows.Forms.Button()
-        Me.lblLsLeft = New System.Windows.Forms.Label()
-        Me.btnKeyLsLeft = New System.Windows.Forms.Button()
-        Me.lblLsRight = New System.Windows.Forms.Label()
-        Me.btnKeyLsRight = New System.Windows.Forms.Button()
-        Me.lblLsButton = New System.Windows.Forms.Label()
-        Me.btnKeyLsButton = New System.Windows.Forms.Button()
-        Me.lblRsUp = New System.Windows.Forms.Label()
-        Me.btnKeyRsUp = New System.Windows.Forms.Button()
-        Me.lblRsDown = New System.Windows.Forms.Label()
-        Me.btnKeyRsDown = New System.Windows.Forms.Button()
-        Me.lblRsLeft = New System.Windows.Forms.Label()
-        Me.btnKeyRsLeft = New System.Windows.Forms.Button()
-        Me.lblRsRight = New System.Windows.Forms.Label()
-        Me.btnKeyRsRight = New System.Windows.Forms.Button()
-        Me.lblRsButton = New System.Windows.Forms.Label()
-        Me.btnKeyRsButton = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.gboxFields.SuspendLayout()
-        CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxRsLeft, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxRsDown, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxRsUp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxLsButton, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxLsRight, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxLsLeft, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBoxLsDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxLsMod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxLsUp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBox_dRight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBox_dLeft, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,6 +176,15 @@ Partial Class frmAddUpdateControls
         CType(Me.picBoxA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxRsLeft, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxRsDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxRsUp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxLsButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxLsRight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxLsLeft, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBoxLsDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panItems.SuspendLayout()
         Me.gboxViewControls.SuspendLayout()
         Me.gboxEditMode.SuspendLayout()
@@ -206,97 +211,100 @@ Partial Class frmAddUpdateControls
         '
         'gboxFields
         '
+        Me.gboxFields.Controls.Add(Me.lblLsMod)
         Me.gboxFields.Controls.Add(Me.lblRsButton)
+        Me.gboxFields.Controls.Add(Me.btnKeyLsMod)
+        Me.gboxFields.Controls.Add(Me.picBoxLsMod)
         Me.gboxFields.Controls.Add(Me.btnKeyRsButton)
-        Me.gboxFields.Controls.Add(Me.lblRsRight)
-        Me.gboxFields.Controls.Add(Me.btnKeyRsRight)
-        Me.gboxFields.Controls.Add(Me.lblRsLeft)
-        Me.gboxFields.Controls.Add(Me.btnKeyRsLeft)
-        Me.gboxFields.Controls.Add(Me.lblRsDown)
-        Me.gboxFields.Controls.Add(Me.btnKeyRsDown)
-        Me.gboxFields.Controls.Add(Me.lblRsUp)
-        Me.gboxFields.Controls.Add(Me.btnKeyRsUp)
-        Me.gboxFields.Controls.Add(Me.lblLsButton)
-        Me.gboxFields.Controls.Add(Me.btnKeyLsButton)
-        Me.gboxFields.Controls.Add(Me.lblLsRight)
-        Me.gboxFields.Controls.Add(Me.btnKeyLsRight)
-        Me.gboxFields.Controls.Add(Me.lblLsLeft)
-        Me.gboxFields.Controls.Add(Me.btnKeyLsLeft)
-        Me.gboxFields.Controls.Add(Me.lblLsDown)
-        Me.gboxFields.Controls.Add(Me.btnKeyLsDown)
         Me.gboxFields.Controls.Add(Me.lblLsUp)
         Me.gboxFields.Controls.Add(Me.btnKeyLsUp)
+        Me.gboxFields.Controls.Add(Me.lblRsRight)
         Me.gboxFields.Controls.Add(Me.lbl_dRight)
         Me.gboxFields.Controls.Add(Me.btnKey_dRight)
+        Me.gboxFields.Controls.Add(Me.btnKeyRsRight)
         Me.gboxFields.Controls.Add(Me.lbl_dLeft)
         Me.gboxFields.Controls.Add(Me.btnKey_dLeft)
+        Me.gboxFields.Controls.Add(Me.lblRsLeft)
         Me.gboxFields.Controls.Add(Me.lbl_dDown)
         Me.gboxFields.Controls.Add(Me.btnKey_dDown)
+        Me.gboxFields.Controls.Add(Me.btnKeyRsLeft)
         Me.gboxFields.Controls.Add(Me.lbl_dUp)
-        Me.gboxFields.Controls.Add(Me.btnKey_dUp)
-        Me.gboxFields.Controls.Add(Me.lblRT)
-        Me.gboxFields.Controls.Add(Me.btnKeyRT)
-        Me.gboxFields.Controls.Add(Me.lblLT)
-        Me.gboxFields.Controls.Add(Me.btnKeyLT)
-        Me.gboxFields.Controls.Add(Me.lblRB)
-        Me.gboxFields.Controls.Add(Me.btnKeyRB)
-        Me.gboxFields.Controls.Add(Me.lblLB)
-        Me.gboxFields.Controls.Add(Me.btnKeyLB)
-        Me.gboxFields.Controls.Add(Me.lblY)
-        Me.gboxFields.Controls.Add(Me.btnKeyY)
-        Me.gboxFields.Controls.Add(Me.lblX)
-        Me.gboxFields.Controls.Add(Me.btnKeyX)
-        Me.gboxFields.Controls.Add(Me.lblB)
-        Me.gboxFields.Controls.Add(Me.btnKeyB)
-        Me.gboxFields.Controls.Add(Me.lblA)
-        Me.gboxFields.Controls.Add(Me.btnKeyA)
-        Me.gboxFields.Controls.Add(Me.lblBack)
-        Me.gboxFields.Controls.Add(Me.btnKeyBack)
-        Me.gboxFields.Controls.Add(Me.lblStart)
-        Me.gboxFields.Controls.Add(Me.Label150)
-        Me.gboxFields.Controls.Add(Me.btnKeyStart)
-        Me.gboxFields.Controls.Add(Me.picBoxRsButton)
         Me.gboxFields.Controls.Add(Me.picBoxRsRight)
-        Me.gboxFields.Controls.Add(Me.picBoxRsLeft)
-        Me.gboxFields.Controls.Add(Me.picBoxRsDown)
-        Me.gboxFields.Controls.Add(Me.cboRsButton)
-        Me.gboxFields.Controls.Add(Me.Label160)
-        Me.gboxFields.Controls.Add(Me.cboRsRight)
-        Me.gboxFields.Controls.Add(Me.Label170)
-        Me.gboxFields.Controls.Add(Me.cboRsLeft)
-        Me.gboxFields.Controls.Add(Me.Label180)
-        Me.gboxFields.Controls.Add(Me.cboRsDown)
-        Me.gboxFields.Controls.Add(Me.picBoxRsUp)
-        Me.gboxFields.Controls.Add(Me.cboRsUp)
-        Me.gboxFields.Controls.Add(Me.Label190)
-        Me.gboxFields.Controls.Add(Me.Label15)
-        Me.gboxFields.Controls.Add(Me.picBoxLsButton)
-        Me.gboxFields.Controls.Add(Me.picBoxLsRight)
-        Me.gboxFields.Controls.Add(Me.picBoxLsLeft)
-        Me.gboxFields.Controls.Add(Me.picBoxLsDown)
-        Me.gboxFields.Controls.Add(Me.cboLsButton)
+        Me.gboxFields.Controls.Add(Me.btnKey_dUp)
+        Me.gboxFields.Controls.Add(Me.lblRsDown)
+        Me.gboxFields.Controls.Add(Me.lblRT)
+        Me.gboxFields.Controls.Add(Me.btnKeyRsDown)
+        Me.gboxFields.Controls.Add(Me.btnKeyRT)
+        Me.gboxFields.Controls.Add(Me.lblRsUp)
+        Me.gboxFields.Controls.Add(Me.lblLT)
+        Me.gboxFields.Controls.Add(Me.btnKeyRsUp)
+        Me.gboxFields.Controls.Add(Me.btnKeyLT)
+        Me.gboxFields.Controls.Add(Me.lblLsButton)
+        Me.gboxFields.Controls.Add(Me.lblRB)
+        Me.gboxFields.Controls.Add(Me.btnKeyLsButton)
+        Me.gboxFields.Controls.Add(Me.btnKeyRB)
         Me.gboxFields.Controls.Add(Me.Label16)
-        Me.gboxFields.Controls.Add(Me.cboLsRight)
-        Me.gboxFields.Controls.Add(Me.Label17)
-        Me.gboxFields.Controls.Add(Me.cboLsLeft)
-        Me.gboxFields.Controls.Add(Me.Label18)
-        Me.gboxFields.Controls.Add(Me.cboLsDown)
+        Me.gboxFields.Controls.Add(Me.lblLB)
+        Me.gboxFields.Controls.Add(Me.lblLsRight)
+        Me.gboxFields.Controls.Add(Me.btnKeyLB)
+        Me.gboxFields.Controls.Add(Me.cboLsButton)
+        Me.gboxFields.Controls.Add(Me.lblY)
+        Me.gboxFields.Controls.Add(Me.btnKeyLsRight)
+        Me.gboxFields.Controls.Add(Me.btnKeyY)
+        Me.gboxFields.Controls.Add(Me.picBoxLsDown)
+        Me.gboxFields.Controls.Add(Me.lblLsLeft)
+        Me.gboxFields.Controls.Add(Me.lblX)
+        Me.gboxFields.Controls.Add(Me.picBoxLsLeft)
+        Me.gboxFields.Controls.Add(Me.btnKeyX)
+        Me.gboxFields.Controls.Add(Me.btnKeyLsLeft)
+        Me.gboxFields.Controls.Add(Me.lblB)
+        Me.gboxFields.Controls.Add(Me.picBoxLsRight)
+        Me.gboxFields.Controls.Add(Me.btnKeyB)
+        Me.gboxFields.Controls.Add(Me.lblLsDown)
+        Me.gboxFields.Controls.Add(Me.lblA)
+        Me.gboxFields.Controls.Add(Me.picBoxLsButton)
+        Me.gboxFields.Controls.Add(Me.btnKeyA)
+        Me.gboxFields.Controls.Add(Me.btnKeyLsDown)
+        Me.gboxFields.Controls.Add(Me.lblBack)
+        Me.gboxFields.Controls.Add(Me.Label15)
+        Me.gboxFields.Controls.Add(Me.btnKeyBack)
+        Me.gboxFields.Controls.Add(Me.Label190)
+        Me.gboxFields.Controls.Add(Me.lblStart)
+        Me.gboxFields.Controls.Add(Me.cboRsUp)
+        Me.gboxFields.Controls.Add(Me.btnKeyStart)
+        Me.gboxFields.Controls.Add(Me.picBoxRsUp)
         Me.gboxFields.Controls.Add(Me.picBoxLsUp)
+        Me.gboxFields.Controls.Add(Me.cboRsDown)
         Me.gboxFields.Controls.Add(Me.cboLsUp)
+        Me.gboxFields.Controls.Add(Me.Label180)
         Me.gboxFields.Controls.Add(Me.Label19)
+        Me.gboxFields.Controls.Add(Me.cboRsLeft)
         Me.gboxFields.Controls.Add(Me.Label14)
+        Me.gboxFields.Controls.Add(Me.Label170)
         Me.gboxFields.Controls.Add(Me.picBox_dRight)
+        Me.gboxFields.Controls.Add(Me.cboRsRight)
         Me.gboxFields.Controls.Add(Me.picBox_dLeft)
+        Me.gboxFields.Controls.Add(Me.Label160)
         Me.gboxFields.Controls.Add(Me.picBox_dDown)
+        Me.gboxFields.Controls.Add(Me.cboRsButton)
         Me.gboxFields.Controls.Add(Me.picBox_dUp)
+        Me.gboxFields.Controls.Add(Me.picBoxRsDown)
         Me.gboxFields.Controls.Add(Me.cbodRight)
+        Me.gboxFields.Controls.Add(Me.picBoxRsLeft)
         Me.gboxFields.Controls.Add(Me.Label11)
+        Me.gboxFields.Controls.Add(Me.picBoxRsButton)
         Me.gboxFields.Controls.Add(Me.cbodLeft)
+        Me.gboxFields.Controls.Add(Me.Label150)
         Me.gboxFields.Controls.Add(Me.Label12)
+        Me.gboxFields.Controls.Add(Me.cboLsDown)
         Me.gboxFields.Controls.Add(Me.cbodDown)
+        Me.gboxFields.Controls.Add(Me.Label18)
         Me.gboxFields.Controls.Add(Me.Label13)
+        Me.gboxFields.Controls.Add(Me.Label17)
         Me.gboxFields.Controls.Add(Me.cbodUp)
+        Me.gboxFields.Controls.Add(Me.cboLsRight)
         Me.gboxFields.Controls.Add(Me.picBoxRT)
+        Me.gboxFields.Controls.Add(Me.cboLsLeft)
         Me.gboxFields.Controls.Add(Me.picBoxLT)
         Me.gboxFields.Controls.Add(Me.picBoxRB)
         Me.gboxFields.Controls.Add(Me.picBoxLB)
@@ -326,12 +334,338 @@ Partial Class frmAddUpdateControls
         Me.gboxFields.Controls.Add(Me.picBoxStart)
         Me.gboxFields.Controls.Add(Me.cboStart)
         Me.gboxFields.Controls.Add(Me.Label1)
+        Me.gboxFields.Controls.Add(Me.Label20)
         Me.gboxFields.Location = New System.Drawing.Point(3, 6)
         Me.gboxFields.Name = "gboxFields"
         Me.gboxFields.Size = New System.Drawing.Size(727, 675)
         Me.gboxFields.TabIndex = 9
         Me.gboxFields.TabStop = False
         Me.gboxFields.Text = "Fields"
+        '
+        'lblLsMod
+        '
+        Me.lblLsMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsMod.Location = New System.Drawing.Point(381, 49)
+        Me.lblLsMod.Name = "lblLsMod"
+        Me.lblLsMod.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsMod.TabIndex = 140
+        Me.lblLsMod.Tag = "KeyLabel"
+        Me.lblLsMod.Text = "<Key>"
+        '
+        'btnKeyLsMod
+        '
+        Me.btnKeyLsMod.Location = New System.Drawing.Point(382, 27)
+        Me.btnKeyLsMod.Name = "btnKeyLsMod"
+        Me.btnKeyLsMod.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsMod.TabIndex = 139
+        Me.btnKeyLsMod.Tag = "KeyButton"
+        Me.btnKeyLsMod.Text = "Edit Keys"
+        Me.btnKeyLsMod.UseVisualStyleBackColor = True
+        '
+        'picBoxLsMod
+        '
+        Me.picBoxLsMod.Location = New System.Drawing.Point(331, 32)
+        Me.picBoxLsMod.Name = "picBoxLsMod"
+        Me.picBoxLsMod.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxLsMod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxLsMod.TabIndex = 138
+        Me.picBoxLsMod.TabStop = False
+        '
+        'lblLsUp
+        '
+        Me.lblLsUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsUp.Location = New System.Drawing.Point(381, 94)
+        Me.lblLsUp.Name = "lblLsUp"
+        Me.lblLsUp.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsUp.TabIndex = 119
+        Me.lblLsUp.Tag = "KeyLabel"
+        Me.lblLsUp.Text = "<Key>"
+        '
+        'btnKeyLsUp
+        '
+        Me.btnKeyLsUp.Enabled = False
+        Me.btnKeyLsUp.Location = New System.Drawing.Point(382, 72)
+        Me.btnKeyLsUp.Name = "btnKeyLsUp"
+        Me.btnKeyLsUp.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsUp.TabIndex = 118
+        Me.btnKeyLsUp.Tag = "KeyButton"
+        Me.btnKeyLsUp.Text = "Edit Keys"
+        Me.btnKeyLsUp.UseVisualStyleBackColor = True
+        '
+        'lbl_dRight
+        '
+        Me.lbl_dRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_dRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_dRight.Location = New System.Drawing.Point(77, 647)
+        Me.lbl_dRight.Name = "lbl_dRight"
+        Me.lbl_dRight.Size = New System.Drawing.Size(219, 19)
+        Me.lbl_dRight.TabIndex = 117
+        Me.lbl_dRight.Tag = "KeyLabel"
+        Me.lbl_dRight.Text = "<Key>"
+        '
+        'btnKey_dRight
+        '
+        Me.btnKey_dRight.Location = New System.Drawing.Point(78, 625)
+        Me.btnKey_dRight.Name = "btnKey_dRight"
+        Me.btnKey_dRight.Size = New System.Drawing.Size(66, 22)
+        Me.btnKey_dRight.TabIndex = 116
+        Me.btnKey_dRight.Tag = "KeyButton"
+        Me.btnKey_dRight.Text = "Edit Keys"
+        Me.btnKey_dRight.UseVisualStyleBackColor = True
+        '
+        'lbl_dLeft
+        '
+        Me.lbl_dLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_dLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_dLeft.Location = New System.Drawing.Point(77, 599)
+        Me.lbl_dLeft.Name = "lbl_dLeft"
+        Me.lbl_dLeft.Size = New System.Drawing.Size(219, 19)
+        Me.lbl_dLeft.TabIndex = 115
+        Me.lbl_dLeft.Tag = "KeyLabel"
+        Me.lbl_dLeft.Text = "<Key>"
+        '
+        'btnKey_dLeft
+        '
+        Me.btnKey_dLeft.Location = New System.Drawing.Point(78, 577)
+        Me.btnKey_dLeft.Name = "btnKey_dLeft"
+        Me.btnKey_dLeft.Size = New System.Drawing.Size(66, 22)
+        Me.btnKey_dLeft.TabIndex = 114
+        Me.btnKey_dLeft.Tag = "KeyButton"
+        Me.btnKey_dLeft.Text = "Edit Keys"
+        Me.btnKey_dLeft.UseVisualStyleBackColor = True
+        '
+        'lbl_dDown
+        '
+        Me.lbl_dDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_dDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_dDown.Location = New System.Drawing.Point(77, 553)
+        Me.lbl_dDown.Name = "lbl_dDown"
+        Me.lbl_dDown.Size = New System.Drawing.Size(219, 19)
+        Me.lbl_dDown.TabIndex = 113
+        Me.lbl_dDown.Tag = "KeyLabel"
+        Me.lbl_dDown.Text = "<Key>"
+        '
+        'btnKey_dDown
+        '
+        Me.btnKey_dDown.Location = New System.Drawing.Point(78, 531)
+        Me.btnKey_dDown.Name = "btnKey_dDown"
+        Me.btnKey_dDown.Size = New System.Drawing.Size(66, 22)
+        Me.btnKey_dDown.TabIndex = 112
+        Me.btnKey_dDown.Tag = "KeyButton"
+        Me.btnKey_dDown.Text = "Edit Keys"
+        Me.btnKey_dDown.UseVisualStyleBackColor = True
+        '
+        'lbl_dUp
+        '
+        Me.lbl_dUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_dUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_dUp.Location = New System.Drawing.Point(76, 508)
+        Me.lbl_dUp.Name = "lbl_dUp"
+        Me.lbl_dUp.Size = New System.Drawing.Size(219, 19)
+        Me.lbl_dUp.TabIndex = 111
+        Me.lbl_dUp.Tag = "KeyLabel"
+        Me.lbl_dUp.Text = "<Key>"
+        '
+        'btnKey_dUp
+        '
+        Me.btnKey_dUp.Location = New System.Drawing.Point(77, 486)
+        Me.btnKey_dUp.Name = "btnKey_dUp"
+        Me.btnKey_dUp.Size = New System.Drawing.Size(66, 22)
+        Me.btnKey_dUp.TabIndex = 110
+        Me.btnKey_dUp.Tag = "KeyButton"
+        Me.btnKey_dUp.Text = "Edit Keys"
+        Me.btnKey_dUp.UseVisualStyleBackColor = True
+        '
+        'lblRT
+        '
+        Me.lblRT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRT.Location = New System.Drawing.Point(75, 459)
+        Me.lblRT.Name = "lblRT"
+        Me.lblRT.Size = New System.Drawing.Size(219, 19)
+        Me.lblRT.TabIndex = 109
+        Me.lblRT.Tag = "KeyLabel"
+        Me.lblRT.Text = "<Key>"
+        '
+        'btnKeyRT
+        '
+        Me.btnKeyRT.Location = New System.Drawing.Point(76, 437)
+        Me.btnKeyRT.Name = "btnKeyRT"
+        Me.btnKeyRT.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRT.TabIndex = 108
+        Me.btnKeyRT.Tag = "KeyButton"
+        Me.btnKeyRT.Text = "Edit Keys"
+        Me.btnKeyRT.UseVisualStyleBackColor = True
+        '
+        'lblLT
+        '
+        Me.lblLT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLT.Location = New System.Drawing.Point(77, 411)
+        Me.lblLT.Name = "lblLT"
+        Me.lblLT.Size = New System.Drawing.Size(219, 19)
+        Me.lblLT.TabIndex = 107
+        Me.lblLT.Tag = "KeyLabel"
+        Me.lblLT.Text = "<Key>"
+        '
+        'btnKeyLT
+        '
+        Me.btnKeyLT.Location = New System.Drawing.Point(78, 389)
+        Me.btnKeyLT.Name = "btnKeyLT"
+        Me.btnKeyLT.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLT.TabIndex = 106
+        Me.btnKeyLT.Tag = "KeyButton"
+        Me.btnKeyLT.Text = "Edit Keys"
+        Me.btnKeyLT.UseVisualStyleBackColor = True
+        '
+        'lblRB
+        '
+        Me.lblRB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRB.Location = New System.Drawing.Point(77, 364)
+        Me.lblRB.Name = "lblRB"
+        Me.lblRB.Size = New System.Drawing.Size(219, 19)
+        Me.lblRB.TabIndex = 105
+        Me.lblRB.Tag = "KeyLabel"
+        Me.lblRB.Text = "<Key>"
+        '
+        'btnKeyRB
+        '
+        Me.btnKeyRB.Location = New System.Drawing.Point(78, 342)
+        Me.btnKeyRB.Name = "btnKeyRB"
+        Me.btnKeyRB.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRB.TabIndex = 104
+        Me.btnKeyRB.Tag = "KeyButton"
+        Me.btnKeyRB.Text = "Edit Keys"
+        Me.btnKeyRB.UseVisualStyleBackColor = True
+        '
+        'lblLB
+        '
+        Me.lblLB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLB.Location = New System.Drawing.Point(75, 321)
+        Me.lblLB.Name = "lblLB"
+        Me.lblLB.Size = New System.Drawing.Size(219, 19)
+        Me.lblLB.TabIndex = 103
+        Me.lblLB.Tag = "KeyLabel"
+        Me.lblLB.Text = "<Key>"
+        '
+        'btnKeyLB
+        '
+        Me.btnKeyLB.Location = New System.Drawing.Point(76, 299)
+        Me.btnKeyLB.Name = "btnKeyLB"
+        Me.btnKeyLB.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLB.TabIndex = 102
+        Me.btnKeyLB.Tag = "KeyButton"
+        Me.btnKeyLB.Text = "Edit Keys"
+        Me.btnKeyLB.UseVisualStyleBackColor = True
+        '
+        'lblY
+        '
+        Me.lblY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblY.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblY.Location = New System.Drawing.Point(78, 276)
+        Me.lblY.Name = "lblY"
+        Me.lblY.Size = New System.Drawing.Size(219, 19)
+        Me.lblY.TabIndex = 101
+        Me.lblY.Tag = "KeyLabel"
+        Me.lblY.Text = "<Key>"
+        '
+        'btnKeyY
+        '
+        Me.btnKeyY.Location = New System.Drawing.Point(79, 254)
+        Me.btnKeyY.Name = "btnKeyY"
+        Me.btnKeyY.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyY.TabIndex = 100
+        Me.btnKeyY.Tag = "KeyButton"
+        Me.btnKeyY.Text = "Edit Keys"
+        Me.btnKeyY.UseVisualStyleBackColor = True
+        '
+        'lblX
+        '
+        Me.lblX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblX.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblX.Location = New System.Drawing.Point(76, 229)
+        Me.lblX.Name = "lblX"
+        Me.lblX.Size = New System.Drawing.Size(219, 19)
+        Me.lblX.TabIndex = 99
+        Me.lblX.Tag = "KeyLabel"
+        Me.lblX.Text = "<Key>"
+        '
+        'btnKeyX
+        '
+        Me.btnKeyX.Location = New System.Drawing.Point(77, 207)
+        Me.btnKeyX.Name = "btnKeyX"
+        Me.btnKeyX.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyX.TabIndex = 98
+        Me.btnKeyX.Tag = "KeyButton"
+        Me.btnKeyX.Text = "Edit Keys"
+        Me.btnKeyX.UseVisualStyleBackColor = True
+        '
+        'lblB
+        '
+        Me.lblB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblB.Location = New System.Drawing.Point(75, 182)
+        Me.lblB.Name = "lblB"
+        Me.lblB.Size = New System.Drawing.Size(219, 19)
+        Me.lblB.TabIndex = 97
+        Me.lblB.Tag = "KeyLabel"
+        Me.lblB.Text = "<Key>"
+        '
+        'btnKeyB
+        '
+        Me.btnKeyB.Location = New System.Drawing.Point(76, 160)
+        Me.btnKeyB.Name = "btnKeyB"
+        Me.btnKeyB.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyB.TabIndex = 96
+        Me.btnKeyB.Tag = "KeyButton"
+        Me.btnKeyB.Text = "Edit Keys"
+        Me.btnKeyB.UseVisualStyleBackColor = True
+        '
+        'lblA
+        '
+        Me.lblA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblA.Location = New System.Drawing.Point(76, 137)
+        Me.lblA.Name = "lblA"
+        Me.lblA.Size = New System.Drawing.Size(219, 19)
+        Me.lblA.TabIndex = 95
+        Me.lblA.Tag = "KeyLabel"
+        Me.lblA.Text = "<Key>"
+        '
+        'btnKeyA
+        '
+        Me.btnKeyA.Location = New System.Drawing.Point(77, 115)
+        Me.btnKeyA.Name = "btnKeyA"
+        Me.btnKeyA.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyA.TabIndex = 94
+        Me.btnKeyA.Tag = "KeyButton"
+        Me.btnKeyA.Text = "Edit Keys"
+        Me.btnKeyA.UseVisualStyleBackColor = True
+        '
+        'lblBack
+        '
+        Me.lblBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBack.Location = New System.Drawing.Point(76, 94)
+        Me.lblBack.Name = "lblBack"
+        Me.lblBack.Size = New System.Drawing.Size(219, 19)
+        Me.lblBack.TabIndex = 93
+        Me.lblBack.Tag = "KeyLabel"
+        Me.lblBack.Text = "<Key>"
+        '
+        'btnKeyBack
+        '
+        Me.btnKeyBack.Location = New System.Drawing.Point(77, 72)
+        Me.btnKeyBack.Name = "btnKeyBack"
+        Me.btnKeyBack.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyBack.TabIndex = 92
+        Me.btnKeyBack.Tag = "KeyButton"
+        Me.btnKeyBack.Text = "Edit Keys"
+        Me.btnKeyBack.UseVisualStyleBackColor = True
         '
         'lblStart
         '
@@ -344,16 +678,6 @@ Partial Class frmAddUpdateControls
         Me.lblStart.Tag = "KeyLabel"
         Me.lblStart.Text = "<Key>"
         '
-        'Label150
-        '
-        Me.Label150.AutoSize = True
-        Me.Label150.Location = New System.Drawing.Point(380, 303)
-        Me.Label150.Name = "Label150"
-        Me.Label150.Size = New System.Drawing.Size(38, 13)
-        Me.Label150.TabIndex = 90
-        Me.Label150.Tag = "XboxLabel"
-        Me.Label150.Text = "Button"
-        '
         'btnKeyStart
         '
         Me.btnKeyStart.Location = New System.Drawing.Point(77, 27)
@@ -364,260 +688,9 @@ Partial Class frmAddUpdateControls
         Me.btnKeyStart.Text = "Edit Keys"
         Me.btnKeyStart.UseVisualStyleBackColor = True
         '
-        'picBoxRsButton
-        '
-        Me.picBoxRsButton.Location = New System.Drawing.Point(332, 438)
-        Me.picBoxRsButton.Name = "picBoxRsButton"
-        Me.picBoxRsButton.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxRsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxRsButton.TabIndex = 89
-        Me.picBoxRsButton.TabStop = False
-        '
-        'picBoxRsRight
-        '
-        Me.picBoxRsRight.Location = New System.Drawing.Point(332, 393)
-        Me.picBoxRsRight.Name = "picBoxRsRight"
-        Me.picBoxRsRight.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxRsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxRsRight.TabIndex = 88
-        Me.picBoxRsRight.TabStop = False
-        '
-        'picBoxRsLeft
-        '
-        Me.picBoxRsLeft.Location = New System.Drawing.Point(332, 348)
-        Me.picBoxRsLeft.Name = "picBoxRsLeft"
-        Me.picBoxRsLeft.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxRsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxRsLeft.TabIndex = 87
-        Me.picBoxRsLeft.TabStop = False
-        '
-        'picBoxRsDown
-        '
-        Me.picBoxRsDown.Location = New System.Drawing.Point(332, 303)
-        Me.picBoxRsDown.Name = "picBoxRsDown"
-        Me.picBoxRsDown.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxRsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxRsDown.TabIndex = 86
-        Me.picBoxRsDown.TabStop = False
-        '
-        'cboRsButton
-        '
-        Me.cboRsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRsButton.FormattingEnabled = True
-        Me.cboRsButton.Location = New System.Drawing.Point(380, 454)
-        Me.cboRsButton.Name = "cboRsButton"
-        Me.cboRsButton.Size = New System.Drawing.Size(197, 21)
-        Me.cboRsButton.TabIndex = 85
-        Me.cboRsButton.Tag = "XboxCBox"
-        '
-        'Label160
-        '
-        Me.Label160.AutoSize = True
-        Me.Label160.Location = New System.Drawing.Point(380, 438)
-        Me.Label160.Name = "Label160"
-        Me.Label160.Size = New System.Drawing.Size(38, 13)
-        Me.Label160.TabIndex = 84
-        Me.Label160.Tag = "XboxLabel"
-        Me.Label160.Text = "Button"
-        '
-        'cboRsRight
-        '
-        Me.cboRsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRsRight.FormattingEnabled = True
-        Me.cboRsRight.Location = New System.Drawing.Point(380, 409)
-        Me.cboRsRight.Name = "cboRsRight"
-        Me.cboRsRight.Size = New System.Drawing.Size(197, 21)
-        Me.cboRsRight.TabIndex = 83
-        Me.cboRsRight.Tag = "XboxCBox"
-        '
-        'Label170
-        '
-        Me.Label170.AutoSize = True
-        Me.Label170.Location = New System.Drawing.Point(380, 393)
-        Me.Label170.Name = "Label170"
-        Me.Label170.Size = New System.Drawing.Size(38, 13)
-        Me.Label170.TabIndex = 82
-        Me.Label170.Tag = "XboxLabel"
-        Me.Label170.Text = "Button"
-        '
-        'cboRsLeft
-        '
-        Me.cboRsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRsLeft.FormattingEnabled = True
-        Me.cboRsLeft.Location = New System.Drawing.Point(380, 363)
-        Me.cboRsLeft.Name = "cboRsLeft"
-        Me.cboRsLeft.Size = New System.Drawing.Size(197, 21)
-        Me.cboRsLeft.TabIndex = 81
-        Me.cboRsLeft.Tag = "XboxCBox"
-        '
-        'Label180
-        '
-        Me.Label180.AutoSize = True
-        Me.Label180.Location = New System.Drawing.Point(380, 347)
-        Me.Label180.Name = "Label180"
-        Me.Label180.Size = New System.Drawing.Size(38, 13)
-        Me.Label180.TabIndex = 80
-        Me.Label180.Tag = "XboxLabel"
-        Me.Label180.Text = "Button"
-        '
-        'cboRsDown
-        '
-        Me.cboRsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRsDown.FormattingEnabled = True
-        Me.cboRsDown.Location = New System.Drawing.Point(380, 318)
-        Me.cboRsDown.Name = "cboRsDown"
-        Me.cboRsDown.Size = New System.Drawing.Size(197, 21)
-        Me.cboRsDown.TabIndex = 79
-        Me.cboRsDown.Tag = "XboxCBox"
-        '
-        'picBoxRsUp
-        '
-        Me.picBoxRsUp.Location = New System.Drawing.Point(332, 258)
-        Me.picBoxRsUp.Name = "picBoxRsUp"
-        Me.picBoxRsUp.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxRsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxRsUp.TabIndex = 78
-        Me.picBoxRsUp.TabStop = False
-        '
-        'cboRsUp
-        '
-        Me.cboRsUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRsUp.FormattingEnabled = True
-        Me.cboRsUp.Location = New System.Drawing.Point(380, 274)
-        Me.cboRsUp.Name = "cboRsUp"
-        Me.cboRsUp.Size = New System.Drawing.Size(197, 21)
-        Me.cboRsUp.TabIndex = 77
-        Me.cboRsUp.Tag = "XboxCBox"
-        '
-        'Label190
-        '
-        Me.Label190.AutoSize = True
-        Me.Label190.Location = New System.Drawing.Point(380, 258)
-        Me.Label190.Name = "Label190"
-        Me.Label190.Size = New System.Drawing.Size(38, 13)
-        Me.Label190.TabIndex = 76
-        Me.Label190.Tag = "XboxLabel"
-        Me.Label190.Text = "Button"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(380, 75)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(38, 13)
-        Me.Label15.TabIndex = 60
-        Me.Label15.Tag = "XboxLabel"
-        Me.Label15.Text = "Button"
-        '
-        'picBoxLsButton
-        '
-        Me.picBoxLsButton.Location = New System.Drawing.Point(332, 210)
-        Me.picBoxLsButton.Name = "picBoxLsButton"
-        Me.picBoxLsButton.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxLsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxLsButton.TabIndex = 59
-        Me.picBoxLsButton.TabStop = False
-        '
-        'picBoxLsRight
-        '
-        Me.picBoxLsRight.Location = New System.Drawing.Point(332, 165)
-        Me.picBoxLsRight.Name = "picBoxLsRight"
-        Me.picBoxLsRight.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxLsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxLsRight.TabIndex = 58
-        Me.picBoxLsRight.TabStop = False
-        '
-        'picBoxLsLeft
-        '
-        Me.picBoxLsLeft.Location = New System.Drawing.Point(332, 120)
-        Me.picBoxLsLeft.Name = "picBoxLsLeft"
-        Me.picBoxLsLeft.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxLsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxLsLeft.TabIndex = 57
-        Me.picBoxLsLeft.TabStop = False
-        '
-        'picBoxLsDown
-        '
-        Me.picBoxLsDown.Location = New System.Drawing.Point(332, 75)
-        Me.picBoxLsDown.Name = "picBoxLsDown"
-        Me.picBoxLsDown.Size = New System.Drawing.Size(42, 36)
-        Me.picBoxLsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxLsDown.TabIndex = 56
-        Me.picBoxLsDown.TabStop = False
-        '
-        'cboLsButton
-        '
-        Me.cboLsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLsButton.FormattingEnabled = True
-        Me.cboLsButton.Location = New System.Drawing.Point(380, 226)
-        Me.cboLsButton.Name = "cboLsButton"
-        Me.cboLsButton.Size = New System.Drawing.Size(197, 21)
-        Me.cboLsButton.TabIndex = 55
-        Me.cboLsButton.Tag = "XboxCBox"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(380, 210)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(38, 13)
-        Me.Label16.TabIndex = 54
-        Me.Label16.Tag = "XboxLabel"
-        Me.Label16.Text = "Button"
-        '
-        'cboLsRight
-        '
-        Me.cboLsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLsRight.FormattingEnabled = True
-        Me.cboLsRight.Location = New System.Drawing.Point(380, 181)
-        Me.cboLsRight.Name = "cboLsRight"
-        Me.cboLsRight.Size = New System.Drawing.Size(197, 21)
-        Me.cboLsRight.TabIndex = 53
-        Me.cboLsRight.Tag = "XboxCBox"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(380, 165)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(38, 13)
-        Me.Label17.TabIndex = 52
-        Me.Label17.Tag = "XboxLabel"
-        Me.Label17.Text = "Button"
-        '
-        'cboLsLeft
-        '
-        Me.cboLsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLsLeft.FormattingEnabled = True
-        Me.cboLsLeft.Location = New System.Drawing.Point(380, 135)
-        Me.cboLsLeft.Name = "cboLsLeft"
-        Me.cboLsLeft.Size = New System.Drawing.Size(197, 21)
-        Me.cboLsLeft.TabIndex = 51
-        Me.cboLsLeft.Tag = "XboxCBox"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(380, 119)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(38, 13)
-        Me.Label18.TabIndex = 50
-        Me.Label18.Tag = "XboxLabel"
-        Me.Label18.Text = "Button"
-        '
-        'cboLsDown
-        '
-        Me.cboLsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLsDown.FormattingEnabled = True
-        Me.cboLsDown.Location = New System.Drawing.Point(380, 90)
-        Me.cboLsDown.Name = "cboLsDown"
-        Me.cboLsDown.Size = New System.Drawing.Size(197, 21)
-        Me.cboLsDown.TabIndex = 49
-        Me.cboLsDown.Tag = "XboxCBox"
-        '
         'picBoxLsUp
         '
-        Me.picBoxLsUp.Location = New System.Drawing.Point(332, 30)
+        Me.picBoxLsUp.Location = New System.Drawing.Point(331, 77)
         Me.picBoxLsUp.Name = "picBoxLsUp"
         Me.picBoxLsUp.Size = New System.Drawing.Size(42, 36)
         Me.picBoxLsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -628,7 +701,7 @@ Partial Class frmAddUpdateControls
         '
         Me.cboLsUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLsUp.FormattingEnabled = True
-        Me.cboLsUp.Location = New System.Drawing.Point(380, 46)
+        Me.cboLsUp.Location = New System.Drawing.Point(379, 93)
         Me.cboLsUp.Name = "cboLsUp"
         Me.cboLsUp.Size = New System.Drawing.Size(197, 21)
         Me.cboLsUp.TabIndex = 47
@@ -637,7 +710,7 @@ Partial Class frmAddUpdateControls
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(380, 30)
+        Me.Label19.Location = New System.Drawing.Point(379, 77)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(38, 13)
         Me.Label19.TabIndex = 46
@@ -1050,6 +1123,459 @@ Partial Class frmAddUpdateControls
         Me.Label1.Tag = "XboxLabel"
         Me.Label1.Text = "Button"
         '
+        'lblRsButton
+        '
+        Me.lblRsButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsButton.Location = New System.Drawing.Point(377, 500)
+        Me.lblRsButton.Name = "lblRsButton"
+        Me.lblRsButton.Size = New System.Drawing.Size(219, 19)
+        Me.lblRsButton.TabIndex = 137
+        Me.lblRsButton.Tag = "KeyLabel"
+        Me.lblRsButton.Text = "<Key>"
+        '
+        'btnKeyRsButton
+        '
+        Me.btnKeyRsButton.Location = New System.Drawing.Point(378, 478)
+        Me.btnKeyRsButton.Name = "btnKeyRsButton"
+        Me.btnKeyRsButton.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRsButton.TabIndex = 136
+        Me.btnKeyRsButton.Tag = "KeyButton"
+        Me.btnKeyRsButton.Text = "Edit Keys"
+        Me.btnKeyRsButton.UseVisualStyleBackColor = True
+        '
+        'lblRsRight
+        '
+        Me.lblRsRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRsRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsRight.Location = New System.Drawing.Point(377, 456)
+        Me.lblRsRight.Name = "lblRsRight"
+        Me.lblRsRight.Size = New System.Drawing.Size(219, 19)
+        Me.lblRsRight.TabIndex = 135
+        Me.lblRsRight.Tag = "KeyLabel"
+        Me.lblRsRight.Text = "<Key>"
+        '
+        'btnKeyRsRight
+        '
+        Me.btnKeyRsRight.Location = New System.Drawing.Point(378, 434)
+        Me.btnKeyRsRight.Name = "btnKeyRsRight"
+        Me.btnKeyRsRight.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRsRight.TabIndex = 134
+        Me.btnKeyRsRight.Tag = "KeyButton"
+        Me.btnKeyRsRight.Text = "Edit Keys"
+        Me.btnKeyRsRight.UseVisualStyleBackColor = True
+        '
+        'lblRsLeft
+        '
+        Me.lblRsLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRsLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsLeft.Location = New System.Drawing.Point(378, 409)
+        Me.lblRsLeft.Name = "lblRsLeft"
+        Me.lblRsLeft.Size = New System.Drawing.Size(219, 19)
+        Me.lblRsLeft.TabIndex = 133
+        Me.lblRsLeft.Tag = "KeyLabel"
+        Me.lblRsLeft.Text = "<Key>"
+        '
+        'btnKeyRsLeft
+        '
+        Me.btnKeyRsLeft.Location = New System.Drawing.Point(379, 387)
+        Me.btnKeyRsLeft.Name = "btnKeyRsLeft"
+        Me.btnKeyRsLeft.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRsLeft.TabIndex = 132
+        Me.btnKeyRsLeft.Tag = "KeyButton"
+        Me.btnKeyRsLeft.Text = "Edit Keys"
+        Me.btnKeyRsLeft.UseVisualStyleBackColor = True
+        '
+        'lblRsDown
+        '
+        Me.lblRsDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRsDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsDown.Location = New System.Drawing.Point(378, 365)
+        Me.lblRsDown.Name = "lblRsDown"
+        Me.lblRsDown.Size = New System.Drawing.Size(219, 19)
+        Me.lblRsDown.TabIndex = 131
+        Me.lblRsDown.Tag = "KeyLabel"
+        Me.lblRsDown.Text = "<Key>"
+        '
+        'btnKeyRsDown
+        '
+        Me.btnKeyRsDown.Location = New System.Drawing.Point(379, 343)
+        Me.btnKeyRsDown.Name = "btnKeyRsDown"
+        Me.btnKeyRsDown.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRsDown.TabIndex = 130
+        Me.btnKeyRsDown.Tag = "KeyButton"
+        Me.btnKeyRsDown.Text = "Edit Keys"
+        Me.btnKeyRsDown.UseVisualStyleBackColor = True
+        '
+        'lblRsUp
+        '
+        Me.lblRsUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRsUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsUp.Location = New System.Drawing.Point(378, 321)
+        Me.lblRsUp.Name = "lblRsUp"
+        Me.lblRsUp.Size = New System.Drawing.Size(219, 19)
+        Me.lblRsUp.TabIndex = 129
+        Me.lblRsUp.Tag = "KeyLabel"
+        Me.lblRsUp.Text = "<Key>"
+        '
+        'btnKeyRsUp
+        '
+        Me.btnKeyRsUp.Location = New System.Drawing.Point(379, 299)
+        Me.btnKeyRsUp.Name = "btnKeyRsUp"
+        Me.btnKeyRsUp.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyRsUp.TabIndex = 128
+        Me.btnKeyRsUp.Tag = "KeyButton"
+        Me.btnKeyRsUp.Text = "Edit Keys"
+        Me.btnKeyRsUp.UseVisualStyleBackColor = True
+        '
+        'lblLsButton
+        '
+        Me.lblLsButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsButton.Location = New System.Drawing.Point(380, 274)
+        Me.lblLsButton.Name = "lblLsButton"
+        Me.lblLsButton.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsButton.TabIndex = 127
+        Me.lblLsButton.Tag = "KeyLabel"
+        Me.lblLsButton.Text = "<Key>"
+        '
+        'btnKeyLsButton
+        '
+        Me.btnKeyLsButton.Location = New System.Drawing.Point(381, 252)
+        Me.btnKeyLsButton.Name = "btnKeyLsButton"
+        Me.btnKeyLsButton.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsButton.TabIndex = 126
+        Me.btnKeyLsButton.Tag = "KeyButton"
+        Me.btnKeyLsButton.Text = "Edit Keys"
+        Me.btnKeyLsButton.UseVisualStyleBackColor = True
+        '
+        'lblLsRight
+        '
+        Me.lblLsRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsRight.Location = New System.Drawing.Point(379, 229)
+        Me.lblLsRight.Name = "lblLsRight"
+        Me.lblLsRight.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsRight.TabIndex = 125
+        Me.lblLsRight.Tag = "KeyLabel"
+        Me.lblLsRight.Text = "<Key>"
+        '
+        'btnKeyLsRight
+        '
+        Me.btnKeyLsRight.Enabled = False
+        Me.btnKeyLsRight.Location = New System.Drawing.Point(380, 207)
+        Me.btnKeyLsRight.Name = "btnKeyLsRight"
+        Me.btnKeyLsRight.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsRight.TabIndex = 124
+        Me.btnKeyLsRight.Tag = "KeyButton"
+        Me.btnKeyLsRight.Text = "Edit Keys"
+        Me.btnKeyLsRight.UseVisualStyleBackColor = True
+        '
+        'lblLsLeft
+        '
+        Me.lblLsLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsLeft.Location = New System.Drawing.Point(379, 182)
+        Me.lblLsLeft.Name = "lblLsLeft"
+        Me.lblLsLeft.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsLeft.TabIndex = 123
+        Me.lblLsLeft.Tag = "KeyLabel"
+        Me.lblLsLeft.Text = "<Key>"
+        '
+        'btnKeyLsLeft
+        '
+        Me.btnKeyLsLeft.Enabled = False
+        Me.btnKeyLsLeft.Location = New System.Drawing.Point(380, 160)
+        Me.btnKeyLsLeft.Name = "btnKeyLsLeft"
+        Me.btnKeyLsLeft.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsLeft.TabIndex = 122
+        Me.btnKeyLsLeft.Tag = "KeyButton"
+        Me.btnKeyLsLeft.Text = "Edit Keys"
+        Me.btnKeyLsLeft.UseVisualStyleBackColor = True
+        '
+        'lblLsDown
+        '
+        Me.lblLsDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLsDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLsDown.Location = New System.Drawing.Point(379, 137)
+        Me.lblLsDown.Name = "lblLsDown"
+        Me.lblLsDown.Size = New System.Drawing.Size(219, 19)
+        Me.lblLsDown.TabIndex = 121
+        Me.lblLsDown.Tag = "KeyLabel"
+        Me.lblLsDown.Text = "<Key>"
+        '
+        'btnKeyLsDown
+        '
+        Me.btnKeyLsDown.Enabled = False
+        Me.btnKeyLsDown.Location = New System.Drawing.Point(380, 115)
+        Me.btnKeyLsDown.Name = "btnKeyLsDown"
+        Me.btnKeyLsDown.Size = New System.Drawing.Size(66, 22)
+        Me.btnKeyLsDown.TabIndex = 120
+        Me.btnKeyLsDown.Tag = "KeyButton"
+        Me.btnKeyLsDown.Text = "Edit Keys"
+        Me.btnKeyLsDown.UseVisualStyleBackColor = True
+        '
+        'Label150
+        '
+        Me.Label150.AutoSize = True
+        Me.Label150.Location = New System.Drawing.Point(379, 348)
+        Me.Label150.Name = "Label150"
+        Me.Label150.Size = New System.Drawing.Size(38, 13)
+        Me.Label150.TabIndex = 90
+        Me.Label150.Tag = "XboxLabel"
+        Me.Label150.Text = "Button"
+        '
+        'picBoxRsButton
+        '
+        Me.picBoxRsButton.Location = New System.Drawing.Point(331, 483)
+        Me.picBoxRsButton.Name = "picBoxRsButton"
+        Me.picBoxRsButton.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxRsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxRsButton.TabIndex = 89
+        Me.picBoxRsButton.TabStop = False
+        '
+        'picBoxRsRight
+        '
+        Me.picBoxRsRight.Location = New System.Drawing.Point(331, 438)
+        Me.picBoxRsRight.Name = "picBoxRsRight"
+        Me.picBoxRsRight.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxRsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxRsRight.TabIndex = 88
+        Me.picBoxRsRight.TabStop = False
+        '
+        'picBoxRsLeft
+        '
+        Me.picBoxRsLeft.Location = New System.Drawing.Point(331, 393)
+        Me.picBoxRsLeft.Name = "picBoxRsLeft"
+        Me.picBoxRsLeft.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxRsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxRsLeft.TabIndex = 87
+        Me.picBoxRsLeft.TabStop = False
+        '
+        'picBoxRsDown
+        '
+        Me.picBoxRsDown.Location = New System.Drawing.Point(331, 348)
+        Me.picBoxRsDown.Name = "picBoxRsDown"
+        Me.picBoxRsDown.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxRsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxRsDown.TabIndex = 86
+        Me.picBoxRsDown.TabStop = False
+        '
+        'cboRsButton
+        '
+        Me.cboRsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRsButton.FormattingEnabled = True
+        Me.cboRsButton.Location = New System.Drawing.Point(379, 499)
+        Me.cboRsButton.Name = "cboRsButton"
+        Me.cboRsButton.Size = New System.Drawing.Size(197, 21)
+        Me.cboRsButton.TabIndex = 85
+        Me.cboRsButton.Tag = "XboxCBox"
+        '
+        'Label160
+        '
+        Me.Label160.AutoSize = True
+        Me.Label160.Location = New System.Drawing.Point(379, 483)
+        Me.Label160.Name = "Label160"
+        Me.Label160.Size = New System.Drawing.Size(38, 13)
+        Me.Label160.TabIndex = 84
+        Me.Label160.Tag = "XboxLabel"
+        Me.Label160.Text = "Button"
+        '
+        'cboRsRight
+        '
+        Me.cboRsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRsRight.FormattingEnabled = True
+        Me.cboRsRight.Location = New System.Drawing.Point(379, 454)
+        Me.cboRsRight.Name = "cboRsRight"
+        Me.cboRsRight.Size = New System.Drawing.Size(197, 21)
+        Me.cboRsRight.TabIndex = 83
+        Me.cboRsRight.Tag = "XboxCBox"
+        '
+        'Label170
+        '
+        Me.Label170.AutoSize = True
+        Me.Label170.Location = New System.Drawing.Point(379, 438)
+        Me.Label170.Name = "Label170"
+        Me.Label170.Size = New System.Drawing.Size(38, 13)
+        Me.Label170.TabIndex = 82
+        Me.Label170.Tag = "XboxLabel"
+        Me.Label170.Text = "Button"
+        '
+        'cboRsLeft
+        '
+        Me.cboRsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRsLeft.FormattingEnabled = True
+        Me.cboRsLeft.Location = New System.Drawing.Point(379, 408)
+        Me.cboRsLeft.Name = "cboRsLeft"
+        Me.cboRsLeft.Size = New System.Drawing.Size(197, 21)
+        Me.cboRsLeft.TabIndex = 81
+        Me.cboRsLeft.Tag = "XboxCBox"
+        '
+        'Label180
+        '
+        Me.Label180.AutoSize = True
+        Me.Label180.Location = New System.Drawing.Point(379, 392)
+        Me.Label180.Name = "Label180"
+        Me.Label180.Size = New System.Drawing.Size(38, 13)
+        Me.Label180.TabIndex = 80
+        Me.Label180.Tag = "XboxLabel"
+        Me.Label180.Text = "Button"
+        '
+        'cboRsDown
+        '
+        Me.cboRsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRsDown.FormattingEnabled = True
+        Me.cboRsDown.Location = New System.Drawing.Point(379, 363)
+        Me.cboRsDown.Name = "cboRsDown"
+        Me.cboRsDown.Size = New System.Drawing.Size(197, 21)
+        Me.cboRsDown.TabIndex = 79
+        Me.cboRsDown.Tag = "XboxCBox"
+        '
+        'picBoxRsUp
+        '
+        Me.picBoxRsUp.Location = New System.Drawing.Point(331, 303)
+        Me.picBoxRsUp.Name = "picBoxRsUp"
+        Me.picBoxRsUp.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxRsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxRsUp.TabIndex = 78
+        Me.picBoxRsUp.TabStop = False
+        '
+        'cboRsUp
+        '
+        Me.cboRsUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRsUp.FormattingEnabled = True
+        Me.cboRsUp.Location = New System.Drawing.Point(379, 319)
+        Me.cboRsUp.Name = "cboRsUp"
+        Me.cboRsUp.Size = New System.Drawing.Size(197, 21)
+        Me.cboRsUp.TabIndex = 77
+        Me.cboRsUp.Tag = "XboxCBox"
+        '
+        'Label190
+        '
+        Me.Label190.AutoSize = True
+        Me.Label190.Location = New System.Drawing.Point(379, 303)
+        Me.Label190.Name = "Label190"
+        Me.Label190.Size = New System.Drawing.Size(38, 13)
+        Me.Label190.TabIndex = 76
+        Me.Label190.Tag = "XboxLabel"
+        Me.Label190.Text = "Button"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(379, 120)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(38, 13)
+        Me.Label15.TabIndex = 60
+        Me.Label15.Tag = "XboxLabel"
+        Me.Label15.Text = "Button"
+        '
+        'picBoxLsButton
+        '
+        Me.picBoxLsButton.Location = New System.Drawing.Point(331, 255)
+        Me.picBoxLsButton.Name = "picBoxLsButton"
+        Me.picBoxLsButton.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxLsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxLsButton.TabIndex = 59
+        Me.picBoxLsButton.TabStop = False
+        '
+        'picBoxLsRight
+        '
+        Me.picBoxLsRight.Location = New System.Drawing.Point(331, 210)
+        Me.picBoxLsRight.Name = "picBoxLsRight"
+        Me.picBoxLsRight.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxLsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxLsRight.TabIndex = 58
+        Me.picBoxLsRight.TabStop = False
+        '
+        'picBoxLsLeft
+        '
+        Me.picBoxLsLeft.Location = New System.Drawing.Point(331, 165)
+        Me.picBoxLsLeft.Name = "picBoxLsLeft"
+        Me.picBoxLsLeft.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxLsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxLsLeft.TabIndex = 57
+        Me.picBoxLsLeft.TabStop = False
+        '
+        'picBoxLsDown
+        '
+        Me.picBoxLsDown.Location = New System.Drawing.Point(331, 120)
+        Me.picBoxLsDown.Name = "picBoxLsDown"
+        Me.picBoxLsDown.Size = New System.Drawing.Size(42, 36)
+        Me.picBoxLsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxLsDown.TabIndex = 56
+        Me.picBoxLsDown.TabStop = False
+        '
+        'cboLsButton
+        '
+        Me.cboLsButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboLsButton.FormattingEnabled = True
+        Me.cboLsButton.Location = New System.Drawing.Point(379, 271)
+        Me.cboLsButton.Name = "cboLsButton"
+        Me.cboLsButton.Size = New System.Drawing.Size(197, 21)
+        Me.cboLsButton.TabIndex = 55
+        Me.cboLsButton.Tag = "XboxCBox"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(379, 255)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(38, 13)
+        Me.Label16.TabIndex = 54
+        Me.Label16.Tag = "XboxLabel"
+        Me.Label16.Text = "Button"
+        '
+        'cboLsRight
+        '
+        Me.cboLsRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboLsRight.FormattingEnabled = True
+        Me.cboLsRight.Location = New System.Drawing.Point(379, 226)
+        Me.cboLsRight.Name = "cboLsRight"
+        Me.cboLsRight.Size = New System.Drawing.Size(197, 21)
+        Me.cboLsRight.TabIndex = 53
+        Me.cboLsRight.Tag = "XboxCBox"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(379, 210)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(38, 13)
+        Me.Label17.TabIndex = 52
+        Me.Label17.Tag = "XboxLabel"
+        Me.Label17.Text = "Button"
+        '
+        'cboLsLeft
+        '
+        Me.cboLsLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboLsLeft.FormattingEnabled = True
+        Me.cboLsLeft.Location = New System.Drawing.Point(379, 180)
+        Me.cboLsLeft.Name = "cboLsLeft"
+        Me.cboLsLeft.Size = New System.Drawing.Size(197, 21)
+        Me.cboLsLeft.TabIndex = 51
+        Me.cboLsLeft.Tag = "XboxCBox"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(379, 164)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(38, 13)
+        Me.Label18.TabIndex = 50
+        Me.Label18.Tag = "XboxLabel"
+        Me.Label18.Text = "Button"
+        '
+        'cboLsDown
+        '
+        Me.cboLsDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboLsDown.FormattingEnabled = True
+        Me.cboLsDown.Location = New System.Drawing.Point(379, 135)
+        Me.cboLsDown.Name = "cboLsDown"
+        Me.cboLsDown.Size = New System.Drawing.Size(197, 21)
+        Me.cboLsDown.TabIndex = 49
+        Me.cboLsDown.Tag = "XboxCBox"
+        '
         'panItems
         '
         Me.panItems.AutoScroll = True
@@ -1135,491 +1661,15 @@ Partial Class frmAddUpdateControls
         Me.rbnEditAll.Text = "Edit for Keyboard and Gamepad"
         Me.rbnEditAll.UseVisualStyleBackColor = True
         '
-        'lblBack
-        '
-        Me.lblBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBack.Location = New System.Drawing.Point(76, 94)
-        Me.lblBack.Name = "lblBack"
-        Me.lblBack.Size = New System.Drawing.Size(219, 19)
-        Me.lblBack.TabIndex = 93
-        Me.lblBack.Tag = "KeyLabel"
-        Me.lblBack.Text = "<Key>"
-        '
-        'btnKeyBack
-        '
-        Me.btnKeyBack.Location = New System.Drawing.Point(77, 72)
-        Me.btnKeyBack.Name = "btnKeyBack"
-        Me.btnKeyBack.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyBack.TabIndex = 92
-        Me.btnKeyBack.Tag = "KeyButton"
-        Me.btnKeyBack.Text = "Edit Keys"
-        Me.btnKeyBack.UseVisualStyleBackColor = True
-        '
-        'lblA
-        '
-        Me.lblA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblA.Location = New System.Drawing.Point(76, 137)
-        Me.lblA.Name = "lblA"
-        Me.lblA.Size = New System.Drawing.Size(219, 19)
-        Me.lblA.TabIndex = 95
-        Me.lblA.Tag = "KeyLabel"
-        Me.lblA.Text = "<Key>"
-        '
-        'btnKeyA
-        '
-        Me.btnKeyA.Location = New System.Drawing.Point(77, 115)
-        Me.btnKeyA.Name = "btnKeyA"
-        Me.btnKeyA.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyA.TabIndex = 94
-        Me.btnKeyA.Tag = "KeyButton"
-        Me.btnKeyA.Text = "Edit Keys"
-        Me.btnKeyA.UseVisualStyleBackColor = True
-        '
-        'lblB
-        '
-        Me.lblB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblB.Location = New System.Drawing.Point(75, 182)
-        Me.lblB.Name = "lblB"
-        Me.lblB.Size = New System.Drawing.Size(219, 19)
-        Me.lblB.TabIndex = 97
-        Me.lblB.Tag = "KeyLabel"
-        Me.lblB.Text = "<Key>"
-        '
-        'btnKeyB
-        '
-        Me.btnKeyB.Location = New System.Drawing.Point(76, 160)
-        Me.btnKeyB.Name = "btnKeyB"
-        Me.btnKeyB.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyB.TabIndex = 96
-        Me.btnKeyB.Tag = "KeyButton"
-        Me.btnKeyB.Text = "Edit Keys"
-        Me.btnKeyB.UseVisualStyleBackColor = True
-        '
-        'lblX
-        '
-        Me.lblX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblX.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblX.Location = New System.Drawing.Point(76, 229)
-        Me.lblX.Name = "lblX"
-        Me.lblX.Size = New System.Drawing.Size(219, 19)
-        Me.lblX.TabIndex = 99
-        Me.lblX.Tag = "KeyLabel"
-        Me.lblX.Text = "<Key>"
-        '
-        'btnKeyX
-        '
-        Me.btnKeyX.Location = New System.Drawing.Point(77, 207)
-        Me.btnKeyX.Name = "btnKeyX"
-        Me.btnKeyX.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyX.TabIndex = 98
-        Me.btnKeyX.Tag = "KeyButton"
-        Me.btnKeyX.Text = "Edit Keys"
-        Me.btnKeyX.UseVisualStyleBackColor = True
-        '
-        'lblY
-        '
-        Me.lblY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblY.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblY.Location = New System.Drawing.Point(78, 276)
-        Me.lblY.Name = "lblY"
-        Me.lblY.Size = New System.Drawing.Size(219, 19)
-        Me.lblY.TabIndex = 101
-        Me.lblY.Tag = "KeyLabel"
-        Me.lblY.Text = "<Key>"
-        '
-        'btnKeyY
-        '
-        Me.btnKeyY.Location = New System.Drawing.Point(79, 254)
-        Me.btnKeyY.Name = "btnKeyY"
-        Me.btnKeyY.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyY.TabIndex = 100
-        Me.btnKeyY.Tag = "KeyButton"
-        Me.btnKeyY.Text = "Edit Keys"
-        Me.btnKeyY.UseVisualStyleBackColor = True
-        '
-        'lblLB
-        '
-        Me.lblLB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLB.Location = New System.Drawing.Point(75, 321)
-        Me.lblLB.Name = "lblLB"
-        Me.lblLB.Size = New System.Drawing.Size(219, 19)
-        Me.lblLB.TabIndex = 103
-        Me.lblLB.Tag = "KeyLabel"
-        Me.lblLB.Text = "<Key>"
-        '
-        'btnKeyLB
-        '
-        Me.btnKeyLB.Location = New System.Drawing.Point(76, 299)
-        Me.btnKeyLB.Name = "btnKeyLB"
-        Me.btnKeyLB.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLB.TabIndex = 102
-        Me.btnKeyLB.Tag = "KeyButton"
-        Me.btnKeyLB.Text = "Edit Keys"
-        Me.btnKeyLB.UseVisualStyleBackColor = True
-        '
-        'lblRB
-        '
-        Me.lblRB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRB.Location = New System.Drawing.Point(77, 364)
-        Me.lblRB.Name = "lblRB"
-        Me.lblRB.Size = New System.Drawing.Size(219, 19)
-        Me.lblRB.TabIndex = 105
-        Me.lblRB.Tag = "KeyLabel"
-        Me.lblRB.Text = "<Key>"
-        '
-        'btnKeyRB
-        '
-        Me.btnKeyRB.Location = New System.Drawing.Point(78, 342)
-        Me.btnKeyRB.Name = "btnKeyRB"
-        Me.btnKeyRB.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRB.TabIndex = 104
-        Me.btnKeyRB.Tag = "KeyButton"
-        Me.btnKeyRB.Text = "Edit Keys"
-        Me.btnKeyRB.UseVisualStyleBackColor = True
-        '
-        'lblLT
-        '
-        Me.lblLT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLT.Location = New System.Drawing.Point(77, 411)
-        Me.lblLT.Name = "lblLT"
-        Me.lblLT.Size = New System.Drawing.Size(219, 19)
-        Me.lblLT.TabIndex = 107
-        Me.lblLT.Tag = "KeyLabel"
-        Me.lblLT.Text = "<Key>"
-        '
-        'btnKeyLT
-        '
-        Me.btnKeyLT.Location = New System.Drawing.Point(78, 389)
-        Me.btnKeyLT.Name = "btnKeyLT"
-        Me.btnKeyLT.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLT.TabIndex = 106
-        Me.btnKeyLT.Tag = "KeyButton"
-        Me.btnKeyLT.Text = "Edit Keys"
-        Me.btnKeyLT.UseVisualStyleBackColor = True
-        '
-        'lblRT
-        '
-        Me.lblRT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRT.Location = New System.Drawing.Point(75, 459)
-        Me.lblRT.Name = "lblRT"
-        Me.lblRT.Size = New System.Drawing.Size(219, 19)
-        Me.lblRT.TabIndex = 109
-        Me.lblRT.Tag = "KeyLabel"
-        Me.lblRT.Text = "<Key>"
-        '
-        'btnKeyRT
-        '
-        Me.btnKeyRT.Location = New System.Drawing.Point(76, 437)
-        Me.btnKeyRT.Name = "btnKeyRT"
-        Me.btnKeyRT.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRT.TabIndex = 108
-        Me.btnKeyRT.Tag = "KeyButton"
-        Me.btnKeyRT.Text = "Edit Keys"
-        Me.btnKeyRT.UseVisualStyleBackColor = True
-        '
-        'lbl_dUp
-        '
-        Me.lbl_dUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_dUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_dUp.Location = New System.Drawing.Point(76, 508)
-        Me.lbl_dUp.Name = "lbl_dUp"
-        Me.lbl_dUp.Size = New System.Drawing.Size(219, 19)
-        Me.lbl_dUp.TabIndex = 111
-        Me.lbl_dUp.Tag = "KeyLabel"
-        Me.lbl_dUp.Text = "<Key>"
-        '
-        'btnKey_dUp
-        '
-        Me.btnKey_dUp.Location = New System.Drawing.Point(77, 486)
-        Me.btnKey_dUp.Name = "btnKey_dUp"
-        Me.btnKey_dUp.Size = New System.Drawing.Size(66, 22)
-        Me.btnKey_dUp.TabIndex = 110
-        Me.btnKey_dUp.Tag = "KeyButton"
-        Me.btnKey_dUp.Text = "Edit Keys"
-        Me.btnKey_dUp.UseVisualStyleBackColor = True
-        '
-        'lbl_dDown
-        '
-        Me.lbl_dDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_dDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_dDown.Location = New System.Drawing.Point(77, 553)
-        Me.lbl_dDown.Name = "lbl_dDown"
-        Me.lbl_dDown.Size = New System.Drawing.Size(219, 19)
-        Me.lbl_dDown.TabIndex = 113
-        Me.lbl_dDown.Tag = "KeyLabel"
-        Me.lbl_dDown.Text = "<Key>"
-        '
-        'btnKey_dDown
-        '
-        Me.btnKey_dDown.Location = New System.Drawing.Point(78, 531)
-        Me.btnKey_dDown.Name = "btnKey_dDown"
-        Me.btnKey_dDown.Size = New System.Drawing.Size(66, 22)
-        Me.btnKey_dDown.TabIndex = 112
-        Me.btnKey_dDown.Tag = "KeyButton"
-        Me.btnKey_dDown.Text = "Edit Keys"
-        Me.btnKey_dDown.UseVisualStyleBackColor = True
-        '
-        'lbl_dLeft
-        '
-        Me.lbl_dLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_dLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_dLeft.Location = New System.Drawing.Point(77, 599)
-        Me.lbl_dLeft.Name = "lbl_dLeft"
-        Me.lbl_dLeft.Size = New System.Drawing.Size(219, 19)
-        Me.lbl_dLeft.TabIndex = 115
-        Me.lbl_dLeft.Tag = "KeyLabel"
-        Me.lbl_dLeft.Text = "<Key>"
-        '
-        'btnKey_dLeft
-        '
-        Me.btnKey_dLeft.Location = New System.Drawing.Point(78, 577)
-        Me.btnKey_dLeft.Name = "btnKey_dLeft"
-        Me.btnKey_dLeft.Size = New System.Drawing.Size(66, 22)
-        Me.btnKey_dLeft.TabIndex = 114
-        Me.btnKey_dLeft.Tag = "KeyButton"
-        Me.btnKey_dLeft.Text = "Edit Keys"
-        Me.btnKey_dLeft.UseVisualStyleBackColor = True
-        '
-        'lbl_dRight
-        '
-        Me.lbl_dRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_dRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_dRight.Location = New System.Drawing.Point(77, 647)
-        Me.lbl_dRight.Name = "lbl_dRight"
-        Me.lbl_dRight.Size = New System.Drawing.Size(219, 19)
-        Me.lbl_dRight.TabIndex = 117
-        Me.lbl_dRight.Tag = "KeyLabel"
-        Me.lbl_dRight.Text = "<Key>"
-        '
-        'btnKey_dRight
-        '
-        Me.btnKey_dRight.Location = New System.Drawing.Point(78, 625)
-        Me.btnKey_dRight.Name = "btnKey_dRight"
-        Me.btnKey_dRight.Size = New System.Drawing.Size(66, 22)
-        Me.btnKey_dRight.TabIndex = 116
-        Me.btnKey_dRight.Tag = "KeyButton"
-        Me.btnKey_dRight.Text = "Edit Keys"
-        Me.btnKey_dRight.UseVisualStyleBackColor = True
-        '
-        'lblLsUp
-        '
-        Me.lblLsUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLsUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLsUp.Location = New System.Drawing.Point(382, 47)
-        Me.lblLsUp.Name = "lblLsUp"
-        Me.lblLsUp.Size = New System.Drawing.Size(219, 19)
-        Me.lblLsUp.TabIndex = 119
-        Me.lblLsUp.Tag = "KeyLabel"
-        Me.lblLsUp.Text = "<Key>"
-        '
-        'btnKeyLsUp
-        '
-        Me.btnKeyLsUp.Location = New System.Drawing.Point(383, 25)
-        Me.btnKeyLsUp.Name = "btnKeyLsUp"
-        Me.btnKeyLsUp.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLsUp.TabIndex = 118
-        Me.btnKeyLsUp.Tag = "KeyButton"
-        Me.btnKeyLsUp.Text = "Edit Keys"
-        Me.btnKeyLsUp.UseVisualStyleBackColor = True
-        '
-        'lblLsDown
-        '
-        Me.lblLsDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLsDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLsDown.Location = New System.Drawing.Point(380, 92)
-        Me.lblLsDown.Name = "lblLsDown"
-        Me.lblLsDown.Size = New System.Drawing.Size(219, 19)
-        Me.lblLsDown.TabIndex = 121
-        Me.lblLsDown.Tag = "KeyLabel"
-        Me.lblLsDown.Text = "<Key>"
-        '
-        'btnKeyLsDown
-        '
-        Me.btnKeyLsDown.Enabled = False
-        Me.btnKeyLsDown.Location = New System.Drawing.Point(381, 70)
-        Me.btnKeyLsDown.Name = "btnKeyLsDown"
-        Me.btnKeyLsDown.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLsDown.TabIndex = 120
-        Me.btnKeyLsDown.Tag = "KeyButton"
-        Me.btnKeyLsDown.Text = "Edit Keys"
-        Me.btnKeyLsDown.UseVisualStyleBackColor = True
-        '
-        'lblLsLeft
-        '
-        Me.lblLsLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLsLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLsLeft.Location = New System.Drawing.Point(380, 137)
-        Me.lblLsLeft.Name = "lblLsLeft"
-        Me.lblLsLeft.Size = New System.Drawing.Size(219, 19)
-        Me.lblLsLeft.TabIndex = 123
-        Me.lblLsLeft.Tag = "KeyLabel"
-        Me.lblLsLeft.Text = "<Key>"
-        '
-        'btnKeyLsLeft
-        '
-        Me.btnKeyLsLeft.Enabled = False
-        Me.btnKeyLsLeft.Location = New System.Drawing.Point(381, 115)
-        Me.btnKeyLsLeft.Name = "btnKeyLsLeft"
-        Me.btnKeyLsLeft.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLsLeft.TabIndex = 122
-        Me.btnKeyLsLeft.Tag = "KeyButton"
-        Me.btnKeyLsLeft.Text = "Edit Keys"
-        Me.btnKeyLsLeft.UseVisualStyleBackColor = True
-        '
-        'lblLsRight
-        '
-        Me.lblLsRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLsRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLsRight.Location = New System.Drawing.Point(380, 184)
-        Me.lblLsRight.Name = "lblLsRight"
-        Me.lblLsRight.Size = New System.Drawing.Size(219, 19)
-        Me.lblLsRight.TabIndex = 125
-        Me.lblLsRight.Tag = "KeyLabel"
-        Me.lblLsRight.Text = "<Key>"
-        '
-        'btnKeyLsRight
-        '
-        Me.btnKeyLsRight.Enabled = False
-        Me.btnKeyLsRight.Location = New System.Drawing.Point(381, 162)
-        Me.btnKeyLsRight.Name = "btnKeyLsRight"
-        Me.btnKeyLsRight.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLsRight.TabIndex = 124
-        Me.btnKeyLsRight.Tag = "KeyButton"
-        Me.btnKeyLsRight.Text = "Edit Keys"
-        Me.btnKeyLsRight.UseVisualStyleBackColor = True
-        '
-        'lblLsButton
-        '
-        Me.lblLsButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLsButton.Location = New System.Drawing.Point(381, 229)
-        Me.lblLsButton.Name = "lblLsButton"
-        Me.lblLsButton.Size = New System.Drawing.Size(219, 19)
-        Me.lblLsButton.TabIndex = 127
-        Me.lblLsButton.Tag = "KeyLabel"
-        Me.lblLsButton.Text = "<Key>"
-        '
-        'btnKeyLsButton
-        '
-        Me.btnKeyLsButton.Location = New System.Drawing.Point(382, 207)
-        Me.btnKeyLsButton.Name = "btnKeyLsButton"
-        Me.btnKeyLsButton.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyLsButton.TabIndex = 126
-        Me.btnKeyLsButton.Tag = "KeyButton"
-        Me.btnKeyLsButton.Text = "Edit Keys"
-        Me.btnKeyLsButton.UseVisualStyleBackColor = True
-        '
-        'lblRsUp
-        '
-        Me.lblRsUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRsUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRsUp.Location = New System.Drawing.Point(379, 276)
-        Me.lblRsUp.Name = "lblRsUp"
-        Me.lblRsUp.Size = New System.Drawing.Size(219, 19)
-        Me.lblRsUp.TabIndex = 129
-        Me.lblRsUp.Tag = "KeyLabel"
-        Me.lblRsUp.Text = "<Key>"
-        '
-        'btnKeyRsUp
-        '
-        Me.btnKeyRsUp.Location = New System.Drawing.Point(380, 254)
-        Me.btnKeyRsUp.Name = "btnKeyRsUp"
-        Me.btnKeyRsUp.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRsUp.TabIndex = 128
-        Me.btnKeyRsUp.Tag = "KeyButton"
-        Me.btnKeyRsUp.Text = "Edit Keys"
-        Me.btnKeyRsUp.UseVisualStyleBackColor = True
-        '
-        'lblRsDown
-        '
-        Me.lblRsDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRsDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRsDown.Location = New System.Drawing.Point(379, 320)
-        Me.lblRsDown.Name = "lblRsDown"
-        Me.lblRsDown.Size = New System.Drawing.Size(219, 19)
-        Me.lblRsDown.TabIndex = 131
-        Me.lblRsDown.Tag = "KeyLabel"
-        Me.lblRsDown.Text = "<Key>"
-        '
-        'btnKeyRsDown
-        '
-        Me.btnKeyRsDown.Location = New System.Drawing.Point(380, 298)
-        Me.btnKeyRsDown.Name = "btnKeyRsDown"
-        Me.btnKeyRsDown.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRsDown.TabIndex = 130
-        Me.btnKeyRsDown.Tag = "KeyButton"
-        Me.btnKeyRsDown.Text = "Edit Keys"
-        Me.btnKeyRsDown.UseVisualStyleBackColor = True
-        '
-        'lblRsLeft
-        '
-        Me.lblRsLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRsLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRsLeft.Location = New System.Drawing.Point(379, 364)
-        Me.lblRsLeft.Name = "lblRsLeft"
-        Me.lblRsLeft.Size = New System.Drawing.Size(219, 19)
-        Me.lblRsLeft.TabIndex = 133
-        Me.lblRsLeft.Tag = "KeyLabel"
-        Me.lblRsLeft.Text = "<Key>"
-        '
-        'btnKeyRsLeft
-        '
-        Me.btnKeyRsLeft.Location = New System.Drawing.Point(380, 342)
-        Me.btnKeyRsLeft.Name = "btnKeyRsLeft"
-        Me.btnKeyRsLeft.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRsLeft.TabIndex = 132
-        Me.btnKeyRsLeft.Tag = "KeyButton"
-        Me.btnKeyRsLeft.Text = "Edit Keys"
-        Me.btnKeyRsLeft.UseVisualStyleBackColor = True
-        '
-        'lblRsRight
-        '
-        Me.lblRsRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRsRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRsRight.Location = New System.Drawing.Point(378, 411)
-        Me.lblRsRight.Name = "lblRsRight"
-        Me.lblRsRight.Size = New System.Drawing.Size(219, 19)
-        Me.lblRsRight.TabIndex = 135
-        Me.lblRsRight.Tag = "KeyLabel"
-        Me.lblRsRight.Text = "<Key>"
-        '
-        'btnKeyRsRight
-        '
-        Me.btnKeyRsRight.Location = New System.Drawing.Point(379, 389)
-        Me.btnKeyRsRight.Name = "btnKeyRsRight"
-        Me.btnKeyRsRight.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRsRight.TabIndex = 134
-        Me.btnKeyRsRight.Tag = "KeyButton"
-        Me.btnKeyRsRight.Text = "Edit Keys"
-        Me.btnKeyRsRight.UseVisualStyleBackColor = True
-        '
-        'lblRsButton
-        '
-        Me.lblRsButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRsButton.Location = New System.Drawing.Point(378, 455)
-        Me.lblRsButton.Name = "lblRsButton"
-        Me.lblRsButton.Size = New System.Drawing.Size(219, 19)
-        Me.lblRsButton.TabIndex = 137
-        Me.lblRsButton.Tag = "KeyLabel"
-        Me.lblRsButton.Text = "<Key>"
-        '
-        'btnKeyRsButton
-        '
-        Me.btnKeyRsButton.Location = New System.Drawing.Point(379, 433)
-        Me.btnKeyRsButton.Name = "btnKeyRsButton"
-        Me.btnKeyRsButton.Size = New System.Drawing.Size(66, 22)
-        Me.btnKeyRsButton.TabIndex = 136
-        Me.btnKeyRsButton.Tag = "KeyButton"
-        Me.btnKeyRsButton.Text = "Edit Keys"
-        Me.btnKeyRsButton.UseVisualStyleBackColor = True
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(385, 49)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(199, 19)
+        Me.Label20.TabIndex = 141
+        Me.Label20.Tag = ""
+        Me.Label20.Text = "For shifting from dpad to L stick"
         '
         'frmAddUpdateControls
         '
@@ -1636,18 +1686,10 @@ Partial Class frmAddUpdateControls
         Me.Controls.Add(Me.lblFile)
         Me.Controls.Add(Me.btnClose)
         Me.Name = "frmAddUpdateControls"
-        Me.Text = "frmAddUpdateControls"
+        Me.Text = "Update Controls"
         Me.gboxFields.ResumeLayout(False)
         Me.gboxFields.PerformLayout()
-        CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxRsLeft, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxRsDown, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxRsUp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxLsButton, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxLsRight, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxLsLeft, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBoxLsDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxLsMod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBoxLsUp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBox_dRight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBox_dLeft, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1663,6 +1705,15 @@ Partial Class frmAddUpdateControls
         CType(Me.picBoxA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBoxStart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxRsButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxRsRight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxRsLeft, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxRsDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxRsUp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxLsButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxLsRight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxLsLeft, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBoxLsDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panItems.ResumeLayout(False)
         Me.gboxViewControls.ResumeLayout(False)
         Me.gboxViewControls.PerformLayout()
@@ -1804,4 +1855,8 @@ Partial Class frmAddUpdateControls
     Friend WithEvents btnKeyA As Button
     Friend WithEvents lblBack As Label
     Friend WithEvents btnKeyBack As Button
+    Friend WithEvents picBoxLsMod As PictureBox
+    Friend WithEvents lblLsMod As Label
+    Friend WithEvents btnKeyLsMod As Button
+    Friend WithEvents Label20 As Label
 End Class
