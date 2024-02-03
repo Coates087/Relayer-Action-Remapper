@@ -18,7 +18,7 @@ Public Class frmMain
         Dim thisAssembly As Assembly = Assembly.GetExecutingAssembly()
         Dim anAssemblyName = thisAssembly.GetName()
 
-        assemblyName = anAssemblyName.Name
+        assemblyName = "RelayerJsonActionMapper" ''anAssemblyName.Name
         lblFile.Text = ""
         ClearSaveLabel()
     End Sub
