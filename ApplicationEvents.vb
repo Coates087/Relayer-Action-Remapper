@@ -16,16 +16,21 @@ Namespace My
             Dim resourceName As String = "RelayerJsonActionMapper." & New AssemblyName(args.Name).Name & ".dll"
             'had to use this line to debug and figure out why it didnt load at first
             Dim resources() As String = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames
+            Dim myAssembly As Assembly = Nothing
+            ''"RelayerJsonActionMapper.Relayer Action Mapper.resources.dll"
+            If resources.Contains(resourceName) Then
 
-            Using stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName)
+                Using stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName)
 
-                Dim assemblyData(CInt(stream.Length - 1)) As Byte
+                    Dim assemblyData(CInt(stream.Length - 1)) As Byte
 
-                stream.Read(assemblyData, 0, assemblyData.Length)
+                    stream.Read(assemblyData, 0, assemblyData.Length)
 
-                Return System.Reflection.Assembly.Load(assemblyData)
+                    myAssembly = System.Reflection.Assembly.Load(assemblyData)
 
-            End Using
+                End Using
+            End If
+            Return myAssembly
         End Function
 
     End Class

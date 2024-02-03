@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.btnLoadFile = New System.Windows.Forms.Button()
         Me.btnDefaultFile = New System.Windows.Forms.Button()
         Me.btnDefaultGamePadFile = New System.Windows.Forms.Button()
@@ -132,6 +133,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(541, 376)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.lblUnSave)
@@ -143,6 +145,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnDefaultGamePadFile)
         Me.Controls.Add(Me.btnDefaultFile)
         Me.Controls.Add(Me.btnLoadFile)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Text = "Relayer Button Mapper"
         Me.ResumeLayout(False)

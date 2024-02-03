@@ -99,7 +99,18 @@ Public Class frmMain
 
     Private Sub btnPreviewConfig_Click(sender As Object, e As EventArgs) Handles btnPreviewConfig.Click
         Dim previewControls As New frmPreviewConfigFile
-        previewControls.gControls = gControls
+
+        Dim myOptions As New JsonSerializerOptions
+        myOptions.WriteIndented = True
+        myOptions.Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+        myOptions.WriteIndented = True
+
+        Dim strJson As String = JsonSerializer.Serialize(gControls, myOptions)
+        Dim myControls As GameControlsPlus = JsonSerializer.Deserialize(Of GameControlsPlus)(strJson)
+
+        myControls = myControls.GetDescriptonsForControlsJSON() ''AddDescriptonsForControls(myControls)
+
+        previewControls.gControls = myControls
         Dim controlDialog As DialogResult = previewControls.ShowDialog()
 
         'If controlDialog = DialogResult.OK Then
@@ -116,6 +127,43 @@ Public Class frmMain
             ClearSaveLabel()
         End If
     End Sub
+
+    Public Function AddDescriptonsForControls(ByVal myControls As GameControlsPlus) As GameControlsPlus
+        myControls.W.Description = $"Move cursor up"
+        myControls.A.Description = $"Move cursor left"
+        myControls.D.Description = $"Move cursor right"
+        myControls.S.Description = $"Move cursor down"
+
+        myControls.CtrlW.Description = $"Move cursor up"
+        myControls.CtrlA.Description = $"Move cursor left"
+        myControls.CtrlD.Description = $"Move cursor right"
+        myControls.CtrlS.Description = $"Move cursor down"
+
+        myControls.Q.Description = $"Switch page/unit left"
+        myControls.E.Description = $"Switch page/unit left{vbCrLf}VN Event/Cutscene: Fast Forword"
+        myControls.WheelDown.Description = $"Zoom In"
+        myControls.WheelUp.Description = $"Zoom Out"
+
+        myControls.V.Description = $"Battle Screen: Display Stage information"
+        myControls.Escape.Description = $"Options Menu: revert to default settings{vbCrLf}Battle Screen: Battle menu{vbCrLf}VN Event/Cutscene: Skip event"
+
+        myControls.F.Description = $"Battle Screen: View Aggro List"
+        myControls.R.Description = $"Battle Screen: Toggle Auto Battle"
+
+        myControls.Enter.Description = $"Confirm"
+        myControls.Backspace.Description = $"Cancel/Back"
+        myControls.Tab.Description = $"Battle Screen:Display Detailed Info{vbCrLf}VN Event/Cutscene: Backlog{vbCrLf}Shop Screen: Overview{vbCrLf}Star Cube Screen: Overview"
+        myControls.Shift.Description = $"Equipment Screen: Remove skill/equipment{vbCrLf}Battle Screen: Display threat area{vbCrLf}VN Event/Cutscene: Auto-Advance{vbCrLf}Shop Screen: Confirm Purchase"
+
+        myControls.UpArrow.Description = $"Battle Screen: Move camera up{vbCrLf}Star Cube Screen: freely move cursor up"
+        myControls.LeftArrow.Description = $"Battle Screen: Move camera left{vbCrLf}Star Cube Screen: freely move cursor left"
+        myControls.DownArrow.Description = $"Battle Screen: Move camera down{vbCrLf}Star Cube Screen: freely move cursor down"
+        myControls.RightArrow.Description = $"Battle Screen: Move camera right{vbCrLf}Star Cube Screen: freely move cursor right"
+
+        Return myControls
+    End Function
+
+
 
     Private Sub PopulateSaveLabel()
 

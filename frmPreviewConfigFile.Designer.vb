@@ -23,9 +23,9 @@ Partial Class frmPreviewConfigFile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panPreview = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.rTxtJson = New System.Windows.Forms.RichTextBox()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.panPreview.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,12 +38,22 @@ Partial Class frmPreviewConfigFile
         Me.panPreview.Size = New System.Drawing.Size(734, 395)
         Me.panPreview.TabIndex = 0
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(472, 24)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Use Ctrl + Mouse Wheel Up/Down to Zoom In/Out"
+        '
         'rTxtJson
         '
         Me.rTxtJson.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rTxtJson.Location = New System.Drawing.Point(4, 35)
         Me.rTxtJson.Name = "rTxtJson"
-        Me.rTxtJson.Size = New System.Drawing.Size(700, 357)
+        Me.rTxtJson.Size = New System.Drawing.Size(727, 357)
         Me.rTxtJson.TabIndex = 0
         Me.rTxtJson.Text = ""
         '
@@ -57,20 +67,11 @@ Partial Class frmPreviewConfigFile
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(472, 24)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Use Ctrl + Mouse Wheel Up/Down to Zoom In/Out"
-        '
         'frmPreviewConfigFile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnClose)

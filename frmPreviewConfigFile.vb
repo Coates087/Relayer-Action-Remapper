@@ -2,7 +2,7 @@
 Imports System.Text.Json
 Public Class frmPreviewConfigFile
 
-    Public gControls As GameControls = Nothing
+    Public gControls As GameControlsPlus = Nothing
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()

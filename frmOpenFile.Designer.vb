@@ -58,6 +58,7 @@ Partial Class frmOpenFile
         '
         'btnCancel
         '
+        Me.btnCancel.AutoSize = True
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Location = New System.Drawing.Point(204, 104)
         Me.btnCancel.Name = "btnCancel"

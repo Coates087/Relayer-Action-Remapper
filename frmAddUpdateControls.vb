@@ -546,8 +546,6 @@ Public Class frmAddUpdateControls
         Return image
     End Function
 
-
-
     Public Function LoadToolTipText(strFile As String) As String
         Dim tipMessage As String = ""
 

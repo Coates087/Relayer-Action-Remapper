@@ -63,6 +63,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Controller Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -218,9 +221,14 @@
     <EmbeddedResource Include="ResourceObjects\KeyConfigDefaultController.json" />
     <EmbeddedResource Include="ResourceObjects\KeyConfigDefaultKeyboard.json" />
     <None Include="packages.config" />
+    <None Include="ResourceObjects\Unused\Controller Icon.pdn" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controller Icon.ico" />
     <Content Include="ResourceObjects\buttonFiles.txt" />
+    <None Include="ResourceObjects\Unused\Controller Icon -small.png" />
+    <None Include="ResourceObjects\Unused\Controller Icon.ico" />
+    <None Include="ResourceObjects\Unused\Controller Icon.png" />
     <EmbeddedResource Include="ResourceObjects\DLLs\Microsoft.Bcl.AsyncInterfaces.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

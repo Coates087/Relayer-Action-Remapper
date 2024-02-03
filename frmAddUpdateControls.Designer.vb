@@ -1686,6 +1686,7 @@ Partial Class frmAddUpdateControls
         Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(899, 628)
         Me.ControlBox = False

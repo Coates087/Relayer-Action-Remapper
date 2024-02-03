@@ -135,6 +135,7 @@ Partial Class frmControlWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(557, 305)
         Me.ControlBox = False
         Me.Controls.Add(Me.panKeys)
