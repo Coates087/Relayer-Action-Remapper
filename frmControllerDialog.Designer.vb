@@ -22,10 +22,12 @@ Partial Class frmControllerDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.panPreview = New System.Windows.Forms.Panel()
         Me.rTxtMessage = New System.Windows.Forms.RichTextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnYes = New System.Windows.Forms.Button()
+        Me.tip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.panPreview.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,4 +91,5 @@ Partial Class frmControllerDialog
     Friend WithEvents btnClose As Button
     Friend WithEvents rTxtMessage As RichTextBox
     Friend WithEvents btnYes As Button
+    Friend WithEvents tip1 As ToolTip
 End Class

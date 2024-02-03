@@ -22,15 +22,17 @@ Partial Class frmControlWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnAddKey = New System.Windows.Forms.Button()
         Me.gBoxKeys = New System.Windows.Forms.GroupBox()
-        Me.cboDefaultKey = New System.Windows.Forms.ComboBox()
         Me.lblAction = New System.Windows.Forms.Label()
-        Me.picBoxButton = New System.Windows.Forms.PictureBox()
         Me.btnRemove = New System.Windows.Forms.Button()
+        Me.picBoxButton = New System.Windows.Forms.PictureBox()
+        Me.cboDefaultKey = New System.Windows.Forms.ComboBox()
         Me.panKeys = New System.Windows.Forms.Panel()
+        Me.tip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.gBoxKeys.SuspendLayout()
         CType(Me.picBoxButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panKeys.SuspendLayout()
@@ -39,9 +41,9 @@ Partial Class frmControlWindow
         'btnSave
         '
         Me.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnSave.Location = New System.Drawing.Point(462, 227)
+        Me.btnSave.Location = New System.Drawing.Point(462, 221)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(64, 20)
+        Me.btnSave.Size = New System.Drawing.Size(83, 26)
         Me.btnSave.TabIndex = 13
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
@@ -51,9 +53,9 @@ Partial Class frmControlWindow
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.Location = New System.Drawing.Point(462, 253)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(64, 20)
+        Me.btnClose.Size = New System.Drawing.Size(83, 26)
         Me.btnClose.TabIndex = 12
-        Me.btnClose.Text = "Close"
+        Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'btnAddKey
@@ -80,17 +82,6 @@ Partial Class frmControlWindow
         Me.gBoxKeys.TabStop = False
         Me.gBoxKeys.Text = "Keys"
         '
-        'cboDefaultKey
-        '
-        Me.cboDefaultKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboDefaultKey.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboDefaultKey.FormattingEnabled = True
-        Me.cboDefaultKey.Location = New System.Drawing.Point(66, 38)
-        Me.cboDefaultKey.Name = "cboDefaultKey"
-        Me.cboDefaultKey.Size = New System.Drawing.Size(267, 32)
-        Me.cboDefaultKey.TabIndex = 8
-        Me.cboDefaultKey.Tag = "key-0"
-        '
         'lblAction
         '
         Me.lblAction.AutoSize = True
@@ -99,15 +90,6 @@ Partial Class frmControlWindow
         Me.lblAction.Size = New System.Drawing.Size(38, 13)
         Me.lblAction.TabIndex = 7
         Me.lblAction.Text = "Button"
-        '
-        'picBoxButton
-        '
-        Me.picBoxButton.Location = New System.Drawing.Point(8, 22)
-        Me.picBoxButton.Name = "picBoxButton"
-        Me.picBoxButton.Size = New System.Drawing.Size(52, 48)
-        Me.picBoxButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBoxButton.TabIndex = 9
-        Me.picBoxButton.TabStop = False
         '
         'btnRemove
         '
@@ -119,6 +101,26 @@ Partial Class frmControlWindow
         Me.btnRemove.Text = "Remove"
         Me.btnRemove.UseVisualStyleBackColor = True
         Me.btnRemove.Visible = False
+        '
+        'picBoxButton
+        '
+        Me.picBoxButton.Location = New System.Drawing.Point(8, 22)
+        Me.picBoxButton.Name = "picBoxButton"
+        Me.picBoxButton.Size = New System.Drawing.Size(52, 48)
+        Me.picBoxButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBoxButton.TabIndex = 9
+        Me.picBoxButton.TabStop = False
+        '
+        'cboDefaultKey
+        '
+        Me.cboDefaultKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDefaultKey.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboDefaultKey.FormattingEnabled = True
+        Me.cboDefaultKey.Location = New System.Drawing.Point(66, 38)
+        Me.cboDefaultKey.Name = "cboDefaultKey"
+        Me.cboDefaultKey.Size = New System.Drawing.Size(267, 32)
+        Me.cboDefaultKey.TabIndex = 8
+        Me.cboDefaultKey.Tag = "key-0"
         '
         'panKeys
         '
@@ -158,4 +160,5 @@ Partial Class frmControlWindow
     Friend WithEvents picBoxButton As PictureBox
     Friend WithEvents cboDefaultKey As ComboBox
     Friend WithEvents panKeys As Panel
+    Friend WithEvents tip1 As ToolTip
 End Class

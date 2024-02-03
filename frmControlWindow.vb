@@ -13,6 +13,7 @@
     Private Const conComboTag As String = "key-"
     Private gHighestNo As Integer = 1
     Private gLastTabStop As Integer = 1
+    Public toolTipText As String = String.Empty
 
     '' On removing a control, figure out how to move the other controls dynamically
 
@@ -102,6 +103,10 @@
         Dim obj = IIf(IsNothing(gButton), gKeyList, gButton)
 
         Dim strKeys As List(Of String) = obj.KeyCode
+
+        If Not String.IsNullOrWhiteSpace(toolTipText) Then
+            tip1.SetToolTip(picBoxButton, toolTipText)
+        End If
 
         If strKeys.Count > 0 Then
             cboDefaultKey.SelectedValue = strKeys(0)

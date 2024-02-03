@@ -49,9 +49,9 @@ Partial Class frmOpenFile
         '
         'btnLoadFile
         '
-        Me.btnLoadFile.Location = New System.Drawing.Point(406, 51)
+        Me.btnLoadFile.Location = New System.Drawing.Point(406, 41)
         Me.btnLoadFile.Name = "btnLoadFile"
-        Me.btnLoadFile.Size = New System.Drawing.Size(114, 20)
+        Me.btnLoadFile.Size = New System.Drawing.Size(114, 30)
         Me.btnLoadFile.TabIndex = 3
         Me.btnLoadFile.Text = "Load File"
         Me.btnLoadFile.UseVisualStyleBackColor = True
@@ -59,9 +59,9 @@ Partial Class frmOpenFile
         'btnCancel
         '
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(204, 114)
+        Me.btnCancel.Location = New System.Drawing.Point(204, 104)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(114, 20)
+        Me.btnCancel.Size = New System.Drawing.Size(114, 30)
         Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -69,9 +69,9 @@ Partial Class frmOpenFile
         'btnOk
         '
         Me.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnOk.Location = New System.Drawing.Point(35, 114)
+        Me.btnOk.Location = New System.Drawing.Point(35, 104)
         Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(114, 20)
+        Me.btnOk.Size = New System.Drawing.Size(114, 30)
         Me.btnOk.TabIndex = 7
         Me.btnOk.Text = "OK"
         Me.btnOk.UseVisualStyleBackColor = True
