@@ -130,6 +130,7 @@ Public Class frmMain
         Dim sFile As New SaveFileDialog
         sFile.DefaultExt = ".json"
         sFile.Filter = "JSON File (.json)|*.json" ' Filter files by extension
+        sFile.FileName = "KeyConfig.json"
         Dim strSaveFilePath As String = ""
 
         Dim strFileData As String = String.Empty
