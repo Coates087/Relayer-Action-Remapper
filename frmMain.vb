@@ -280,8 +280,6 @@ Public Class frmMain
             If msgResult = DialogResult.Yes Then
                 dirPath = IO.Path.GetDirectoryName(strSaveFilePath)
                 Process.Start("explorer.exe", "/select,/separate," & Chr(34) & strSaveFilePath & Chr(34))
-                'Process.Start("explorer.exe", "/select" & Chr(34) & strSaveFilePath & Chr(34))
-                'Process.Start(dirPath)
             End If
         End If
     End Sub
