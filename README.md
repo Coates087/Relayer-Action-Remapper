@@ -1,6 +1,6 @@
 # Relayer Action Remapper
  
-Hello. Welcome to the Relayer Action Remapper tool. This utility tool is designed to make customizing the controls for Relayer Advanced on PC eazier to do.
+Hello. Welcome to the Relayer Action Remapper tool. This utility tool is designed to make customizing the controls for Relayer Advanced on PC easier to do.
 
 Currently, you can change the game's controls by editing the KeyConfig.json inside the (game directory)\KeyConfig\ directory. There are two problems with this. First, all of control actions in the file are referred to the keys and not the actions their selves. What I mean is, instead of having:
 `jump = "keyname"`, the game uses the following:
