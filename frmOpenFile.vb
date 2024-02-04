@@ -39,6 +39,10 @@ Public Class frmOpenFile
         If result = True Then
             ' Open document
             Dim strFilename As String = oFile.FileName
+            If Not IO.File.Exists(strFilename) Then
+                Exit Sub
+            End If
+
             gStrOpenFileName = strFilename
             txtFileName.Text = strFilename
 
